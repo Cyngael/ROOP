@@ -202,6 +202,49 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
+				,
+				{
+					x		: 30,
+					y		: 20,
+					width	: 45,
+					height	: 45,
+					img		: "pop-ups/AOLTitanic.png",
+					id		: "randomPopupConf1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					},
+					confirmPopup : {
+						x		: 10,
+						y		: 10,
+						width	: 80,
+						height	: 80,
+						img		: "pop-ups/AOLTitanicStep2.png",
+						id		: "confirmPopup1",
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 0,
+								y		: 97,
+								width	: 3,
+								height	: 2,
+								img		: "",
+								txt 	: "",
+								callback: function() {
+								}
+							}
+						}
+					}
+				}
 			]
 			,
 			mails : [
@@ -219,7 +262,7 @@ define(["jquery"],function ($) {
 							x		: 0,
 							y		: 97,
 							width	: 3,
-							height	: 2,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -228,9 +271,9 @@ define(["jquery"],function ($) {
 						,
 						others : [{
 							className	: "sendMail",
-							x		: 103,
-							y		: 0,
-							width	: 5,
+							x		: 101,
+							y		: 1,
+							width	: 4,
 							height	: 3,
 							img		: "",
 							txt 	: "",
@@ -243,6 +286,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
+							"Choose a destinary",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
@@ -253,8 +297,8 @@ define(["jquery"],function ($) {
 					}
 				},
 				{
-					x		: 25,
-					y		: 10,
+					x		: 20,
+					y		: 15,
 					width	: 80,
 					height	: 80,
 					img		: "mail/urgent_mail2.png",
@@ -265,16 +309,16 @@ define(["jquery"],function ($) {
 							x		: 0,
 							y		: 97,
 							width	: 3,
-							height	: 2,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {}						
 						},
 						others : [{
 							className	: "sendMail",
-							x		: 103,
-							y		: 0,
-							width	: 5,
+							x		: 65,
+							y		: 1,
+							width	: 4,
 							height	: 3,
 							img		: "",
 							txt 	: "",
@@ -287,6 +331,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
+							"Choose a destinary",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
