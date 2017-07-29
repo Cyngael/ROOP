@@ -61,7 +61,7 @@ define(["jquery"],function ($) {
 
 			this.closed = false;
 			this.disabled = false;
-			
+
 			this.bringToFront();
 		}
 
@@ -112,6 +112,8 @@ define(["jquery"],function ($) {
 			}
 
 			this.$Element.append(domElement);
+
+			return domElement;
 		}
 
 		close() {

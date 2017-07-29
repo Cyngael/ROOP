@@ -1,4 +1,4 @@
-define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, GameEngine, PopupPool, popupsParams) {
+define(["jquery", "BasePopup", "MailPopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, GameEngine, PopupPool, popupsParams) {
 
 	
 	var GE = new GameEngine();
@@ -13,7 +13,7 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],functi
 		allPopupsContainer.simples[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.simples[i]);
 	}
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.mails.length; i++) {
-		allPopupsContainer.mails[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.mails[i]);
+		allPopupsContainer.mails[i] = new MailPopup(popupsParams.otherPotentialPopupsParams.mails[i]);
 	}
 
 	var allPopupPoolsContainer = {};
