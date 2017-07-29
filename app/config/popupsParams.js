@@ -122,7 +122,7 @@ define(["jquery"],function ($) {
 					y		: 1,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow3.png",
+					img		: "mail/urgent_mail.png",
 					id		: "mail1",
 					buttons : {
 						close : {
@@ -134,8 +134,8 @@ define(["jquery"],function ($) {
 							img		: "",
 							txt 	: "",
 							callback: function() {
+							}						
 							}
-						}
 					},
 					selectList : {
 						x : 1,
