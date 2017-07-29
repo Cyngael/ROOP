@@ -31,6 +31,10 @@ define(["jquery"],function ($) {
 			}
 		}
 
+		close(className) {
+			
+		}
+
 	}
 
 	return PopupPool;
