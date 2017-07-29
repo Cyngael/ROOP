@@ -6,6 +6,7 @@ requirejs.config({
         BasePopup 	: '../app/popups/js/basePopup',
         PopupPool 	: '../app/popups/js/popupPool',
         GameEngine 	: '../app/gameEngine/js/gameEngine',
+        TaskBar 	: '../app/gameEngine/js/taskBar',
         popupsParams 	: '../app/config/popupsParams',
     }
 });
