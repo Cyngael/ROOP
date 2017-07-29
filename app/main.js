@@ -6,8 +6,8 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],functi
 	var introPopup = new BasePopup(popupsParams.introPopupParams);
 
 	var listInitialPopup = [];
-	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.length; i++) {
-		listInitialPopup[i] = new BasePopup(popupsParams.otherPotentialPopupsParams[i]);
+	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.simples.length; i++) {
+		listInitialPopup[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.simples[i]);
 	}
 	var initialPopupPool = new PopupPool(listInitialPopup);
 	// initialPopupPool.randomizePositions();
