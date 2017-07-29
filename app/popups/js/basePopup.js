@@ -35,13 +35,13 @@ define(["jquery"],function ($) {
 			this.domElement.style.height 			= this.height + "%";
 			this.domElement.style.border 			= "1px solid black";
 			this.domElement.onclick 				= this.bringToFront.bind(this);
-			var backgroundImage = document.createElement('img');
-			backgroundImage.src = "app/img/" + this.img;
-			backgroundImage.style.display = "block";
-			backgroundImage.style.width = "100%";
-			backgroundImage.style.height = "auto";
+			this.backgroundImage = document.createElement('img');
+			this.backgroundImage.src = "app/img/" + this.img;
+			this.backgroundImage.style.display = "block";
+			this.backgroundImage.style.width = "100%";
+			this.backgroundImage.style.height = "auto";
 
-			this.domElement.append(backgroundImage);
+			this.domElement.append(this.backgroundImage);
 
 			$("#popupContainer").append(this.domElement);
 			this.$Element = $(this.domElement);

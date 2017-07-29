@@ -39,9 +39,9 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 					}
 				},
 				{
-					txt : "ButtonTest3",
+					txt : "Games",
 					callback : function(){
-
+						that.allPopupPoolsContainer.games.openAll();						
 					}
 				}
 			]);
