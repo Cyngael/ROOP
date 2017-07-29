@@ -20,6 +20,9 @@ define(["jquery"],function ($) {
 
 			this.domElement = document.createElement('div');
 			this.domElement.id = "taskBar";
+			this.domElement.style.width = "100%";
+			this.domElement.style.height = "5%";
+			this.domElement.style.backgroundColor = "blue";
 
 		}
 
