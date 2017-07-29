@@ -15,7 +15,7 @@ define(["jquery"],function ($) {
 
 		open() {
 			this.domElement 						= document.createElement('div');
-			this.domElement.class 					= this.class;
+			this.domElement.className 				= this.class;
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "px";
 			this.domElement.style.left 				= this.y + "px";
@@ -40,13 +40,13 @@ define(["jquery"],function ($) {
 			this.closed = false;
 		}
 
-		addButton(id, callback) {
+		addButton(class, callback) {
 
 			var params;
 			if(id == "close")
 				params = this.buttonsParams.close;
 			else if (this.buttonsParams.others)
-				params = this.buttonsParams.others.find(function(o){ return o.id == id});
+				params = this.buttonsParams.others.find(function(o){ return o.class == id});
 
 			var domElement 						= document.createElement('div');
 			domElement.className				= params.class;
@@ -132,8 +132,12 @@ define(["jquery"],function ($) {
 
 		}
 
-		set callback(cb) {
-			this.callback = cb;
+		setButtonCallback(id, cb) {
+			var params;
+			if(id == "close")
+				this.buttonsParams.close.callback = cb;
+			else if(this.buttonsParams.others)
+				this.buttonsParams.find(function(o){ return o.class = id})close.callback = cb;
 		}
 
 	}

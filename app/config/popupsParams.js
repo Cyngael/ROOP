@@ -10,7 +10,7 @@ define(["jquery"],function ($) {
 			id		: "introPopup",
 			buttons : {
 				close : {
-					class	: "close",
+					className : "close",
 					x		: 25,
 					y		: 50,
 					width	: 50,
@@ -34,7 +34,7 @@ define(["jquery"],function ($) {
 				id		: "randomPopup",
 				buttons : {
 					close : {
-						class	: "close",
+						className	: "close",
 						x		: 25,
 						y		: 50,
 						width	: 50,
@@ -56,7 +56,7 @@ define(["jquery"],function ($) {
 				id		: "randomPopup",
 				buttons : {
 					close : {
-						class	: "close",
+						className	: "close",
 						x		: 25,
 						y		: 50,
 						width	: 50,
