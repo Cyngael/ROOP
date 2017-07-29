@@ -3,9 +3,9 @@ define(["jquery"],function ($) {
 	var popupsParams = {
 		introPopupParams : {
 			x		: 25,
-			y		: 10,
-			width	: 150,
-			height	: 50,
+			y		: 25,
+			width	: 30,
+			height	: 30,
 			img		: "normalwindow1.png",
 			id		: "introPopup",
 			buttons : {
@@ -27,21 +27,21 @@ define(["jquery"],function ($) {
 		otherPotentialPopupsParams : [
 						/*normalwindows*/
 			{
-				x		: Math.random(),
-				y		: Math.random(),
-				width	: Math.random(),
-				height	: Math.random(),
-				img		: "img/classic_windows/normalwindow1.png",
+				x		: 0,
+				y		: 0,
+				width	: 80,
+				height	: 80,
+				img		: "classic_windows/normalwindow1.png",
 				id		: "randomPopup",
 				buttons : {
 					close : {
 						className	: "close",
-						x		: 25,
-						y		: 50,
-						width	: 50,
-						height	: 10,
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
 						img		: "",
-						txt 	: "close",
+						txt 	: "",
 						callback: function() {
 						}
 					}
@@ -49,21 +49,21 @@ define(["jquery"],function ($) {
 			}
 			,
 			{
-				x		: Math.random(),
-				y		: Math.random(),
-				width	: Math.random(),
-				height	: Math.random(),
-				img		: "img/classic_windows/normalwindow2.png",
+				x		: 1,
+				y		: 2,
+				width	: 80,
+				height	: 80,
+				img		: "classic_windows/normalwindow2.png",
 				id		: "randomPopup",
 				buttons : {
 					close : {
 						className	: "close",
-						x		: 25,
-						y		: 50,
-						width	: 50,
-						height	: 10,
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
 						img		: "",
-						txt 	: "close",
+						txt 	: "",
 						callback: function() {
 						}
 					}
@@ -71,21 +71,21 @@ define(["jquery"],function ($) {
 			}
 			,
 			{
-				x		: Math.random(),
-				y		: Math.random(),
-				width	: Math.random(),
-				height	: Math.random(),
-				img		: "img/classic_windows/normalwindow3.png",
+				x		: 2,
+				y		: 1,
+				width	: 80,
+				height	: 80,
+				img		: "classic_windows/normalwindow3.png",
 				id		: "randomPopup",
 				buttons : {
 					close : {
 						className	: "close",
-						x		: 25,
-						y		: 50,
-						width	: 50,
-						height	: 10,
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
 						img		: "",
-						txt 	: "close",
+						txt 	: "",
 						callback: function() {
 						}
 					}
@@ -98,7 +98,7 @@ define(["jquery"],function ($) {
 				y		: Math.random(),
 				width	: Math.random(),
 				height	: Math.random(),
-				img		: "img/pop-ups/fakebook.png",
+				img		: "pop-ups/fakebook.png",
 				id		: "randomPopup",
 				buttons : {
 					close : {
