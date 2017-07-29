@@ -32,7 +32,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow1.png",
-					id		: "randomPopup",
+					id		: "randomPopup1",
 					buttons : {
 						close : {
 							className	: "close",
@@ -54,7 +54,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow2.png",
-					id		: "randomPopup",
+					id		: "randomPopup2",
 					buttons : {
 						close : {
 							className	: "close",
@@ -76,7 +76,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow3.png",
-					id		: "randomPopup",
+					id		: "randomPopup3",
 					buttons : {
 						close : {
 							className	: "close",
@@ -99,7 +99,7 @@ define(["jquery"],function ($) {
 					width	: Math.random(),
 					height	: Math.random(),
 					img		: "pop-ups/fakebook.png",
-					id		: "randomPopup",
+					id		: "randomPopup4",
 					buttons : {
 						close : {
 							className	: "close",
@@ -135,7 +135,7 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {
 							}						
-							}
+						}
 					},
 					selectList : {
 						x : 1,

@@ -9,14 +9,15 @@ define(["jquery"],function ($) {
 			this.height= params.height;
 			this.img 	= params.img;
 			this.id 	= params.id;
-			this.closed = true;
 			this.buttonsParams = params.buttons;
+
+			this.closed = true;
 		}
 
 		open() {
 			this.domElement 						= document.createElement('div');
+			this.domElement.id 						= this.id;
 			this.domElement.display 				= "block";
-			this.domElement.className 				= this.className;
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "%";
 			this.domElement.style.left 				= this.y + "%";

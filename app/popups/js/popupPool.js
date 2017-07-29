@@ -31,8 +31,8 @@ define(["jquery"],function ($) {
 			}
 		}
 
-		close(className) {
-			
+		close(id) {
+
 		}
 
 	}
