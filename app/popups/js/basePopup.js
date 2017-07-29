@@ -11,16 +11,6 @@ define(["jquery"],function ($) {
 			this.id 	= params.id;
 			this.closed = true;
 			this.buttonsParams = params.buttons;
-
-			this.open();
-	 		addButton(this.$Element,this.buttonsParams.close, this.close.bind(this));
-
-			if(this.buttonsParams.others)
-			{
-				for (var i = 0; i < this.buttonsParams.others.length; i++) {
-					addButton(this.$Element,this.buttonsParams.others[i]);
-				}
-			}
 		}
 
 		open() {
@@ -37,13 +27,62 @@ define(["jquery"],function ($) {
 			$("body").append(this.domElement);
 			this.$Element = $(this.domElement);
 
-			this.closed = true;
+	 		addButton(this.$Element,this.buttonsParams.close, this.close.bind(this));
+
+			if(this.buttonsParams.others)
+			{
+				for (var i = 0; i < this.buttonsParams.others.length; i++) {
+					addButton(this.$Element,this.buttonsParams.others[i]);
+				}
+			}
+
+
+			this.closed = false;
 		}
 
 		close() {
-			console.log("OnClose");
 			this.$Element.remove();
 			this.closed = true;
+		}
+
+		randomizePosition(xMin,xMax, yMin, yMax) {
+			if(typeof xMin == "undefined")
+			{
+				xMin = 50;
+				xMax = 1000;
+				yMin = 50;
+				yMax = 500;
+			} 
+
+			this.x  = Math.random() * (xMax - xMin) + xMin;
+			this.y  = Math.random() * (yMax - yMin) + yMin;
+
+			if(!this.closed)
+			{
+				this.domElement.style.left = this.x;
+				this.domElement.style.top  = this.y;
+			}
+			
+		}
+
+		randomizeSize(xMin,xMax, yMin, yMax) {
+			if(typeof xMin == "undefined")
+			{
+				xMin = 50;
+				xMax = 100;
+				yMin = 25;
+				yMax = 50;
+			} 
+
+			this.width  = Math.random() * (xMax - xMin) + xMin;
+			this.height  = Math.random() * (yMax - yMin) + yMin;
+
+			if(!this.closed)
+			{
+				this.domElement.style.height  = this.height;
+				this.domElement.style.width = this.width;
+			}
+			
 		}
 
 		show() {
@@ -68,14 +107,16 @@ define(["jquery"],function ($) {
 		domElement.style.backgroundImage 	= "url(" + params.img + ")";
 		domElement.style.border 			= "1px solid blue";
 		domElement.innerHTML 				= params.txt;
+		domElement.onclick = function()
+		{
+			if(typeof params.callback == "function")
+				params.callback();
 
-		if(typeof callback == "function")
-			domElement.onclick = callback;
-		else if(typeof params.callback == "function")
-			domElement.onclick = params.callback;
+			if(typeof callback == "function")
+				callback()
+		}
 
 		$Element.append(domElement);
-		console.log(domElement,$Element)
 	}
 	
 	return basePopup;

@@ -3,7 +3,10 @@ requirejs.config({
     paths: {
         app 		: '../app',
         jquery 		: 'jquery-3.2.1.min',
-        basePopup 	: '../app/popups/js/basePopup',
+        BasePopup 	: '../app/popups/js/basePopup',
+        PopupPool 	: '../app/popups/js/popupPool',
+        GameEngine 	: '../app/gameEngine/js/gameEngine',
+        potentialPopupsParams 	: '../app/config/potentialPopupsParams',
     }
 });
 
