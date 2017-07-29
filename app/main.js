@@ -1,29 +1,8 @@
-define(["jquery", "BasePopup", "GameEngine", "PopupPool", "potentialPopupsParams"],function ($, BasePopup, GameEngine, PopupPool, potentialPopupsParams) {
+define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, GameEngine, PopupPool, popupsParams) {
 
 	
-	var introPopupParams = {
-		x		: 25,
-		y		: 10,
-		width	: 150,
-		height	: 50,
-		img		: "normalwindow1.png",
-		id		: "introPopup",
-		buttons : {
-			close : {
-				class	: "close",
-				x		: 25,
-				y		: 50,
-				width	: 50,
-				height	: 10,
-				img		: "",
-				txt 	: "close",
-				callback: function() {
-					GE.start();
-				}
-			}
-		}
-	};
-	var introPopup = new BasePopup(introPopupParams);
+	
+	var introPopup = new BasePopup(popupsParams.introPopupParams);
 
 
 
@@ -32,7 +11,7 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "potentialPopupsParams
 
 	var listPopup = [];
 	for (var i = 0; i < 5; i++) {
-		listPopup[i] = new BasePopup(potentialPopupsParams[1]);
+		listPopup[i] = new BasePopup(popupsParams.otherPotentialPopupsParams[0]);
 	}
 	var initialPopupPool = new PopupPool(listPopup);
 	initialPopupPool.randomizePositions();
