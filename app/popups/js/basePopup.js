@@ -21,7 +21,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.left 				= this.y + "px";
 			this.domElement.style.width				= this.width + "px";
 			this.domElement.style.height 			= this.height + "px";
-			this.domElement.style.backgroundImage 	= "url(" + this.img + ")";
+			this.domElement.style.backgroundImage 	= "url(app/img/" + this.img + ")";
 			this.domElement.style.border 			= "1px solid black";
 
 			$("body").append(this.domElement);

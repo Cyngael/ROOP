@@ -6,7 +6,7 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "potentialPopupsParams
 		y		: 10,
 		width	: 150,
 		height	: 50,
-		img		: "",
+		img		: "normalwindow1.png",
 		id		: "introPopup",
 		buttons : {
 			close : {
