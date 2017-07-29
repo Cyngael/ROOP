@@ -15,7 +15,7 @@ define(["jquery"],function ($) {
 
 		open() {
 			this.domElement 						= document.createElement('div');
-			this.domElement.className 				= this.class;
+			this.domElement.className 				= this.className;
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "px";
 			this.domElement.style.left 				= this.y + "px";
@@ -27,12 +27,12 @@ define(["jquery"],function ($) {
 			$("body").append(this.domElement);
 			this.$Element = $(this.domElement);
 
-	 		this.addButton(this.buttonsParams.close.class, this.close.bind(this));
+	 		this.addButton(this.buttonsParams.close.className, this.close.bind(this));
 
 			if(this.buttonsParams.others)
 			{
 				for (var i = 0; i < this.buttonsParams.others.length; i++) {
-					this.addButton(this.buttonsParams.others[i].class);
+					this.addButton(this.buttonsParams.others[i].className);
 				}
 			}
 
@@ -40,13 +40,13 @@ define(["jquery"],function ($) {
 			this.closed = false;
 		}
 
-		addButton(class, callback) {
+		addButton(className, callback) {
 
 			var params;
-			if(id == "close")
+			if(className == "close")
 				params = this.buttonsParams.close;
 			else if (this.buttonsParams.others)
-				params = this.buttonsParams.others.find(function(o){ return o.class == id});
+				params = this.buttonsParams.others.find(function(o){ return o.className == className});
 
 			var domElement 						= document.createElement('div');
 			domElement.className				= params.class;
@@ -62,12 +62,12 @@ define(["jquery"],function ($) {
 			var that = this;
 			domElement.onclick = function()
 			{
-				var id = $(this).attr("class");
+				var className = $(this).attr("class");
 				var paramsIn;
-				if(id == "close")
+				if(className == "close")
 					paramsIn = that.buttonsParams.close;
 				else if(that.buttonsParams.others)
-					paramsIn = that.buttonsParams.others.find(function(o){ return o.id == id});
+					paramsIn = that.buttonsParams.others.find(function(o){ return o.className == className});
 
 				if(typeof paramsIn.callback == "function")
 					paramsIn.callback();
@@ -132,12 +132,11 @@ define(["jquery"],function ($) {
 
 		}
 
-		setButtonCallback(id, cb) {
-			var params;
-			if(id == "close")
+		setButtonCallback(className, cb) {
+			if(className == "close")
 				this.buttonsParams.close.callback = cb;
 			else if(this.buttonsParams.others)
-				this.buttonsParams.find(function(o){ return o.class = id})close.callback = cb;
+				this.buttonsParams.others.find(function(o){ return o.className = className}).callback = cb;
 		}
 
 	}
