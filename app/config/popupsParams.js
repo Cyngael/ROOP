@@ -45,6 +45,27 @@ define(["jquery"],function ($) {
 							callback: function() {
 							}
 						}
+					},
+					confirmPopup : {
+						x		: 0,
+						y		: 0,
+						width	: 20,
+						height	: 10,
+						img		: "classic_windows/normalwindow1.png",
+						id		: "confirmPopup1",
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 0,
+								y		: 97,
+								width	: 3,
+								height	: 2,
+								img		: "",
+								txt 	: "",
+								callback: function() {
+								}
+							}
+						},
 					}
 				}
 				,

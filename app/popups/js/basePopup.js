@@ -1,6 +1,6 @@
 define(["jquery"],function ($) {
 	
-	class basePopup {
+	class BasePopup {
 
 		constructor(params) {
 			this.x 	= params.x;
@@ -10,8 +10,10 @@ define(["jquery"],function ($) {
 			this.img 	= params.img;
 			this.id 	= params.id;
 			this.buttonsParams = params.buttons;
+			this.confirmPopupParams = params.confirmPopup;
 
 			this.closed = true;
+			this.disabled = true;
 		}
 
 		open() {
@@ -57,6 +59,7 @@ define(["jquery"],function ($) {
 
 
 			this.closed = false;
+			this.disabled = false;
 		}
 
 		addButton(className, callback) {
@@ -84,6 +87,9 @@ define(["jquery"],function ($) {
 			var that = this;
 			domElement.onclick = function(e)
 			{
+				if(that.disabled)
+					return;
+				
 				var className = this.className;
 				var paramsIn;
 				if(className == "close"){
@@ -106,6 +112,23 @@ define(["jquery"],function ($) {
 		}
 
 		close() {
+
+			this.disabled = true;
+			if(this.confirmPopupParams)
+			{
+				var confirmPopup = new BasePopup(this.confirmPopupParams);
+				confirmPopup.open();
+				confirmPopup.setButtonCallback("close", this._doClose.bind(this));
+				setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);
+
+			}
+			else
+			{
+				this._doClose();
+			}
+		}
+
+		_doClose() {
 			this.$Element.remove();
 			this.closed = true;
 		}
@@ -174,9 +197,7 @@ define(["jquery"],function ($) {
 
 			var highterZ = 0;
 			var popups = $(".popup");
-			$(".popup").each(function(index, elem){
-				console.log(elem, $(elem), $(elem).attr("z-index"));
-				
+			$(".popup").each(function(index, elem){				
 				let z = parseInt(elem.style.zIndex);
 				if(z > highterZ) 
 					highterZ = z;
@@ -193,6 +214,6 @@ define(["jquery"],function ($) {
 
 
 	
-	return basePopup;
+	return BasePopup;
     
 });
