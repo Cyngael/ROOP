@@ -17,10 +17,10 @@ define(["jquery"],function ($) {
 			this.domElement 						= document.createElement('div');
 			this.domElement.className 				= this.className;
 			this.domElement.style.position 			= "absolute";
-			this.domElement.style.top 				= this.x + "px";
-			this.domElement.style.left 				= this.y + "px";
-			this.domElement.style.width				= this.width + "px";
-			this.domElement.style.height 			= this.height + "px";
+			this.domElement.style.top 				= this.x + "%";
+			this.domElement.style.left 				= this.y + "%";
+			this.domElement.style.width				= this.width + "%";
+			this.domElement.style.height 			= this.height + "%";
 			this.domElement.style.backgroundImage 	= "url(app/img/" + this.img + ")";
 			this.domElement.style.border 			= "1px solid black";
 
@@ -51,10 +51,10 @@ define(["jquery"],function ($) {
 			var domElement 						= document.createElement('div');
 			domElement.className				= params.className;
 			domElement.style.position 			= "relative";
-			domElement.style.top 				= params.x + "px";
-			domElement.style.left 				= params.y + "px";
-			domElement.style.width				= params.width + "px";
-			domElement.style.height 			= params.height + "px";
+			domElement.style.top 				= params.x + "%";
+			domElement.style.left 				= params.y + "%";
+			domElement.style.width				= params.width + "%";
+			domElement.style.height 			= params.height + "%";
 			domElement.style.backgroundImage 	= "url(" + params.img + ")";
 			domElement.style.border 			= "1px solid blue";
 			domElement.innerHTML 				= params.txt;
