@@ -5,6 +5,7 @@ requirejs.config({
         jquery 		: 'jquery-3.2.1.min',
         BasePopup 	: '../app/popups/js/basePopup',
         MailPopup 	: '../app/popups/js/mailPopup',
+        DoomPopup 	: '../app/popups/js/doomPopup',
         PopupPool 	: '../app/popups/js/popupPool',
         GameEngine 	: '../app/gameEngine/js/gameEngine',
         TaskBar 	: '../app/gameEngine/js/taskBar',

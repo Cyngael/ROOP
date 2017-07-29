@@ -298,6 +298,34 @@ define(["jquery"],function ($) {
 				},
 
 			]
+			,
+			doom : {
+				x		: 25,
+				y		: 10,
+				width	: 80,
+				height	: 80,
+				img		: "game/doom_base.png",
+				id		: "doom",
+				buttons : {
+					close : {
+						className	: "close",
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
+						img		: "",
+						txt 	: "",
+						callback: function() {}						
+					},
+				},
+				imgStates : [
+					"game/doom_base.png",
+					"game/doom_load.png",
+					"game/doom_option.png",
+					"game/doom_read.png",
+					"game/doom_quit.png",
+				]
+			}
 		}
 		
 	}

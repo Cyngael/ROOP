@@ -1,4 +1,4 @@
-define(["jquery", "BasePopup", "MailPopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, GameEngine, PopupPool, popupsParams) {
+define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, GameEngine, PopupPool, popupsParams) {
 
 	
 	var GE = new GameEngine();
@@ -8,6 +8,7 @@ define(["jquery", "BasePopup", "MailPopup", "GameEngine", "PopupPool", "popupsPa
 	var allPopupsContainer = {
 		simples : [],
 		mails : [],
+		games : []
 	};
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.simples.length; i++) {
 		allPopupsContainer.simples[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.simples[i]);
@@ -16,13 +17,18 @@ define(["jquery", "BasePopup", "MailPopup", "GameEngine", "PopupPool", "popupsPa
 		allPopupsContainer.mails[i] = new MailPopup(popupsParams.otherPotentialPopupsParams.mails[i]);
 	}
 
+	allPopupsContainer.games.push(new DoomPopup(popupsParams.otherPotentialPopupsParams.doom));
+	
+
+
 	var allPopupPoolsContainer = {};
 
 	allPopupPoolsContainer.simples = new PopupPool(allPopupsContainer.simples);
 	allPopupPoolsContainer.mails = new PopupPool(allPopupsContainer.mails);
+	allPopupPoolsContainer.games = new PopupPool(allPopupsContainer.games);
 
 
-	var masterPopupPools = new PopupPool([allPopupPoolsContainer.simples, allPopupPoolsContainer.mails]);
+	var masterPopupPools = new PopupPool([allPopupPoolsContainer.simples, allPopupPoolsContainer.mails,  allPopupPoolsContainer.games]);
 
 
 
