@@ -20,5 +20,6 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],functi
 		popupPool  : initialPopupPool,
 	};
 	GE.init(GEparams);
-    
+	introPopup.setButtonCallback("close", GE.start.bind(GE));
+
 });
