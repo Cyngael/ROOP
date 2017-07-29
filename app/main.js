@@ -1,6 +1,8 @@
 define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, GameEngine, PopupPool, popupsParams) {
 
 	
+	var GE = new GameEngine();
+
 	var introPopup = new BasePopup(popupsParams.introPopupParams);
 
 	var listInitialPopup = [];
@@ -17,6 +19,6 @@ define(["jquery", "BasePopup", "GameEngine", "PopupPool", "popupsParams"],functi
 		introPopup : introPopup,
 		popupPool  : initialPopupPool,
 	};
-	var GE = new GameEngine(GEparams);
+	GE.init(GEparams);
     
 });
