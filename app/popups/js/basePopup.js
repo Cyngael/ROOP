@@ -15,7 +15,7 @@ define(["jquery"],function ($) {
 
 		open() {
 			this.domElement 						= document.createElement('div');
-			this.domElement.id 						= this.id;
+			this.domElement.className 				= this.className;
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "px";
 			this.domElement.style.left 				= this.y + "px";
@@ -27,17 +27,56 @@ define(["jquery"],function ($) {
 			$("body").append(this.domElement);
 			this.$Element = $(this.domElement);
 
-	 		addButton(this.$Element,this.buttonsParams.close, this.close.bind(this));
+	 		this.addButton(this.buttonsParams.close.className, this.close.bind(this));
 
 			if(this.buttonsParams.others)
 			{
 				for (var i = 0; i < this.buttonsParams.others.length; i++) {
-					addButton(this.$Element,this.buttonsParams.others[i]);
+					this.addButton(this.buttonsParams.others[i].className);
 				}
 			}
 
 
 			this.closed = false;
+		}
+
+		addButton(className, callback) {
+
+			var params;
+			if(className == "close")
+				params = this.buttonsParams.close;
+			else if (this.buttonsParams.others)
+				params = this.buttonsParams.others.find(function(o){ return o.className == className});
+
+			var domElement 						= document.createElement('div');
+			domElement.className				= params.class;
+			domElement.style.position 			= "relative";
+			domElement.style.top 				= params.x + "px";
+			domElement.style.left 				= params.y + "px";
+			domElement.style.width				= params.width + "px";
+			domElement.style.height 			= params.height + "px";
+			domElement.style.backgroundImage 	= "url(" + params.img + ")";
+			domElement.style.border 			= "1px solid blue";
+			domElement.innerHTML 				= params.txt;
+
+			var that = this;
+			domElement.onclick = function()
+			{
+				var className = $(this).attr("class");
+				var paramsIn;
+				if(className == "close")
+					paramsIn = that.buttonsParams.close;
+				else if(that.buttonsParams.others)
+					paramsIn = that.buttonsParams.others.find(function(o){ return o.className == className});
+
+				if(typeof paramsIn.callback == "function")
+					paramsIn.callback();
+
+				if(typeof callback == "function")
+					callback()
+			}
+
+			this.$Element.append(domElement);
 		}
 
 		close() {
@@ -93,31 +132,16 @@ define(["jquery"],function ($) {
 
 		}
 
-	}
-
-	function addButton($Element, params, callback) {
-		var domElement 						= document.createElement('div');
-		domElement.id 						= params.id;
-		domElement.className				= params.class;
-		domElement.style.position 			= "relative";
-		domElement.style.top 				= params.x + "px";
-		domElement.style.left 				= params.y + "px";
-		domElement.style.width				= params.width + "px";
-		domElement.style.height 			= params.height + "px";
-		domElement.style.backgroundImage 	= "url(" + params.img + ")";
-		domElement.style.border 			= "1px solid blue";
-		domElement.innerHTML 				= params.txt;
-		domElement.onclick = function()
-		{
-			if(typeof params.callback == "function")
-				params.callback();
-
-			if(typeof callback == "function")
-				callback()
+		setButtonCallback(className, cb) {
+			if(className == "close")
+				this.buttonsParams.close.callback = cb;
+			else if(this.buttonsParams.others)
+				this.buttonsParams.others.find(function(o){ return o.className = className}).callback = cb;
 		}
 
-		$Element.append(domElement);
 	}
+
+
 	
 	return basePopup;
     
