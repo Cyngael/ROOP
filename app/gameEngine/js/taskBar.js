@@ -23,9 +23,10 @@ define(["jquery"],function ($) {
 			this.domElement.id 						= "taskBar";
 			this.domElement.style.width 			= "100%";
 			this.domElement.style.height 			= "5%";
-			this.domElement.style.backgroundColor 	= "blue";
+			this.domElement.style.backgroundImage 	= "url(app/img/UI/taskbar.png)";
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.bottom			= "0";
+			this.domElement.style.left				= "0";
 			this.domElement.style.display			= "flex";
 			this.domElement.style.flexDirection		= "row";
 
@@ -36,6 +37,16 @@ define(["jquery"],function ($) {
 		}
 
 		renderButtons() {
+
+			let domButton = document.createElement("div");
+			domButton.style.height = "70%";
+			domButton.style.width = "2%";
+			domButton.style.margin = "5px";
+			domButton.style.cursor = "pointer";
+			domButton.style.border = "1px solid red";
+
+			this.domElement.append(domButton);
+
 			for (var i = 0; i < this.buttonsParams.length; i++) {
 				
  				let domButton = document.createElement("div");
