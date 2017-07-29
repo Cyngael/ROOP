@@ -49,7 +49,7 @@ define(["jquery"],function ($) {
 				params = this.buttonsParams.others.find(function(o){ return o.className == className});
 
 			var domElement 						= document.createElement('div');
-			domElement.className				= params.class;
+			domElement.className				= params.className;
 			domElement.style.position 			= "relative";
 			domElement.style.top 				= params.x + "px";
 			domElement.style.left 				= params.y + "px";
@@ -62,7 +62,7 @@ define(["jquery"],function ($) {
 			var that = this;
 			domElement.onclick = function()
 			{
-				var className = $(this).attr("class");
+				var className = this.className;
 				var paramsIn;
 				if(className == "close")
 					paramsIn = that.buttonsParams.close;
