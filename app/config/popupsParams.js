@@ -26,13 +26,14 @@ define(["jquery"],function ($) {
 		,
 		otherPotentialPopupsParams : {
 			simples : [
+				/*Documents => ask for save*/
 				{
 					x		: 0,
 					y		: 0,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow1.png",
-					id		: "randomPopup1",
+					img		: "documents/TomorrowPres.png",
+					id		: "randomPopupConf1",
 					buttons : {
 						close : {
 							className	: "close",
@@ -47,19 +48,19 @@ define(["jquery"],function ($) {
 						}
 					},
 					confirmPopup : {
-						x		: 0,
-						y		: 0,
+						x		: 35,
+						y		: 35,
 						width	: 20,
 						height	: 10,
-						img		: "classic_windows/normalwindow1.png",
+						img		: "documents/TomorrowPresPopUp.png",
 						id		: "confirmPopup1",
 						buttons : {
 							close : {
 								className	: "close",
-								x		: 0,
-								y		: 97,
-								width	: 3,
-								height	: 2,
+								x		: 90,
+								y		: 20,
+								width	: 15,
+								height	: 17,
 								img		: "",
 								txt 	: "",
 								callback: function() {
@@ -70,11 +71,77 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
+					x		: 15,
+					y		: 10,
+					width	: 80,
+					height	: 80,
+					img		: "documents/ProjectWhole.png",
+					id		: "randomPopupConf1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					},
+					confirmPopup : {
+						x		: 35,
+						y		: 35,
+						width	: 20,
+						height	: 10,
+						img		: "documents/ProjectWholePopUp.png",
+						id		: "confirmPopup1",
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 90,
+								y		: 20,
+								width	: 15,
+								height	: 17,
+								img		: "",
+								txt 	: "",
+								callback: function() {
+								}
+							}
+						},
+					}
+				}
+				,
+				/*web pages => close quickly, high number*/
+				{
 					x		: 7,
 					y		: 12,
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow2.png",
+					id		: "randomPopup1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
+				,
+				{
+					x		: 7,
+					y		: 12,
+					width	: 80,
+					height	: 80,
+					img		: "classic_windows/normalwindow1.png",
 					id		: "randomPopup2",
 					buttons : {
 						close : {
@@ -112,7 +179,7 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
-				/*pop-ups*/
+				/*pop-ups => other kind of web pages, smaller*/
 				,
 				{
 					x		: 20,
@@ -138,6 +205,7 @@ define(["jquery"],function ($) {
 			]
 			,
 			mails : [
+			/*mails => must choose the destinary and send to close correctly*/
 				{
 					x		: 2,
 					y		: 1,
