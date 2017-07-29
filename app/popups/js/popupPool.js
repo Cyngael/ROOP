@@ -14,7 +14,12 @@ define(["jquery"],function ($) {
 				if(typeof this.listPopup[i].openAll == "function")
 					this.listPopup[i].openAll();
 				else 
-					this.listPopup[i].open();
+				{
+					if(this.listPopup[i].closed)
+						this.listPopup[i].open();
+					else
+						this.listPopup[i].bringToFront();
+				}
 			}
 
 		}
@@ -35,8 +40,11 @@ define(["jquery"],function ($) {
 
 		}
 
-		bringToFront(id) {
-			
+		bringToFront() {
+			for (var i = 0; i < this.listPopup[i].length; i++) {
+				this.listPopup[i].bringToFront();
+			}
+
 		}
 
 	}

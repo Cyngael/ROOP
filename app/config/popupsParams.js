@@ -174,8 +174,8 @@ define(["jquery"],function ($) {
 					}
 				},
 				{
-					x		: 2,
-					y		: 1,
+					x		: 25,
+					y		: 10,
 					width	: 80,
 					height	: 80,
 					img		: "mail/urgent_mail2.png",

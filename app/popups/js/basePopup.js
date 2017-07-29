@@ -58,8 +58,11 @@ define(["jquery"],function ($) {
 			}
 
 
+
 			this.closed = false;
 			this.disabled = false;
+			
+			this.bringToFront();
 		}
 
 		addButton(className, callback) {
@@ -89,7 +92,7 @@ define(["jquery"],function ($) {
 			{
 				if(that.disabled)
 					return;
-				
+
 				var className = this.className;
 				var paramsIn;
 				if(className == "close"){
