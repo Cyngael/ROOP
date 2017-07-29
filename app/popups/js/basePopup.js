@@ -24,6 +24,7 @@ define(["jquery"],function ($) {
 
 			this.domElement 						= document.createElement('div');
 			this.domElement.id 						= this.id;
+			this.domElement.className 				= "popup";
 			this.domElement.display 				= "block";
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "%";
@@ -39,7 +40,7 @@ define(["jquery"],function ($) {
 
 			this.domElement.append(backgroundImage);
 
-			$("body").append(this.domElement);
+			$("#popupContainer").append(this.domElement);
 			this.$Element = $(this.domElement);
 
 	 		this.addButton(this.buttonsParams.close.className, this.close.bind(this));
@@ -153,6 +154,10 @@ define(["jquery"],function ($) {
 				this.buttonsParams.close.callback = cb;
 			else if(this.buttonsParams.others)
 				this.buttonsParams.others.find(function(o){ return o.className.includes(className)}).callback = cb;
+		}
+
+		bringOnFront() {
+			var popups = $(".popup");
 		}
 
 	}

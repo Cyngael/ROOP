@@ -35,6 +35,10 @@ define(["jquery"],function ($) {
 
 		}
 
+		bringOnFront(id) {
+			
+		}
+
 	}
 
 	return PopupPool;
