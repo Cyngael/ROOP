@@ -15,14 +15,21 @@ define(["jquery"],function ($) {
 
 		open() {
 			this.domElement 						= document.createElement('div');
+			this.domElement.display 				= "block";
 			this.domElement.className 				= this.className;
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.top 				= this.x + "%";
 			this.domElement.style.left 				= this.y + "%";
 			this.domElement.style.width				= this.width + "%";
 			this.domElement.style.height 			= this.height + "%";
-			this.domElement.style.backgroundImage 	= "url(app/img/" + this.img + ")";
 			this.domElement.style.border 			= "1px solid black";
+			var backgroundImage = document.createElement('img');
+			backgroundImage.src = "app/img/" + this.img;
+			backgroundImage.style.display = "block";
+			backgroundImage.style.width = "100%";
+			backgroundImage.style.height = "auto";
+
+			this.domElement.append(backgroundImage);
 
 			$("body").append(this.domElement);
 			this.$Element = $(this.domElement);
@@ -46,11 +53,12 @@ define(["jquery"],function ($) {
 			if(className == "close")
 				params = this.buttonsParams.close;
 			else if (this.buttonsParams.others)
-				params = this.buttonsParams.others.find(function(o){ return o.className == className});
+				params = this.buttonsParams.others.find(function(o){ return o.className.includes(className)});
 
 			var domElement 						= document.createElement('div');
 			domElement.className				= params.className;
-			domElement.style.position 			= "relative";
+			domElement.style.display 			= "block";
+			domElement.style.position 			= "absolute";
 			domElement.style.top 				= params.x + "%";
 			domElement.style.left 				= params.y + "%";
 			domElement.style.width				= params.width + "%";
@@ -67,7 +75,7 @@ define(["jquery"],function ($) {
 				if(className == "close")
 					paramsIn = that.buttonsParams.close;
 				else if(that.buttonsParams.others)
-					paramsIn = that.buttonsParams.others.find(function(o){ return o.className == className});
+					paramsIn = that.buttonsParams.others.find(function(o){ return o.className.includes(className)});
 
 				if(typeof paramsIn.callback == "function")
 					paramsIn.callback();
@@ -136,7 +144,7 @@ define(["jquery"],function ($) {
 			if(className == "close")
 				this.buttonsParams.close.callback = cb;
 			else if(this.buttonsParams.others)
-				this.buttonsParams.others.find(function(o){ return o.className = className}).callback = cb;
+				this.buttonsParams.others.find(function(o){ return o.className.includes(className)}).callback = cb;
 		}
 
 	}
