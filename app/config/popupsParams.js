@@ -94,19 +94,19 @@ define(["jquery"],function ($) {
 			/*pop-ups*/
 			,
 			{
-				x		: Math.random(),
-				y		: Math.random(),
-				width	: Math.random(),
-				height	: Math.random(),
+				x		: 2,
+				y		: 1,
+				width	: 20,
+				height	: 20,
 				img		: "pop-ups/fakebook.png",
 				id		: "randomPopup",
 				buttons : {
 					close : {
 						className	: "close",
-						x		: 25,
-						y		: 50,
-						width	: 50,
-						height	: 10,
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
 						img		: "",
 						txt 	: "close",
 						callback: function() {
