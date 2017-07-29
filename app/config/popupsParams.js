@@ -225,12 +225,23 @@ define(["jquery"],function ($) {
 							callback: function() {
 							}						
 						}
+						,
+						others : [{
+							className	: "sendMail",
+							x		: 103,
+							y		: 0,
+							width	: 5,
+							height	: 3,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 					selectList : {
-						x : 1,
-						y : 2,
+						x : 4,
+						y : 0,
 						width : 100,
-						height : 5,
+						height : 6,
 						elements : [
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
@@ -257,15 +268,24 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}						
-							}
+							callback: function() {}						
+						},
+						others : [{
+							className	: "sendMail",
+							x		: 103,
+							y		: 0,
+							width	: 5,
+							height	: 3,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 					selectList : {
-						x : 1,
-						y : 2,
+						x : 4,
+						y : 0,
 						width : 100,
-						height : 5,
+						height : 6,
 						elements : [
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",

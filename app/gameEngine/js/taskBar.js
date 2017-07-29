@@ -29,6 +29,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.left				= "0";
 			this.domElement.style.display			= "flex";
 			this.domElement.style.flexDirection		= "row";
+			this.domElement.style.zIndex			= "9999999999999999999999999999999999";
 
 			$("body").append(this.domElement);
 
