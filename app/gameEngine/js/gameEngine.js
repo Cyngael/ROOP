@@ -6,7 +6,8 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 			if(params)
 			{
 				this.introPopup = params.introPopup;
-				this.popupPool = params.popupPool;
+				this.masterPopupPool = params.masterPopupPool;
+				this.allPopupPoolsContainer = params.allPopupPoolsContainer;
 
 				this.introPopup.open();
 			}
@@ -14,7 +15,8 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 
 		init(params) {
 			this.introPopup = params.introPopup;
-			this.popupPool = params.popupPool;
+			this.masterPopupPool = params.masterPopupPool;
+			this.allPopupPoolsContainer = params.allPopupPoolsContainer;
 
 			this.introPopup.open();
 		}
@@ -25,15 +27,15 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 			var that = this;
 			this.taskBar = new TaskBar([
 				{
-					txt : "ButtonTest",
+					txt : "Simples",
 					callback : function(){
-						console.log("test1",this,that)
+						that.allPopupPoolsContainer.simples.openAll();						
 					}
 				},
 				{
-					txt : "ButtonTest2",
+					txt : "Mails",
 					callback : function(){
-
+						that.allPopupPoolsContainer.mails.openAll();						
 					}
 				},
 				{
@@ -44,7 +46,7 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 				}
 			]);
 
-			this.popupPool.openAll();
+			//this.masterPopupPool.openAll();
 		}
 
 	}

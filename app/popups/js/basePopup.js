@@ -15,6 +15,13 @@ define(["jquery"],function ($) {
 		}
 
 		open() {
+
+			if(!this.closed)
+			{
+				return;
+			}
+			
+
 			this.domElement 						= document.createElement('div');
 			this.domElement.id 						= this.id;
 			this.domElement.display 				= "block";
@@ -134,11 +141,11 @@ define(["jquery"],function ($) {
 		}
 
 		show() {
-
+			this.domElement.style.display = "block";
 		}
 
 		hide() {
-
+			this.domElement.style.display = "hidden";
 		}
 
 		setButtonCallback(className, cb) {
