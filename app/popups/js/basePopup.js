@@ -32,6 +32,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.width				= this.width + "%";
 			this.domElement.style.height 			= this.height + "%";
 			this.domElement.style.border 			= "1px solid black";
+			this.domElement.onclick 				= this.bringToFront.bind(this);
 			var backgroundImage = document.createElement('img');
 			backgroundImage.src = "app/img/" + this.img;
 			backgroundImage.style.display = "block";
@@ -43,6 +44,8 @@ define(["jquery"],function ($) {
 			$("#popupContainer").append(this.domElement);
 			this.$Element = $(this.domElement);
 
+
+			this.listDomElement = [];
 	 		this.addButton(this.buttonsParams.close.className, this.close.bind(this));
 
 			if(this.buttonsParams.others)
@@ -76,13 +79,17 @@ define(["jquery"],function ($) {
 			domElement.style.border 			= "1px solid blue";
 			domElement.innerHTML 				= params.txt;
 
+			this.listDomElement.push(domElement);
+
 			var that = this;
-			domElement.onclick = function()
+			domElement.onclick = function(e)
 			{
 				var className = this.className;
 				var paramsIn;
-				if(className == "close")
+				if(className == "close"){
 					paramsIn = that.buttonsParams.close;
+					e.preventDefault();
+				}
 				else if(that.buttonsParams.others)
 					paramsIn = that.buttonsParams.others.find(function(o){ return o.className.includes(className)});
 
@@ -91,6 +98,8 @@ define(["jquery"],function ($) {
 
 				if(typeof callback == "function")
 					callback()
+
+
 			}
 
 			this.$Element.append(domElement);
@@ -156,8 +165,28 @@ define(["jquery"],function ($) {
 				this.buttonsParams.others.find(function(o){ return o.className.includes(className)}).callback = cb;
 		}
 
-		bringOnFront() {
+		bringToFront(e) {
+			if(this.closed)
+				return;
+
+			if(e)
+				e.preventDefault();
+
+			var highterZ = 0;
 			var popups = $(".popup");
+			$(".popup").each(function(index, elem){
+				console.log(elem, $(elem), $(elem).attr("z-index"));
+				
+				let z = parseInt(elem.style.zIndex);
+				if(z > highterZ) 
+					highterZ = z;
+			});
+
+			this.domElement.style.zIndex = highterZ + 10;
+			for (var i = 0; i < this.listDomElement.length; i++) {
+				this.listDomElement[i].zIndex = highterZ + 11;
+			}
+			//Order by Z index, Zindex -1 ?
 		}
 
 	}

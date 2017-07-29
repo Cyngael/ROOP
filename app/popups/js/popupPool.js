@@ -35,7 +35,7 @@ define(["jquery"],function ($) {
 
 		}
 
-		bringOnFront(id) {
+		bringToFront(id) {
 			
 		}
 
