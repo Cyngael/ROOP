@@ -36,7 +36,18 @@ define(["jquery"],function ($) {
 			}
 		}
 
-		close(id) {
+		closeAll() {
+			console.log("Opening : ", this.listPopup);
+
+			for (var i = 0; i < this.listPopup.length; i++) {
+				if(typeof this.listPopup[i].closeAll == "function")
+					this.listPopup[i].closeAll();
+				else 
+				{
+					if(!this.listPopup[i].closed)
+						this.listPopup[i].close();
+				}
+			}
 
 		}
 

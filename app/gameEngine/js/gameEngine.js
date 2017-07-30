@@ -1,10 +1,11 @@
-define(["jquery", "TaskBar"],function ($, TaskBar) {
+define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 	
 	class GameEngine {
 
 		constructor(params) {
 			if(params)
 			{
+				this.outroPopup = params.outroPopup;
 				this.introPopup = params.introPopup;
 				this.masterPopupPool = params.masterPopupPool;
 				this.allPopupPoolsContainer = params.allPopupPoolsContainer;
@@ -14,9 +15,12 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 		}
 
 		init(params) {
+			this.outroPopup = params.outroPopup;
 			this.introPopup = params.introPopup;
 			this.masterPopupPool = params.masterPopupPool;
 			this.allPopupPoolsContainer = params.allPopupPoolsContainer;
+			this.secBySec = 1;
+			this.timeRemaining = 300;//secondes
 
 			this.introPopup.open();
 		}
@@ -56,9 +60,37 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 						that.allPopupPoolsContainer.skype.openAll();						
 					}
 				}
-			]);
+			], this);
 
 			this.masterPopupPool.openAll();
+			this.startTimer();
+
+		}
+
+		startTimer() {
+			this.timeRemaining = 300;//secondes
+			var that = this;
+			this.timer = setInterval(function(){
+				that.timeRemaining -= that.secBySec;
+				that.majTimerDisplay();
+				if(that.timeRemaining <= 0)
+				{
+					that.endGame(true);
+					return;
+				}
+			},1000);
+		}
+
+		majTimerDisplay() {
+			this.taskBar.updateTimer(Utils.formatSecToMin(this.timeRemaining));
+		}
+
+		endGame(timeout) {
+			console.log(timeout ? "timeout ! " : "End of the game, you WIN");
+
+			this.timer = null;
+			this.masterPopupPool.closeAll();
+			this.outroPopup.open();
 		}
 
 	}
