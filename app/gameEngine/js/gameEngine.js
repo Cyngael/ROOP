@@ -33,6 +33,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			var that = this;
 			this.taskBar = new TaskBar([
 				{
+					img : "app/img/UI/internetIcon.png",
 					txt : "Internet",
 					callback : function(){
 						that.allPopupPoolsContainer.mails.openAll();						
@@ -40,30 +41,35 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 					}
 				},
 				{
+					img : "app/img/UI/skypeIcon.png",
 					txt : "Skype",
 					callback : function(){
 						that.allPopupPoolsContainer.skype.openAll();						
 					}
 				},
 				{
+					img : "app/img/UI/steamIcon.png",
 					txt : "Steam",
 					callback : function(){
 						that.allPopupPoolsContainer.steam.openAll();						
 					}
 				},
 				{
+					img : "app/img/UI/doomIcon.png",
 					txt : "Doom",
 					callback : function(){
 						that.allPopupPoolsContainer.doom.openAll();						
 					}
 				},
 				{
+					img : "app/img/UI/adobeIcon.png",
 					txt : "Adobe",
 					callback : function(){
 						that.allPopupPoolsContainer.adobe.openAll();						
 					}
 				},
 				{
+					img : "app/img/UI/foldersIcon.png",
 					txt : "OpenOffice",
 					callback : function(){
 						that.allPopupPoolsContainer.documents.openAll();						
@@ -80,9 +86,10 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			this.timeRemaining = 300;//secondes
 			this.timeTotalUsed = 0;
 			var that = this;
+
 			this.timer = setInterval(function(){
-				that.timeRemaining -= that.secBySec;
 				that.timeTotalUsed ++;
+				that.timeRemaining -= that.secBySec;
 				that.majTimerDisplay();
 				if(that.timeRemaining <= 0)
 				{
@@ -105,7 +112,8 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			};
 
 			//Check conditions victoire
-			let score = 3000;
+			this.totalTimer = null;
+			let score = Math.ceil(3000 - (this.timeTotalUsed*100));
 			//SKype
 			if(this.allPopupsContainer.skype[0].closed){
 				let add = 1500;

@@ -876,7 +876,7 @@ define(["jquery"],function ($) {
 				x		: 10,
 				y		: 10,
 				width	: 60,
-				height	: 60,
+				height	: 42,
 				img		: "game/doom_base.png",
 				id		: "doom",
 				buttons : {
