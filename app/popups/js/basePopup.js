@@ -39,6 +39,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.height 			= this.height + "%";
 			this.domElement.style.border 			= "8px solid #d7e4f2";
 			this.domElement.onclick 				= this.bringToFront.bind(this);
+
 			this.backgroundImage = document.createElement('img');
 			this.backgroundImage.src = "app/img/" + this.img;
 			this.backgroundImage.style.display = "block";
@@ -211,7 +212,11 @@ define(["jquery"],function ($) {
 			if(className == "close")
 				this.buttonsParams.close.callback = cb;
 			else if(this.buttonsParams.others)
-				this.buttonsParams.others.find(function(o){ return o.className.includes(className)}).callback = cb;
+			{
+				var test = this.buttonsParams.others.find(function(o){ return o.className.includes(className)});
+				if(test)
+					test.callback = cb;
+			}
 		}
 
 		bringToFront(e) {
