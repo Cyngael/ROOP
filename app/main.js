@@ -12,13 +12,21 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 		mails : [],
 		doom : [],
 		steam : [],
-		skype : []
+		skype : [],
+		folders : [],
+		adobe : [],
 	};
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.documents.length; i++) {
 		allPopupsContainer.documents[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.documents[i]);
 	}
+	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.adobe.length; i++) {
+		allPopupsContainer.adobe[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.adobe[i]);
+	}
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.simples.length; i++) {
 		allPopupsContainer.simples[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.simples[i]);
+	}
+	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.folders.length; i++) {
+		allPopupsContainer.folders[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.folders[i]);
 	}
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.mails.length; i++) {
 		allPopupsContainer.mails[i] = new MailPopup(popupsParams.otherPotentialPopupsParams.mails[i]);
@@ -37,7 +45,9 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 
 	var allPopupPoolsContainer = {};
 
+	allPopupPoolsContainer.adobe = new PopupPool(allPopupsContainer.adobe);
 	allPopupPoolsContainer.documents = new PopupPool(allPopupsContainer.documents);
+	allPopupPoolsContainer.folders = new PopupPool(allPopupsContainer.folders);
 	allPopupPoolsContainer.simples = new PopupPool(allPopupsContainer.simples);
 	allPopupPoolsContainer.mails = new PopupPool(allPopupsContainer.mails);
 	allPopupPoolsContainer.doom = new PopupPool(allPopupsContainer.doom);
@@ -45,7 +55,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 	allPopupPoolsContainer.skype = new PopupPool(allPopupsContainer.skype);
 
 
-	var masterPopupPools = new PopupPool([allPopupPoolsContainer.documents, allPopupPoolsContainer.simples, allPopupPoolsContainer.mails,  allPopupPoolsContainer.doom ,allPopupPoolsContainer.steam, allPopupPoolsContainer.skype]);
+	var masterPopupPools = new PopupPool([allPopupPoolsContainer.documents, allPopupPoolsContainer.adobe, allPopupPoolsContainer.folders, allPopupPoolsContainer.simples, allPopupPoolsContainer.mails,  allPopupPoolsContainer.doom ,allPopupPoolsContainer.steam, allPopupPoolsContainer.skype]);
 
 
 
