@@ -2,10 +2,11 @@ define(["jquery"],function ($) {
 	
 	class TaskBar {
 
-		constructor(params) {
+		constructor(params, GE) {
 			
 			this.buttonsParams = params;
 			this.enable = false;
+			this.GE = GE;
 			this.render();
 		}
 
@@ -34,7 +35,6 @@ define(["jquery"],function ($) {
 			$("body").append(this.domElement);
 
 			this.renderButtons();
-
 		}
 
 		renderButtons() {
@@ -61,6 +61,28 @@ define(["jquery"],function ($) {
 
 				this.domElement.append(domButton);
 			}
+
+			this.domBatterie = document.createElement("div");
+			this.domBatterie.style.position = "absolute";
+			this.domBatterie.style.height = "70%";
+			this.domBatterie.style.width = "2%";
+			this.domBatterie.style.margin = "5px";
+			this.domBatterie.style.cursor = "pointer";
+			this.domBatterie.style.left	  = "90%";
+			this.domBatterie.style.border = "1px solid red";
+
+			var that = this;
+			this.domBatterie.onclick = function(){
+				that.GE.endGame(false);
+			};
+
+			this.domBatterie.title = "";
+
+			this.domElement.append(this.domBatterie);
+		}
+
+		updateTimer(string) {
+			this.domBatterie.title = "Time remaining before shutdown : " + string;
 		}
 
 	}

@@ -4,6 +4,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 	var GE = new GameEngine();
 
 	var introPopup = new BasePopup(popupsParams.introPopupParams);
+	var outroPopup = new BasePopup(popupsParams.outroPopupParams);
 
 	var allPopupsContainer = {
 		simples : [],
@@ -47,6 +48,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 
 	var GEparams = {
 		introPopup : introPopup,
+		outroPopup : outroPopup,
 		masterPopupPool  : masterPopupPools,
 		allPopupPoolsContainer : allPopupPoolsContainer,
 	};
