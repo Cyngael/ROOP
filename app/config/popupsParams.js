@@ -72,6 +72,111 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
+					x		: 0,
+					y		: 0,
+					width	: 80,
+					height	: 80,
+					img		: "documents/EmptyDoc.png",
+					id		: "randomPopupConf1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {}
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "documents/EmptyDocPopup1.png",
+								id		: "confirmPopup1",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 90,
+										y		: 20,
+										width	: 15,
+										height	: 17,
+										img		: "",
+										txt 	: "",
+										callback: function() {}
+										confirmPopup : {
+											x		: 35,
+											y		: 35,
+											width	: 20,
+											height	: 10,
+											img		: "documents/EmptyDocPopup2.png",
+											id		: "confirmPopup1",
+											linked  : true,
+											buttons : {
+												close : {
+													className	: "close",
+													x		: 90,
+													y		: 20,
+													width	: 15,
+													height	: 17,
+													img		: "",
+													txt 	: "",
+													callback: function() {}
+												}
+												confirmPopup : {
+												x		: 35,
+												y		: 35,
+												width	: 20,
+												height	: 10,
+												img		: "documents/EmptyDocPopup3.png",
+												id		: "confirmPopup1",
+												linked  : true,
+												buttons : {
+													close : {
+														className	: "close",
+														x		: 90,
+														y		: 20,
+														width	: 15,
+														height	: 17,
+														img		: "",
+														txt 	: "",
+														callback: function() {}
+														confirmPopup : {
+														x		: 35,
+														y		: 35,
+														width	: 20,
+														height	: 10,
+														img		: "documents/EmptyDocPopup4.png",
+														id		: "confirmPopup1",
+														linked  : true,
+															buttons : {
+																close : {
+																	className	: "close",
+																	x		: 90,
+																	y		: 20,
+																	width	: 15,
+																	height	: 17,
+																	img		: "",
+																	txt 	: "",
+																	callback: function() {}
+																}
+															},
+														}
+													}
+												},
+												}
+											},
+										}
+									}
+								},
+							}
+						}
+					},
+				}
+				,
+				{
 					x		: 15,
 					y		: 10,
 					width	: 80,
@@ -87,7 +192,8 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {},
+							callback: function() {
+							},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -95,7 +201,7 @@ define(["jquery"],function ($) {
 								height	: 10,
 								img		: "documents/ProjectWholePopUp.png",
 								id		: "confirmPopup1",
-								linked	: false,
+								linked  : true,
 								buttons : {
 									close : {
 										className	: "close",
@@ -110,7 +216,7 @@ define(["jquery"],function ($) {
 									}
 								},
 							}
-						},
+						}
 					}
 				}
 				,
@@ -120,8 +226,8 @@ define(["jquery"],function ($) {
 					y		: 12,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow2.png",
-					id		: "randomPopup1",
+					img		: "classic_windows/normalwindow1.png",
+					id		: "randomPopup2",
 					buttons : {
 						close : {
 							className	: "close",
@@ -142,8 +248,8 @@ define(["jquery"],function ($) {
 					y		: 12,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow1.png",
-					id		: "randomPopup2",
+					img		: "classic_windows/normalwindow2.png",
+					id		: "randomPopup1",
 					buttons : {
 						close : {
 							className	: "close",
@@ -180,6 +286,28 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
+				,
+				{
+					x		: 5,
+					y		: 8,
+					width	: 80,
+					height	: 80,
+					img		: "classic_windows/safariwindow1.png",
+					id		: "randomPopup3",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 2,
+							y		: 1,
+							width	: 1,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
 				/*pop-ups => other kind of web pages, smaller*/
 				,
 				{
@@ -203,6 +331,60 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
+				,
+				{
+					x		: 30,
+					y		: 20,
+					width	: 45,
+					height	: 45,
+					img		: "pop-ups/AOLTitanic.png",
+					id		: "randomPopupConf1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 104,
+							y		: 90,
+							width	: 25,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					},
+					others : [{
+						className	: "itsatrap",
+						x		: 104,
+						y		: 39,
+						width	: 25,
+						height	: 12,
+						img		: "",
+						txt 	: "",
+						callback: function() {}
+						confirmPopup : {
+							x		: 10,
+							y		: 10,
+							width	: 80,
+							height	: 80,
+							img		: "pop-ups/AOLTitanicStep2.png",
+							id		: "confirmPopup1",
+							linked  : false,
+							buttons : {
+								close : {
+									className	: "close",
+									x		: 0,
+									y		: 97,
+									width	: 3,
+									height	: 2,
+									img		: "",
+									txt 	: "",
+									callback: function() {
+									}
+								}
+							}
+						}		
+					}]
+				}
 			]
 			,
 			mails : [
@@ -220,7 +402,7 @@ define(["jquery"],function ($) {
 							x		: 0,
 							y		: 97,
 							width	: 3,
-							height	: 2,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -229,9 +411,9 @@ define(["jquery"],function ($) {
 						,
 						others : [{
 							className	: "sendMail",
-							x		: 103,
-							y		: 0,
-							width	: 5,
+							x		: 101,
+							y		: 1,
+							width	: 4,
 							height	: 3,
 							img		: "",
 							txt 	: "",
@@ -244,6 +426,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
+							"Choose a destinary",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
@@ -254,8 +437,8 @@ define(["jquery"],function ($) {
 					}
 				},
 				{
-					x		: 25,
-					y		: 10,
+					x		: 20,
+					y		: 15,
 					width	: 80,
 					height	: 80,
 					img		: "mail/urgent_mail2.png",
@@ -266,16 +449,16 @@ define(["jquery"],function ($) {
 							x		: 0,
 							y		: 97,
 							width	: 3,
-							height	: 2,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {}						
 						},
 						others : [{
 							className	: "sendMail",
-							x		: 103,
-							y		: 0,
-							width	: 5,
+							x		: 65,
+							y		: 1,
+							width	: 4,
 							height	: 3,
 							img		: "",
 							txt 	: "",
@@ -288,6 +471,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
+							"Choose a destinary",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
@@ -321,8 +505,9 @@ define(["jquery"],function ($) {
 				},
 				imgStates : [
 					"game/doom_base.png",
-					"game/doom_load.png",
 					"game/doom_option.png",
+					"game/doom_load.png",
+					"game/doom_save.png",
 					"game/doom_read.png",
 					"game/doom_quit.png",
 				]
