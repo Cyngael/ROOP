@@ -91,7 +91,18 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			this.timer = null;
 			this.masterPopupPool.closeAll();
 			this.taskBar.close();
+			this.hardCleanPopup();
+
 			this.outroPopup.open();
+		}
+
+		hardCleanPopup() {
+			document.getElementById("popupContainer").innerHTML = "";
+			var id = window.setTimeout(function() {}, 0);
+
+			while (id--) {
+			    window.clearTimeout(id); // will do nothing if no timeout with id is present
+			}
 		}
 
 	}
