@@ -9,6 +9,7 @@ requirejs.config({
         SteamPopup 	: '../app/popups/js/steamPopup',
         SkypePopup	: '../app/popups/js/skypePopup',
         PopupPool 	: '../app/popups/js/popupPool',
+        Utils 	: '../app/utils/Utils',
         GameEngine 	: '../app/gameEngine/js/gameEngine',
         TaskBar 	: '../app/gameEngine/js/taskBar',
         popupsParams 	: '../app/config/popupsParams',
