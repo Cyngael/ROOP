@@ -338,7 +338,7 @@ define(["jquery"],function ($) {
 							height	: 12,
 							img		: "",
 							txt 	: "",
-							callback: function() {},		
+							callback: function() {}		
 						}]
 					}
 				}
