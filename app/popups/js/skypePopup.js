@@ -6,21 +6,45 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			super(params);
 			this.callPopupParams = params.callPopup;
 			this.callPopup = new BasePopup(this.callPopupParams);
+			this.inputParams = params.input;
 		}
 
 		open() {
 			super.open();
+			var that = this;
 
 
-			// this.domInput = document.createElement("input");
+			this.domInput = document.createElement("input");
 			
-			// this.domInput.style.position 			= "absolute";
-			// this.domInput.style.top 				= this.selectList.x + "%";
-			// this.domInput.style.left 				= this.selectList.y + "%";
-			// this.domInput.style.width				= this.selectList.width + "%";
-			// this.domInput.style.height 				= this.selectList.height + "%";
+			this.domInput.style.position 			= "absolute";
+			this.domInput.style.top 				= this.inputParams.x + "%";
+			this.domInput.style.left 				= this.inputParams.y + "%";
+			this.domInput.style.width				= this.inputParams.width + "%";
+			this.domInput.style.height 				= this.inputParams.height + "%";
+			this.domInput.onkeyup = function(e){
+				let x = e.which || e.keyCode;
+				if (x == 13)//Enter
+				{
+					let isEnought = true;
+					for (var i = 0; i < that.inputParams.keywords.length; i++) {
+						if(!this.value.toUpperCase().includes(that.inputParams.keywords[i].toUpperCase()))
+							isEnought = false;
+					}
 
-			// this.domElement.append(this.domInput);
+					if(isEnought)
+					{
+						this.isGFWaiting = false;
+						that.close();
+					}
+					else
+					{
+						this.value = "";
+					}
+				}
+
+			}
+
+			this.domElement.append(this.domInput);
 
 			this.setButtonCallback("close", this.hideAndTimer.bind(this))
 		}

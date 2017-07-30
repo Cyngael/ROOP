@@ -654,6 +654,13 @@ define(["jquery"],function ($) {
 						callback: function() {}
 					}
 				},
+				input : {
+					x		: 98,
+					y		: 5,
+					width	: 90,
+					height	: 5,
+					keywords: ["bye", "sorry", "42"] 
+				},
 				callPopup : {
 					timer   : 5000,
 					x		: 35,
