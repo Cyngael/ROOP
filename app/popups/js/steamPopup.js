@@ -10,7 +10,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 		close()
 		{
-			if()
+			if(false)
 			{
 				var errorPopup = new BasePopup(this.errorPopupParams);
 				errorPopup.open();

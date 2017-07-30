@@ -87,7 +87,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {}
+							callback: function() {},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -105,7 +105,7 @@ define(["jquery"],function ($) {
 										height	: 17,
 										img		: "",
 										txt 	: "",
-										callback: function() {}
+										callback: function() {},
 										confirmPopup : {
 											x		: 35,
 											y		: 35,
@@ -123,8 +123,8 @@ define(["jquery"],function ($) {
 													height	: 17,
 													img		: "",
 													txt 	: "",
-													callback: function() {}
-												}
+													callback: function() {},
+												},
 												confirmPopup : {
 												x		: 35,
 												y		: 35,
@@ -142,31 +142,31 @@ define(["jquery"],function ($) {
 														height	: 17,
 														img		: "",
 														txt 	: "",
-														callback: function() {}
+														callback: function() {},
 														confirmPopup : {
-														x		: 35,
-														y		: 35,
-														width	: 20,
-														height	: 10,
-														img		: "documents/EmptyDocPopup4.png",
-														id		: "confirmPopup1",
-														linked  : true,
-															buttons : {
-																close : {
-																	className	: "close",
-																	x		: 90,
-																	y		: 20,
-																	width	: 15,
-																	height	: 17,
-																	img		: "",
-																	txt 	: "",
-																	callback: function() {}
-																}
-															},
+															x		: 35,
+															y		: 35,
+															width	: 20,
+															height	: 10,
+															img		: "documents/EmptyDocPopup4.png",
+															id		: "confirmPopup1",
+															linked  : true,
+																buttons : {
+																	close : {
+																		className	: "close",
+																		x		: 90,
+																		y		: 20,
+																		width	: 15,
+																		height	: 17,
+																		img		: "",
+																		txt 	: "",
+																		callback: function() {},
+																	}
+																},
+															}
 														}
 													}
 												},
-												}
 											},
 										}
 									}
@@ -360,7 +360,7 @@ define(["jquery"],function ($) {
 						height	: 12,
 						img		: "",
 						txt 	: "",
-						callback: function() {}
+						callback: function() {},
 						confirmPopup : {
 							x		: 10,
 							y		: 10,
@@ -531,7 +531,7 @@ define(["jquery"],function ($) {
 						txt 	: "",
 						callback: function() {}
 					}
-				}
+				},
 				errorPopup : {
 					x		: 35,
 					y		: 35,
