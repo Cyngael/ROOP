@@ -1,4 +1,4 @@
-define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, SteamPopup, SkypePopup, GameEngine, PopupPool, popupsParams) {
+define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePopup", "AdobePopup",  "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, SteamPopup, SkypePopup, AdobePopup,  GameEngine, PopupPool, popupsParams) {
 
 	
 	var GE = new GameEngine();
@@ -20,7 +20,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 		allPopupsContainer.documents[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.documents[i]);
 	}
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.adobe.length; i++) {
-		allPopupsContainer.adobe[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.adobe[i]);
+		allPopupsContainer.adobe[i] = new AdobePopup(popupsParams.otherPotentialPopupsParams.adobe[i], GE);
 	}
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.simples.length; i++) {
 		allPopupsContainer.simples[i] = new BasePopup(popupsParams.otherPotentialPopupsParams.simples[i]);

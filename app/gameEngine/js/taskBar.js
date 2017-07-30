@@ -76,10 +76,12 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 				that.powerPlanPopup.setButtonCallback("riskPowerPlan", function(){
 					that.GE.setPowerPlanRisk(true);
 					that.powerPlanPopup.setImg(popupsParams.powerPlanPopupParams.imgRisk);
+					that.powerPlanPopup.hide();
 				});
 				that.powerPlanPopup.setButtonCallback("normalPowerPlan", function(){
 					that.GE.setPowerPlanRisk(false);
 					that.powerPlanPopup.setImg(popupsParams.powerPlanPopupParams.img);
+					that.powerPlanPopup.hide();
 				});
 			};
 

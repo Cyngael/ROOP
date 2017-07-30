@@ -367,8 +367,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							},
+							callback: function() {},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -386,8 +385,7 @@ define(["jquery"],function ($) {
 										height	: 17,
 										img		: "",
 										txt 	: "",
-										callback: function() {
-										}
+										callback: function() {}
 									}
 								},
 							}
@@ -404,6 +402,7 @@ define(["jquery"],function ($) {
 					height	: 100,
 					img		: "Adobe/Fireworks.png",
 					id		: "randomPopupConf10",
+					timeWin : 10,
 					buttons : {
 						close : {
 							className	: "close",
@@ -413,8 +412,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							},
+							callback: function() {},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -432,35 +430,46 @@ define(["jquery"],function ($) {
 										height	: 24,
 										img		: "",
 										txt 	: "",
-										callback: function() {
-										},
-										savePopup : {
-											x		: 35,
-											y		: 35,
-											width	: 20,
-											height	: 10,
-											img		: "Adobe/savePopup.png",
-											id		: "confirmPopup10",
-											linked  : true,
-											buttons : {
-												close : {
-													className	: "close",
-													x		: 138,
-													y		: 15,
-													width	: 24,
-													height	: 24,
-													img		: "",
-													txt 	: "",
-													callback: function() {
-													}
-												}
-											},
-										}
+										callback: function() {},
 									}
 								},
 							}
 						}
 					},
+					savePopup : {
+						x		: 35,
+						y		: 35,
+						width	: 20,
+						height	: 10,
+						img		: "Adobe/savePopup01.png",
+						id		: "savePopup1",
+						timer  : 3,//Temps mis a sauvegarder
+						steps : [
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup02.png",
+							"Adobe/savePopup03.png",
+							"Adobe/savePopup05.png",
+							"Adobe/savePopup08.png",
+							"Adobe/savePopup10.png",
+							"Adobe/savePopup13.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup15.png",
+							"Adobe/savePopup15.png"
+						],
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 138,
+								y		: 15,
+								width	: 24,
+								height	: 24,
+								img		: "",
+								txt 	: "",
+								callback: function() {}
+							}
+						},
+					}
 				}
 				,
 				{
@@ -470,6 +479,7 @@ define(["jquery"],function ($) {
 					height	: 100,
 					img		: "Adobe/Flash.png",
 					id		: "randomPopupConf11",
+					timeWin : 10,
 					buttons : {
 						close : {
 							className	: "close",
@@ -479,8 +489,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							},
+							callback: function() {},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -498,35 +507,46 @@ define(["jquery"],function ($) {
 										height	: 19,
 										img		: "",
 										txt 	: "",
-										callback: function() {
-										},
-										savePopup : {
-											x		: 35,
-											y		: 35,
-											width	: 20,
-											height	: 10,
-											img		: "Adobe/savePopup.png",
-											id		: "confirmPopup10",
-											linked  : true,
-											buttons : {
-												close : {
-													className	: "close",
-													x		: 138,
-													y		: 15,
-													width	: 24,
-													height	: 24,
-													img		: "",
-													txt 	: "",
-													callback: function() {
-													}
-												}
-											},
-										}
+										callback: function() {},
 									}
 								},
 							}
 						}
 					},
+					savePopup : {
+						x		: 35,
+						y		: 35,
+						width	: 20,
+						height	: 10,
+						img		: "Adobe/savePopup01.png",
+						id		: "savePopup2",
+						timer  : 3,//Temps mis a sauvegarder
+						steps : [
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup04.png",
+							"Adobe/savePopup05.png",
+							"Adobe/savePopup06.png",
+							"Adobe/savePopup06.png",
+							"Adobe/savePopup13.png",
+							"Adobe/savePopup15.png",
+							"Adobe/savePopup15.png"
+						],
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 138,
+								y		: 15,
+								width	: 24,
+								height	: 24,
+								img		: "",
+								txt 	: "",
+								callback: function() {}
+							}
+						},
+					}
 				}
 				,
 				{
@@ -536,6 +556,7 @@ define(["jquery"],function ($) {
 					height	: 100,
 					img		: "Adobe/Photoshop.png",
 					id		: "randomPopupConf12",
+					timeWin : 10,
 					buttons : {
 						close : {
 							className	: "close",
@@ -545,8 +566,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							},
+							callback: function() {},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -564,35 +584,46 @@ define(["jquery"],function ($) {
 										height	: 19,
 										img		: "",
 										txt 	: "",
-										callback: function() {
-										},
-										savePopup : {
-											x		: 35,
-											y		: 35,
-											width	: 20,
-											height	: 10,
-											img		: "Adobe/savePopup.png",
-											id		: "confirmPopup10",
-											linked  : true,
-											buttons : {
-												close : {
-													className	: "close",
-													x		: 138,
-													y		: 15,
-													width	: 24,
-													height	: 24,
-													img		: "",
-													txt 	: "",
-													callback: function() {
-													}
-												}
-											},
-										}
+										callback: function() {},
 									}
 								},
 							}
 						}
 					},
+					savePopup : {
+						x		: 35,
+						y		: 35,
+						width	: 20,
+						height	: 10,
+						img		: "Adobe/savePopup01.png",
+						id		: "savePopup3",
+						timer  : 3,//Temps mis a sauvegarder
+						steps : [
+							"Adobe/savePopup01.png",
+							"Adobe/savePopup05.png",
+							"Adobe/savePopup06.png",
+							"Adobe/savePopup08.png",
+							"Adobe/savePopup11.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup14.png",
+							"Adobe/savePopup15.png",
+							"Adobe/savePopup15.png"
+						],
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 138,
+								y		: 15,
+								width	: 24,
+								height	: 24,
+								img		: "",
+								txt 	: "",
+								callback: function() {}
+							}
+						},
+					}
 				}
 			
 			],
@@ -614,8 +645,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
+							callback: function() {}
 						}
 					}
 				}
@@ -636,8 +666,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
+							callback: function() {}
 						}
 					}
 				}
@@ -658,8 +687,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
+							callback: function() {}
 						}
 					}
 				}
@@ -680,8 +708,7 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
+							callback: function() {}
 						}
 					}
 				}

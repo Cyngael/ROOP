@@ -47,43 +47,43 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 					img : "app/img/UI/internetIcon.png",
 					txt : "Internet",
 					callback : function(){
-						that.allPopupPoolsContainer.mails.openAll();						
-						that.allPopupPoolsContainer.simples.openAll();						
+						that.allPopupPoolsContainer.mails.bringToFront();						
+						that.allPopupPoolsContainer.simples.bringToFront();						
 					}
 				},
 				{
 					img : "app/img/UI/skypeIcon.png",
 					txt : "Skype",
 					callback : function(){
-						that.allPopupPoolsContainer.skype.openAll();						
+						that.allPopupPoolsContainer.skype.bringToFront();						
 					}
 				},
 				{
 					img : "app/img/UI/steamIcon.png",
 					txt : "Steam",
 					callback : function(){
-						that.allPopupPoolsContainer.steam.openAll();						
+						that.allPopupPoolsContainer.steam.bringToFront();						
 					}
 				},
 				{
 					img : "app/img/UI/doomIcon.png",
 					txt : "Doom",
 					callback : function(){
-						that.allPopupPoolsContainer.doom.openAll();						
+						that.allPopupPoolsContainer.doom.bringToFront();						
 					}
 				},
 				{
 					img : "app/img/UI/adobeIcon.png",
 					txt : "Adobe",
 					callback : function(){
-						that.allPopupPoolsContainer.adobe.openAll();						
+						that.allPopupPoolsContainer.adobe.bringToFront();						
 					}
 				},
 				{
 					img : "app/img/UI/foldersIcon.png",
 					txt : "OpenOffice",
 					callback : function(){
-						that.allPopupPoolsContainer.documents.openAll();						
+						that.allPopupPoolsContainer.documents.bringToFront();						
 					}
 				}
 			], this);
@@ -108,6 +108,10 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 					return;
 				}
 			},1000);
+		}
+
+		adobeClosed (timeWin) {
+			this.timeRemaining += timeWin;
 		}
 
 		majTimerDisplay() {
@@ -202,7 +206,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 			}
 
 
-			this.timer = null;
+			clearInterval(this.timer);
 			this.masterPopupPool.closeAll();
 			this.taskBar.close();
 			this.hardCleanPopup();

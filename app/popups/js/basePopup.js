@@ -13,9 +13,11 @@ define(["jquery"],function ($) {
 			this.id 	= params.id;
 			this.buttonsParams = params.buttons;
 			this.confirmPopupParams = params.confirmPopup;
+			this.savePopupParams = params.savePopup;
 
 			this.duplicates = [];
 
+			this.hidden = false;
 			this.closed = true;
 			this.disabled = true;
 		}
@@ -24,6 +26,9 @@ define(["jquery"],function ($) {
 
 			if(!this.closed)
 			{
+				if(this.hidden)
+					this.show();
+
 				return;
 			}
 			
@@ -37,7 +42,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.left 				= this.y + "%";
 			this.domElement.style.width				= this.width + "%";
 			this.domElement.style.height 			= this.height + "%";
-			this.domElement.style.border 			= "8px solid #d7e4f2";
+			//this.domElement.style.border 			= "8px solid #d7e4f2";
 			this.domElement.onclick 				= this.bringToFront.bind(this);
 
 			this.backgroundImage = document.createElement('img');
@@ -45,6 +50,7 @@ define(["jquery"],function ($) {
 			this.backgroundImage.style.display = "block";
 			this.backgroundImage.style.width = "100%";
 			this.backgroundImage.style.height = "auto";
+			this.backgroundImage.style.position = "absolute";
 
 			this.domElement.append(this.backgroundImage);
 
@@ -101,6 +107,7 @@ define(["jquery"],function ($) {
 			domElement.style.height 			= params.height + "%";
 			domElement.style.backgroundImage 	= "url(" + params.img + ")";
 			domElement.style.border 			= "1px solid blue";
+			domElement.style.cursor				= "pointer";
 			domElement.innerHTML 				= params.txt;
 
 			this.listDomElement.push(domElement);
@@ -157,6 +164,8 @@ define(["jquery"],function ($) {
 			return domElement;
 		}
 
+
+
 		close() {
 			if(this.domElement.style.display != "none")
 			{
@@ -208,10 +217,12 @@ define(["jquery"],function ($) {
 
 		show() {
 			this.domElement.style.display = "block";
+			this.hidden = false;
 		}
 
 		hide() {
 			this.domElement.style.display = "none";
+			this.hidden = true;
 		}
 
 		setButtonCallback(className, cb) {
@@ -228,11 +239,21 @@ define(["jquery"],function ($) {
 		setImg(newImgPath) {
 			this.img = newImgPath;
 			var path = "app/img/" + this.img;
-			    var image = $(this.backgroundImage);
-			    image.fadeOut('fast', function () {
-			        image.attr('src', path);
-			        image.fadeIn('fast');
-			    });
+
+		    var imageClone = this.backgroundImage.cloneNode(true);
+		    imageClone.src = path;
+		    imageClone.className = "clone";
+		    this.backgroundImage.parentElement.append(imageClone);
+
+			var image = $(this.backgroundImage);
+		    image.fadeOut('fast', function () {
+		        image.attr('src', path);
+		        image.fadeIn(10,function(){
+		        	$(imageClone).remove();
+		        });
+		    });
+
+
 		}
 
 		majTxt(className, txt) {

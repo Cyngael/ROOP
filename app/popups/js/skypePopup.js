@@ -80,7 +80,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 		close() {
 			if(!this.isGFWaiting)
 			{
-				this.timer = null;
+				clearInterval(this.timer);
 				super.close();
 			}
 		}

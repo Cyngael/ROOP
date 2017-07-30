@@ -21,7 +21,6 @@ define(["jquery"],function ($) {
 						this.listPopup[i].bringToFront();
 				}
 			}
-
 		}
 
 		randomizePositions(xMin,xMax, yMin, yMax) {
@@ -52,7 +51,7 @@ define(["jquery"],function ($) {
 		}
 
 		bringToFront() {
-			for (var i = 0; i < this.listPopup[i].length; i++) {
+			for (var i = 0; i < this.listPopup.length; i++) {
 				this.listPopup[i].bringToFront();
 			}
 
