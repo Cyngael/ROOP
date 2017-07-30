@@ -87,57 +87,15 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
-						}
-					},
-					confirmPopup : {
-						x		: 35,
-						y		: 35,
-						width	: 20,
-						height	: 10,
-						img		: "documents/EmptyDocPopup1.png",
-						id		: "confirmPopup1",
-						buttons : {
-							close : {
-								className	: "close",
-								x		: 90,
-								y		: 20,
-								width	: 15,
-								height	: 17,
-								img		: "",
-								txt 	: "",
-								callback: function() {
-								}
-							}
-						},
-						confirmPopup : {
-							x		: 35,
-							y		: 35,
-							width	: 20,
-							height	: 10,
-							img		: "documents/EmptyDocPopup2.png",
-							id		: "confirmPopup1",
-							buttons : {
-								close : {
-									className	: "close",
-									x		: 90,
-									y		: 20,
-									width	: 15,
-									height	: 17,
-									img		: "",
-									txt 	: "",
-									callback: function() {
-									}
-								}
-							},
+							callback: function() {}
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
 								width	: 20,
 								height	: 10,
-								img		: "documents/EmptyDocPopup3.png",
+								img		: "documents/EmptyDocPopup1.png",
 								id		: "confirmPopup1",
+								linked  : true,
 								buttons : {
 									close : {
 										className	: "close",
@@ -147,34 +105,75 @@ define(["jquery"],function ($) {
 										height	: 17,
 										img		: "",
 										txt 	: "",
-										callback: function() {
+										callback: function() {}
+										confirmPopup : {
+											x		: 35,
+											y		: 35,
+											width	: 20,
+											height	: 10,
+											img		: "documents/EmptyDocPopup2.png",
+											id		: "confirmPopup1",
+											linked  : true,
+											buttons : {
+												close : {
+													className	: "close",
+													x		: 90,
+													y		: 20,
+													width	: 15,
+													height	: 17,
+													img		: "",
+													txt 	: "",
+													callback: function() {}
+												}
+												confirmPopup : {
+												x		: 35,
+												y		: 35,
+												width	: 20,
+												height	: 10,
+												img		: "documents/EmptyDocPopup3.png",
+												id		: "confirmPopup1",
+												linked  : true,
+												buttons : {
+													close : {
+														className	: "close",
+														x		: 90,
+														y		: 20,
+														width	: 15,
+														height	: 17,
+														img		: "",
+														txt 	: "",
+														callback: function() {}
+														confirmPopup : {
+														x		: 35,
+														y		: 35,
+														width	: 20,
+														height	: 10,
+														img		: "documents/EmptyDocPopup4.png",
+														id		: "confirmPopup1",
+														linked  : true,
+															buttons : {
+																close : {
+																	className	: "close",
+																	x		: 90,
+																	y		: 20,
+																	width	: 15,
+																	height	: 17,
+																	img		: "",
+																	txt 	: "",
+																	callback: function() {}
+																}
+															},
+														}
+													}
+												},
+												}
+											},
 										}
 									}
 								},
-								confirmPopup : {
-									x		: 35,
-									y		: 35,
-									width	: 20,
-									height	: 10,
-									img		: "documents/EmptyDocPopup4.png",
-									id		: "confirmPopup1",
-									buttons : {
-										close : {
-											className	: "close",
-											x		: 90,
-											y		: 20,
-											width	: 15,
-											height	: 17,
-											img		: "",
-											txt 	: "",
-											callback: function() {
-											}
-										}
-									},
-								}
 							}
-					}
-					}
+						}
+					},
 				}
 				,
 				{
@@ -193,7 +192,8 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {},
+							callback: function() {
+							},
 							confirmPopup : {
 								x		: 35,
 								y		: 35,
@@ -201,7 +201,7 @@ define(["jquery"],function ($) {
 								height	: 10,
 								img		: "documents/ProjectWholePopUp.png",
 								id		: "confirmPopup1",
-								linked	: false,
+								linked  : true,
 								buttons : {
 									close : {
 										className	: "close",
@@ -216,7 +216,7 @@ define(["jquery"],function ($) {
 									}
 								},
 							}
-						},
+						}
 					}
 				}
 				,
@@ -343,7 +343,7 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 104,
-							y		: 39,
+							y		: 90,
 							width	: 25,
 							height	: 12,
 							img		: "",
@@ -352,27 +352,38 @@ define(["jquery"],function ($) {
 							}
 						}
 					},
-					confirmPopup : {
-						x		: 10,
-						y		: 10,
-						width	: 80,
-						height	: 80,
-						img		: "pop-ups/AOLTitanicStep2.png",
-						id		: "confirmPopup1",
-						buttons : {
-							close : {
-								className	: "close",
-								x		: 0,
-								y		: 97,
-								width	: 3,
-								height	: 2,
-								img		: "",
-								txt 	: "",
-								callback: function() {
+					others : [{
+						className	: "itsatrap",
+						x		: 104,
+						y		: 39,
+						width	: 25,
+						height	: 12,
+						img		: "",
+						txt 	: "",
+						callback: function() {}
+						confirmPopup : {
+							x		: 10,
+							y		: 10,
+							width	: 80,
+							height	: 80,
+							img		: "pop-ups/AOLTitanicStep2.png",
+							id		: "confirmPopup1",
+							linked  : false,
+							buttons : {
+								close : {
+									className	: "close",
+									x		: 0,
+									y		: 97,
+									width	: 3,
+									height	: 2,
+									img		: "",
+									txt 	: "",
+									callback: function() {
+									}
 								}
 							}
-						}
-					}
+						}		
+					}]
 				}
 			]
 			,
