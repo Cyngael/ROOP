@@ -94,7 +94,7 @@ define(["jquery"],function ($) {
 								width	: 20,
 								height	: 10,
 								img		: "documents/EmptyDocPopup1.png",
-								id		: "confirmPopup1",
+								id		: "confirmPopup2",
 								linked  : true,
 								buttons : {
 									close : {
@@ -112,7 +112,7 @@ define(["jquery"],function ($) {
 											width	: 20,
 											height	: 10,
 											img		: "documents/EmptyDocPopup2.png",
-											id		: "confirmPopup2",
+											id		: "confirmPopup21",
 											linked  : true,
 											buttons : {
 												close : {
@@ -130,7 +130,7 @@ define(["jquery"],function ($) {
 													width	: 20,
 													height	: 10,
 													img		: "documents/EmptyDocPopup3.png",
-													id		: "confirmPopup3",
+													id		: "confirmPopup211",
 													linked  : true,
 													buttons : {
 														close : {
@@ -148,7 +148,7 @@ define(["jquery"],function ($) {
 																width	: 20,
 																height	: 10,
 																img		: "documents/EmptyDocPopup4.png",
-																id		: "confirmPopup4",
+																id		: "confirmPopup2111",
 																linked  : true,
 																buttons : {
 																	close : {
@@ -200,7 +200,7 @@ define(["jquery"],function ($) {
 								width	: 20,
 								height	: 10,
 								img		: "documents/ProjectWholePopUp.png",
-								id		: "confirmPopup1",
+								id		: "confirmPopup3",
 								linked  : true,
 								buttons : {
 									close : {
@@ -377,7 +377,7 @@ define(["jquery"],function ($) {
 								width	: 80,
 								height	: 80,
 								img		: "pop-ups/AOLTitanicStep2.png",
-								id		: "confirmPopup1",
+								id		: "confirmPopup4",
 								linked  : false,
 								buttons : {
 									close : {
@@ -521,7 +521,7 @@ define(["jquery"],function ($) {
 					width	: 20,
 					height	: 10,
 					img		: "documents/TomorrowPresPopUp.png",
-					id		: "confirmPopup1",
+					id		: "confirmPopup5",
 					linked  : true,
 					buttons : {
 						close : {
