@@ -90,6 +90,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 			this.timer = null;
 			this.masterPopupPool.closeAll();
+			this.taskBar.close();
 			this.outroPopup.open();
 		}
 

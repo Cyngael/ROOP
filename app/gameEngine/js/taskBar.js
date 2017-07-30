@@ -85,6 +85,11 @@ define(["jquery"],function ($) {
 			this.domBatterie.title = "Time remaining before shutdown : " + string;
 		}
 
+		close() {
+			if($("#taskBar"))
+				$("#taskBar").remove();
+		}
+
 	}
 
 	return TaskBar;
