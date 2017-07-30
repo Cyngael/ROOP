@@ -43,6 +43,12 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 					callback : function(){
 						that.allPopupPoolsContainer.games.openAll();						
 					}
+				},
+				{
+					txt : "Skype",
+					callback : function(){
+						that.allPopupPoolsContainer.skype.openAll();						
+					}
 				}
 			]);
 
