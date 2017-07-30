@@ -154,7 +154,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 			this.outroPopup.majTxt("gfResult", texts.gfResult);
 			this.outroPopup.majTxt("mailResult", texts.mailResult);
-			this.outroPopup.majTxt("docResult", nbDocClosed);
+			this.outroPopup.majTxt("docResult", nbDocClosed + " * 200pts");
 			this.outroPopup.majTxt("scoreResult", score);
 
 			this.outroPopup.open();
