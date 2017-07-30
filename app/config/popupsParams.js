@@ -342,48 +342,49 @@ define(["jquery"],function ($) {
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 104,
-							y		: 90,
-							width	: 25,
-							height	: 12,
+							x		: 110,
+							y		: 85,
+							width	: 12,
+							height	: 6,
 							img		: "",
 							txt 	: "",
 							callback: function() {
 							}
 						}
-					},
-					others : [{
-						className	: "itsatrap",
-						x		: 104,
-						y		: 39,
-						width	: 25,
-						height	: 12,
-						img		: "",
-						txt 	: "",
-						callback: function() {},
-						confirmPopup : {
-							x		: 10,
-							y		: 10,
-							width	: 80,
-							height	: 80,
-							img		: "pop-ups/AOLTitanicStep2.png",
-							id		: "confirmPopup1",
-							linked  : false,
-							buttons : {
-								close : {
-									className	: "close",
-									x		: 0,
-									y		: 97,
-									width	: 3,
-									height	: 2,
-									img		: "",
-									txt 	: "",
-									callback: function() {
+						,
+						others : [{
+							className	: "itsATrap",
+							x		: 104,
+							y		: 39,
+							width	: 25,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {},
+							confirmPopup : {
+								x		: 10,
+								y		: 10,
+								width	: 80,
+								height	: 80,
+								img		: "pop-ups/AOLTitanicStep2.png",
+								id		: "confirmPopup1",
+								linked  : false,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 0,
+										y		: 97,
+										width	: 3,
+										height	: 2,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
 									}
 								}
-							}
-						}		
-					}]
+							}		
+						}]
+					},
 				}
 			]
 			,
