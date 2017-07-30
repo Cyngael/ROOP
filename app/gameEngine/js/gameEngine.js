@@ -61,6 +61,12 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 					callback : function(){
 						that.allPopupPoolsContainer.skype.openAll();						
 					}
+				},
+				{
+					txt : "OpenOffice",
+					callback : function(){
+						that.allPopupPoolsContainer.documents.openAll();						
+					}
 				}
 			], this);
 
@@ -98,10 +104,14 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			//Check conditions victoire
 			let score = 0;
 			//SKype
-			if(this.allPopupsContainer.skype[0].closed)
+			if(this.allPopupsContainer.skype[0].closed){
 				texts.gfResult = "Wow, you made it like a boss. Your girldfriend understood you had a probleme and you will call her later on phone. +1000pts";
-			else
+				score += 1000;
+			}
+			else{
 				texts.gfResult = "You made your girlfriend angry because she didn't understand your quick departure. You should have said some kind words. +0pts";
+				score += 0;
+			}
 
 			//Mails
 			let tempTextTab = [
@@ -109,6 +119,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 				"Big mistake. You sent the mails to the wrong persons. Now it's a mess. at least you've not lost them. +500pts",
 				"Oh no! You had some important mails to send but your didn't ! Now the boss is very angry at you and you're in trouble ! +0pts",
 			]
+			let tempScoreTab = [1000,500,0];
 			let failLevel = 0;
 			for (var i = 0; i < this.allPopupsContainer.mails.length; i++) {
 				if(!this.allPopupsContainer.mails[i].sended)
@@ -123,6 +134,15 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			}
 
 			texts.mailResult = tempTextTab[failLevel];
+			score += tempScoreTab[failLevel];
+
+			var nbDocClosed = 0;
+			for (var i = 0; i < this.allPopupsContainer.documents.length; i++) {
+				if(this.allPopupsContainer.documents[i].closed) {
+					score += 200;
+					nbDocClosed ++;
+				}
+			}
 
 
 
@@ -134,7 +154,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 			this.outroPopup.majTxt("gfResult", texts.gfResult);
 			this.outroPopup.majTxt("mailResult", texts.mailResult);
-			this.outroPopup.majTxt("docResult", "42");
+			this.outroPopup.majTxt("docResult", nbDocClosed);
 			this.outroPopup.majTxt("scoreResult", score);
 
 			this.outroPopup.open();
