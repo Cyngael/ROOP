@@ -329,6 +329,17 @@ define(["jquery"],function ($) {
 							callback: function() {
 							}
 						}
+						,
+						others : [{
+							className	: "duplicate",
+							x		: 104,
+							y		: 39,
+							width	: 25,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {},		
+						}]
 					}
 				}
 				,
