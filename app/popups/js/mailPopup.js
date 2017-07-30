@@ -36,12 +36,12 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			if(this.selectList.answer == this.domSelect.value)
 			{
 				console.log("SUCCES : Sending mail to the right person !")
-				this._doClose();
+				this.close();
 			}
 			else
 			{
 				console.log("FAIL : Sending mail to the wrong person !")
-				this._doClose();
+				this.close();
 			}
 		}
 

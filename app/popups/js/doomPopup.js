@@ -23,6 +23,8 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 			var that = this;
 			this.domElement.tabIndex = "0";
+			this.domElement.style.border = "";
+
 
 			this.domElement.onclick = function(){
 				that.bringToFront.bind(that);
@@ -30,7 +32,6 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			}
 
 			this.domElement.onkeydown = function(event){
-				console.log('hey')
 				if(!that.isFocused)
 					return;
 

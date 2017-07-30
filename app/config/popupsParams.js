@@ -86,28 +86,27 @@ define(["jquery"],function ($) {
 							height	: 2,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
-						}
-					},
-					confirmPopup : {
-						x		: 35,
-						y		: 35,
-						width	: 20,
-						height	: 10,
-						img		: "documents/ProjectWholePopUp.png",
-						id		: "confirmPopup1",
-						buttons : {
-							close : {
-								className	: "close",
-								x		: 90,
-								y		: 20,
-								width	: 15,
-								height	: 17,
-								img		: "",
-								txt 	: "",
-								callback: function() {
-								}
+							callback: function() {},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "documents/ProjectWholePopUp.png",
+								id		: "confirmPopup1",
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 90,
+										y		: 20,
+										width	: 15,
+										height	: 17,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
 							}
 						},
 					}

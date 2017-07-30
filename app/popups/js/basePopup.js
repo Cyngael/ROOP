@@ -33,7 +33,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.left 				= this.y + "%";
 			this.domElement.style.width				= this.width + "%";
 			this.domElement.style.height 			= this.height + "%";
-			this.domElement.style.border 			= "1px solid black";
+			this.domElement.style.border 			= "8px solid #d7e4f2";
 			this.domElement.onclick 				= this.bringToFront.bind(this);
 			this.backgroundImage = document.createElement('img');
 			this.backgroundImage.src = "app/img/" + this.img;
@@ -102,11 +102,25 @@ define(["jquery"],function ($) {
 				else if(that.buttonsParams.others)
 					paramsIn = that.buttonsParams.others.find(function(o){ return o.className.includes(className)});
 
-				if(typeof paramsIn.callback == "function")
-					paramsIn.callback();
 
-				if(typeof callback == "function")
-					callback()
+				if(paramsIn.confirmPopup)
+				{
+					var confirmPopup = new BasePopup(paramsIn.confirmPopup);
+					confirmPopup.open();
+					confirmPopup.setButtonCallback("close", that.close.bind(that));
+					setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);
+
+				}
+				else
+				{
+					if(typeof paramsIn.callback == "function")
+						paramsIn.callback();
+					
+					if(typeof callback == "function")
+						callback()
+				}
+
+
 
 
 			}
@@ -119,21 +133,6 @@ define(["jquery"],function ($) {
 		close() {
 
 			this.disabled = true;
-			if(this.confirmPopupParams)
-			{
-				var confirmPopup = new BasePopup(this.confirmPopupParams);
-				confirmPopup.open();
-				confirmPopup.setButtonCallback("close", this._doClose.bind(this));
-				setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);
-
-			}
-			else
-			{
-				this._doClose();
-			}
-		}
-
-		_doClose() {
 			this.$Element.remove();
 			this.closed = true;
 		}
