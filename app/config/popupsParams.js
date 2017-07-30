@@ -332,10 +332,10 @@ define(["jquery"],function ($) {
 						,
 						others : [{
 							className	: "duplicate",
-							x		: 104,
-							y		: 39,
-							width	: 25,
-							height	: 12,
+							x		: 90,
+							y		: 2,
+							width	: 40,
+							height	: 10,
 							img		: "",
 							txt 	: "",
 							callback: function() {}		
@@ -568,10 +568,10 @@ define(["jquery"],function ($) {
 			}
 			,
 			skype : {
-				x		: 2,
-				y		: 2,
-				width	: 90,
-				height	: 90,
+				x		: 8,
+				y		: 60,
+				width	: 25,
+				height	: 80,
 				img		: "Skype/gf.png",
 				id		: "skypePopup",
 				buttons : {
