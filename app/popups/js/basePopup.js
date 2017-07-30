@@ -107,7 +107,10 @@ define(["jquery"],function ($) {
 				{
 					var confirmPopup = new BasePopup(paramsIn.confirmPopup);
 					confirmPopup.open();
-					confirmPopup.setButtonCallback("close", that.close.bind(that));
+					
+					if(paramsIn.confirmPopup.linked !== false)
+						confirmPopup.setButtonCallback("close", that.close.bind(that));
+
 					setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);
 
 				}
