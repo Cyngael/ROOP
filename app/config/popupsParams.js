@@ -392,6 +392,28 @@ define(["jquery"],function ($) {
 										img		: "",
 										txt 	: "",
 										callback: function() {
+										},
+										savePopup : {
+											x		: 35,
+											y		: 35,
+											width	: 20,
+											height	: 10,
+											img		: "Adobe/savePopup.png",
+											id		: "confirmPopup10",
+											linked  : true,
+											buttons : {
+												close : {
+													className	: "close",
+													x		: 138,
+													y		: 15,
+													width	: 24,
+													height	: 24,
+													img		: "",
+													txt 	: "",
+													callback: function() {
+													}
+												}
+											},
 										}
 									}
 								},
@@ -436,6 +458,28 @@ define(["jquery"],function ($) {
 										img		: "",
 										txt 	: "",
 										callback: function() {
+										},
+										savePopup : {
+											x		: 35,
+											y		: 35,
+											width	: 20,
+											height	: 10,
+											img		: "Adobe/savePopup.png",
+											id		: "confirmPopup10",
+											linked  : true,
+											buttons : {
+												close : {
+													className	: "close",
+													x		: 138,
+													y		: 15,
+													width	: 24,
+													height	: 24,
+													img		: "",
+													txt 	: "",
+													callback: function() {
+													}
+												}
+											},
 										}
 									}
 								},
@@ -480,6 +524,28 @@ define(["jquery"],function ($) {
 										img		: "",
 										txt 	: "",
 										callback: function() {
+										},
+										savePopup : {
+											x		: 35,
+											y		: 35,
+											width	: 20,
+											height	: 10,
+											img		: "Adobe/savePopup.png",
+											id		: "confirmPopup10",
+											linked  : true,
+											buttons : {
+												close : {
+													className	: "close",
+													x		: 138,
+													y		: 15,
+													width	: 24,
+													height	: 24,
+													img		: "",
+													txt 	: "",
+													callback: function() {
+													}
+												}
+											},
 										}
 									}
 								},
