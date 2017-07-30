@@ -1,4 +1,4 @@
-define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
+define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils, gameParams) {
 	
 	class GameEngine {
 
@@ -22,7 +22,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			this.allPopupPoolsContainer = params.allPopupPoolsContainer;
 			this.allPopupsContainer = params.allPopupsContainer;
 			this.secBySec = 1;
-			this.timeRemaining = 300;//secondes			
+			this.timeRemaining = gameParams.startTime;//secondes			
 
 			this.wall = document.createElement("div");
 			this.wall.style.backgroundColor = "black";
@@ -94,7 +94,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 		}
 
 		startTimer() {
-			this.timeRemaining = 30;//secondes
+			this.timeRemaining = gameParams.startTime;//secondes
 			this.timeTotalUsed = 0;
 			var that = this;
 
@@ -118,16 +118,16 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			if(on)
 			{
 				$(this.wall).animate({ 
-					opacity : 0.85
-				},1000);
+					opacity : gameParams.powerPlan.opacity
+				},gameParams.powerPlan.transitionTime);
 
-				this.secBySec = 0.5;
+				this.secBySec = gameParams.powerPlan.timeRatio;
 			}
 			else
 			{
 				$(this.wall).animate({ 
 					opacity : 0
-				},1000);
+				},gameParams.powerPlan.transitionTime);
 				this.secBySec = 1;
 			}
 		}
@@ -142,10 +142,10 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 			//Check conditions victoire
 			this.totalTimer = null;
-			let score = Math.ceil(3000 - (this.timeTotalUsed*100));
+			let score = Math.ceil(gameParams.points.startingPoints + (this.timeTotalUsed*gameParams.points.pointsBySecond));
 			//SKype
 			if(this.allPopupsContainer.skype[0].closed){
-				let add = 1500;
+				let add = gameParams.points.pointsForGFHappy;
 				texts.gfResult = "Wow, you made it like a boss. Your girlfriend understood you had a probleme and you will call her later on phone. +" + add + "pts";
 				score += add;
 			}
@@ -156,7 +156,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			}
 
 			//Mails
-			let tempScoreTab = [1000,500,0];
+			let tempScoreTab = gameParams.points.pointsForMails;
 			let tempTextTab = [
 				"Congrats! Even in this bad situation, you've well sent all your urgent mails. Boss is happy ! +"+tempScoreTab[0]+"pts * mail",
 				"Big mistake. You sent the mails to the wrong persons. Now it's a mess. at least you've not lost them. +"+tempScoreTab[1]+"pts * mail",
@@ -184,7 +184,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			texts.mailResult = tempTextTab[failLevel];
 
 			var nbDocClosed = 0;
-			var addByDoc = 200;
+			var addByDoc = gameParams.points.pointsByDoc;
 			for (var i = 0; i < this.allPopupsContainer.documents.length; i++) {
 				if(this.allPopupsContainer.documents[i].closed) {
 					score += addByDoc;
@@ -193,7 +193,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			}
 
 			var nbAdobeClosed = 0;
-			var addByAdobe = 200;
+			var addByAdobe = gameParams.points.pointsByAdobe;
 			for (var i = 0; i < this.allPopupsContainer.adobe.length; i++) {
 				if(this.allPopupsContainer.adobe[i].closed) {
 					score += addByAdobe;

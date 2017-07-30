@@ -13,6 +13,7 @@ requirejs.config({
         GameEngine 	: '../app/gameEngine/js/gameEngine',
         TaskBar 	: '../app/gameEngine/js/taskBar',
         popupsParams 	: '../app/config/popupsParams',
+        gameParams 	: '../app/config/gameParams',
     }
 });
 
