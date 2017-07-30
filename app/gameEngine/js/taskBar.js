@@ -1,4 +1,4 @@
-define(["jquery"],function ($) {
+define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsParams) {
 	
 	class TaskBar {
 
@@ -7,6 +7,8 @@ define(["jquery"],function ($) {
 			this.buttonsParams = params;
 			this.enable = false;
 			this.GE = GE;
+			this.powerPlanPopup = new BasePopup(popupsParams.powerPlanPopupParams);
+
 			this.render();
 		}
 
@@ -30,7 +32,7 @@ define(["jquery"],function ($) {
 			this.domElement.style.left				= "0";
 			this.domElement.style.display			= "flex";
 			this.domElement.style.flexDirection		= "row";
-			this.domElement.style.zIndex			= "9999999999999999999999999999999999";
+			this.domElement.style.zIndex			= "999999";
 
 			$("body").append(this.domElement);
 
@@ -70,7 +72,9 @@ define(["jquery"],function ($) {
 
 			var that = this;
 			this.domBatterie.onclick = function(){
-				that.GE.endGame(false);
+				that.powerPlanPopup.open();
+				that.powerPlanPopup.setButtonCallback("riskPowerPlan", function(){ that.GE.setPowerPlanRisk(true) });
+				that.powerPlanPopup.setButtonCallback("normalPowerPlan", function(){ that.GE.setPowerPlanRisk(false) });
 			};
 
 			this.domBatterie.title = "";

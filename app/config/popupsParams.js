@@ -88,6 +88,48 @@ define(["jquery"],function ($) {
 			}
 		}
 		,
+		powerPlanPopupParams : {
+			x		: 72,
+			y		: 80,
+			width	: 20,
+			height	: 23,
+			img		: "UI/batteryChange.png",
+			id		: "powerPlan",
+			buttons : {
+				close : {
+					className : "close",
+					x		: 0,
+					y		: 0,
+					width	: 0,
+					height	: 0,
+					img		: "",
+					txt 	: "",
+					callback: function() {}
+				},
+				others : [{
+					className	: "normalPowerPlan",
+					x		: 54,
+					y		: 10,
+					width	: 65,
+					height	: 10,
+					img		: "",
+					txt 	: "",
+					callback: function() {}		
+				}
+				,
+				{
+					className	: "riskPowerPlan",
+					x		: 68,
+					y		: 10,
+					width	: 65,
+					height	: 10,
+					img		: "",
+					txt 	: "",
+					callback: function() {}		
+				}]
+			}
+		}
+		,
 		otherPotentialPopupsParams : {
 			folders : [
 			/*desktop windows => just another category, with nothing important to close actually. pure spam*/

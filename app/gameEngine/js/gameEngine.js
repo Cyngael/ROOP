@@ -24,6 +24,17 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			this.secBySec = 1;
 			this.timeRemaining = 300;//secondes			
 
+			this.wall = document.createElement("div");
+			this.wall.style.backgroundColor = "black";
+			this.wall.style.position = "absolute";
+			this.wall.style.height = "100%";
+			this.wall.style.width = "100%";
+			this.wall.style.opacity = "0";
+			this.wall.style.zIndex	= "99999999999999999999999999999999999999999999";
+			this.wall.style.pointerEvents= "none";
+
+			$("#popupContainer").append(this.wall);
+
 			this.introPopup.open();
 		}
 
@@ -83,12 +94,12 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 		}
 
 		startTimer() {
-			this.timeRemaining = 300;//secondes
+			this.timeRemaining = 30;//secondes
 			this.timeTotalUsed = 0;
 			var that = this;
 
 			this.timer = setInterval(function(){
-				that.timeTotalUsed ++;
+				that.timeTotalUsed += that.secBySec;
 				that.timeRemaining -= that.secBySec;
 				that.majTimerDisplay();
 				if(that.timeRemaining <= 0)
@@ -100,7 +111,25 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 		}
 
 		majTimerDisplay() {
-			this.taskBar.updateTimer(Utils.formatSecToMin(this.timeRemaining));
+			this.taskBar.updateTimer(Utils.formatSecToMin(Math.round(this.timeRemaining)));
+		}
+
+		setPowerPlanRisk(on) {
+			if(on)
+			{
+				$(this.wall).animate({ 
+					opacity : 0.85
+				},1000);
+
+				this.secBySec = 0.5;
+			}
+			else
+			{
+				$(this.wall).animate({ 
+					opacity : 0
+				},1000);
+				this.secBySec = 1;
+			}
 		}
 
 		endGame(timeout) {
