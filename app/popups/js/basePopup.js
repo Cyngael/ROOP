@@ -126,7 +126,7 @@ define(["jquery"],function ($) {
 						paramsIn.callback();
 					
 					if(typeof callback == "function")
-						callback()
+						setTimeout(callback());
 				}
 
 
@@ -140,10 +140,12 @@ define(["jquery"],function ($) {
 		}
 
 		close() {
-
-			this.disabled = true;
-			this.$Element.remove();
-			this.closed = true;
+			if(this.domElement.style.display != "none")
+			{
+				this.disabled = true;
+				this.$Element.remove();
+				this.closed = true;
+			}
 		}
 
 		randomizePosition(xMin,xMax, yMin, yMax) {
@@ -191,7 +193,7 @@ define(["jquery"],function ($) {
 		}
 
 		hide() {
-			this.domElement.style.display = "hidden";
+			this.domElement.style.display = "none";
 		}
 
 		setButtonCallback(className, cb) {
