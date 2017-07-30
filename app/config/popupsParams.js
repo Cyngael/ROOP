@@ -25,24 +25,12 @@ define(["jquery"],function ($) {
 		}
 		,
 		outroPopupParams : {
-			x		: 25,
-			y		: 25,
-			width	: 30,
-			height	: 30,
-			img		: "IntroPopUp.png",
-			id		: "introPopup",
-			buttons : {
-				close : {
-					className : "close",
-					x		: 95,
-					y		: 75,
-					width	: 15,
-					height	: 10,
-					img		: "",
-					txt 	: "",
-					callback: function() {}
-				}
-			}
+			x		: 0,
+			y		: 0,
+			width	: 100,
+			height	: 100,
+			img		: "OutroScreen.png",
+			id		: "OutroScreen"
 		}
 		,
 		otherPotentialPopupsParams : {
@@ -525,7 +513,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
-							"Choose a destinary",
+							"Choose a recipient",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
@@ -570,7 +558,7 @@ define(["jquery"],function ($) {
 						width : 100,
 						height : 6,
 						elements : [
-							"Choose a destinary",
+							"Choose a recipient",
 							"c.verimportent@coldmail.com",
 							"karl.neighbour@youpi.org",
 							"plegallois@thepost.fr",
