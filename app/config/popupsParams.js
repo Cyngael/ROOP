@@ -94,6 +94,7 @@ define(["jquery"],function ($) {
 			width	: 20,
 			height	: 23,
 			img		: "UI/batteryChange.png",
+			imgRisk	: "UI/batteryChanged.png",
 			id		: "powerPlan",
 			buttons : {
 				close : {

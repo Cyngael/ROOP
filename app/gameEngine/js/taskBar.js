@@ -73,8 +73,14 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			var that = this;
 			this.domBatterie.onclick = function(){
 				that.powerPlanPopup.open();
-				that.powerPlanPopup.setButtonCallback("riskPowerPlan", function(){ that.GE.setPowerPlanRisk(true) });
-				that.powerPlanPopup.setButtonCallback("normalPowerPlan", function(){ that.GE.setPowerPlanRisk(false) });
+				that.powerPlanPopup.setButtonCallback("riskPowerPlan", function(){
+					that.GE.setPowerPlanRisk(true);
+					that.powerPlanPopup.setImg(popupsParams.powerPlanPopupParams.imgRisk);
+				});
+				that.powerPlanPopup.setButtonCallback("normalPowerPlan", function(){
+					that.GE.setPowerPlanRisk(false);
+					that.powerPlanPopup.setImg(popupsParams.powerPlanPopupParams.img);
+				});
 			};
 
 			this.domBatterie.title = "";

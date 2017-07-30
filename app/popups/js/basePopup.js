@@ -225,6 +225,16 @@ define(["jquery"],function ($) {
 			}
 		}
 
+		setImg(newImgPath) {
+			this.img = newImgPath;
+			var path = "app/img/" + this.img;
+			    var image = $(this.backgroundImage);
+			    image.fadeOut('fast', function () {
+			        image.attr('src', path);
+			        image.fadeIn('fast');
+			    });
+		}
+
 		majTxt(className, txt) {
 			if(this.buttonsParams.others)
 			{
