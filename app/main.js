@@ -1,4 +1,4 @@
-define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, GameEngine, PopupPool, popupsParams) {
+define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, SteamPopup, GameEngine, PopupPool, popupsParams) {
 
 	
 	var GE = new GameEngine();
@@ -18,6 +18,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "GameEngine", "PopupPoo
 	}
 
 	allPopupsContainer.games.push(new DoomPopup(popupsParams.otherPotentialPopupsParams.doom));
+	allPopupsContainer.games.push(new SteamPopup(popupsParams.otherPotentialPopupsParams.steam));
 	
 
 

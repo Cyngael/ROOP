@@ -327,6 +327,48 @@ define(["jquery"],function ($) {
 					"game/doom_quit.png",
 				]
 			}
+			,
+			steam :  {
+				x		: 20,
+				y		: 25,
+				width	: 50,
+				height	: 50,
+				img		: "games/steam.png",
+				id		: "randomPopup4",
+				buttons : {
+					close : {
+						className	: "close",
+						x		: 0,
+						y		: 95,
+						width	: 5,
+						height	: 3,
+						img		: "",
+						txt 	: "",
+						callback: function() {}
+					}
+				}
+				errorPopup : {
+					x		: 35,
+					y		: 35,
+					width	: 20,
+					height	: 10,
+					img		: "documents/TomorrowPresPopUp.png",
+					id		: "confirmPopup1",
+					linked  : true,
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 90,
+							y		: 20,
+							width	: 15,
+							height	: 17,
+							img		: "",
+							txt 	: "",
+							callback: function() {}
+						}
+					},
+				}
+			}
 		}
 		
 	}
