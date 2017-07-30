@@ -62,9 +62,10 @@ define(["jquery"],function ($) {
 				}
 			}
 
+			var that = this;
 			this.setButtonCallback("duplicate", function(){
 				let newDuplicate = new BasePopup(that.initialParams);
-				this.duplicates.push(newDuplicate);
+				that.duplicates.push(newDuplicate);
 				newDuplicate.randomizePosition();
 				newDuplicate.open();
 			});
