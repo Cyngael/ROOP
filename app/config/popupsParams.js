@@ -566,6 +566,58 @@ define(["jquery"],function ($) {
 					},
 				}
 			}
+			,
+			skype : {
+				x		: 2,
+				y		: 2,
+				width	: 90,
+				height	: 90,
+				img		: "Skype/gf.png",
+				id		: "skypePopup",
+				buttons : {
+					close : {
+						className	: "close",
+						x		: 0,
+						y		: 95,
+						width	: 5,
+						height	: 3,
+						img		: "",
+						txt 	: "",
+						callback: function() {}
+					}
+				},
+				callPopup : {
+					timer   : 5000,
+					x		: 35,
+					y		: 35,
+					width	: 20,
+					height	: 10,
+					img		: "Skype/gfcall.png",
+					id		: "skypeCallPopup",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 50,
+							y		: 85,
+							width	: 15,
+							height	: 50,
+							img		: "",
+							txt 	: "",
+							callback: function() {}
+						},
+						others : [{
+							className	: "openChat",
+							x		: 50,
+							y		: 60,
+							width	: 24,
+							height	: 50,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
+					},
+				}
+			}
 		}
 		
 	}
