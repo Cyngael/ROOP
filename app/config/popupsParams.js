@@ -30,10 +30,68 @@ define(["jquery"],function ($) {
 			width	: 100,
 			height	: 100,
 			img		: "OutroScreen.png",
-			id		: "OutroScreen"
+			id		: "OutroScreen",
+			buttons : {
+				close : {
+					className : "close",
+					x		: 82,
+					y		: 45,
+					width	: 5,
+					height	: 3,
+					img		: "",
+					txt 	: "",
+					callback: function() {
+						window.location.reload();
+					}
+				},
+				others : [{
+					className	: "gfResult result",
+					x		: 57,
+					y		: 41,
+					width	: 30,
+					height	: 3,
+					img		: "",
+					txt 	: "gfResult",
+					callback: function() {}		
+				}
+				,
+				{
+					className	: "mailResult result",
+					x		: 61,
+					y		: 41,
+					width	: 30,
+					height	: 3,
+					img		: "",
+					txt 	: "mailResult",
+					callback: function() {}		
+				},
+				{
+					className	: "docResult result",
+					x		: 66,
+					y		: 55,
+					width	: 16,
+					height	: 3,
+					img		: "",
+					txt 	: "docResult",
+					callback: function() {}		
+				},
+				{
+					className	: "scoreResult result",
+					x		: 73,
+					y		: 46,
+					width	: 25,
+					height	: 3,
+					img		: "",
+					txt 	: "scoreResult",
+					callback: function() {}		
+				}]
+			}
 		}
 		,
 		otherPotentialPopupsParams : {
+			documents : [
+			
+			],
 			simples : [
 				/*Documents => ask for save*/
 				{

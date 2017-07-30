@@ -9,6 +9,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 				this.introPopup = params.introPopup;
 				this.masterPopupPool = params.masterPopupPool;
 				this.allPopupPoolsContainer = params.allPopupPoolsContainer;
+				this.allPopupsContainer = params.allPopupsContainer;
 
 				this.introPopup.open();
 			}
@@ -19,8 +20,9 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			this.introPopup = params.introPopup;
 			this.masterPopupPool = params.masterPopupPool;
 			this.allPopupPoolsContainer = params.allPopupPoolsContainer;
+			this.allPopupsContainer = params.allPopupsContainer;
 			this.secBySec = 1;
-			this.timeRemaining = 300;//secondes
+			this.timeRemaining = 300;//secondes			
 
 			this.introPopup.open();
 		}
@@ -88,10 +90,52 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 		endGame(timeout) {
 			console.log(timeout ? "timeout ! " : "End of the game, you WIN");
 
+			var texts = {
+				gfResult : "",
+				mailResult : "",
+			};
+
+			//Check conditions victoire
+			let score = 0;
+			//SKype
+			if(this.allPopupsContainer.skype[0].closed)
+				texts.gfResult = "Wow, you made it like a boss. Your girldfriend understood you had a probleme and you will call her later on phone. +1000pts";
+			else
+				texts.gfResult = "You made your girlfriend angry because she didn't understand your quick departure. You should have said some kind words. +0pts";
+
+			//Mails
+			let tempTextTab = [
+				"Congrats! Even in this bad situation, you've well sent all your urgent mails. Boss is happy ! +1000pts",
+				"Big mistake. You sent the mails to the wrong persons. Now it's a mess. at least you've not lost them. +500pts",
+				"Oh no! You had some important mails to send but your didn't ! Now the boss is very angry at you and you're in trouble ! +0pts",
+			]
+			let failLevel = 0;
+			for (var i = 0; i < this.allPopupsContainer.mails.length; i++) {
+				if(!this.allPopupsContainer.mails[i].sended)
+				{
+					failLevel = 2;
+				}
+				else if (!this.allPopupsContainer.mails[i].goodAnswer )
+				{
+					if(failLevel < 1)
+						failLevel = 1;
+				}
+			}
+
+			texts.mailResult = tempTextTab[failLevel];
+
+
+
 			this.timer = null;
 			this.masterPopupPool.closeAll();
 			this.taskBar.close();
 			this.hardCleanPopup();
+
+
+			this.outroPopup.majTxt("gfResult", texts.gfResult);
+			this.outroPopup.majTxt("mailResult", texts.mailResult);
+			this.outroPopup.majTxt("docResult", "42");
+			this.outroPopup.majTxt("scoreResult", score);
 
 			this.outroPopup.open();
 		}

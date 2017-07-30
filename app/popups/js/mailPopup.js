@@ -6,6 +6,8 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			super(params);
 
 			this.selectList = params.selectList;
+			this.goodAnswer = false;
+			this.sended = false;
 		}
 
 		open() {
@@ -32,15 +34,17 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 		}
 
 		sendMail() {
-
+			this.sended = true;
 			if(this.selectList.answer == this.domSelect.value)
 			{
 				console.log("SUCCES : Sending mail to the right person !")
+				this.goodAnswer = true;
 				this.close();
 			}
 			else
 			{
 				console.log("FAIL : Sending mail to the wrong person !")
+				this.goodAnswer = false;
 				this.close();
 			}
 		}

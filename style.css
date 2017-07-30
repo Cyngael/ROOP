@@ -2,3 +2,10 @@ body {
 	background-image: url(app/img/UI/background.jpg);
 	overflow: hidden;
 }
+
+.result {
+	font-size: medium;
+	font-family: sans-serif;
+	color: white;
+	line-height: 90%;
+}

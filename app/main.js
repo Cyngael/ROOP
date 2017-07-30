@@ -50,6 +50,7 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 		introPopup : introPopup,
 		outroPopup : outroPopup,
 		masterPopupPool  : masterPopupPools,
+		allPopupsContainer : allPopupsContainer,
 		allPopupPoolsContainer : allPopupPoolsContainer,
 	};
 	GE.init(GEparams);

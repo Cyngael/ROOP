@@ -225,6 +225,17 @@ define(["jquery"],function ($) {
 			}
 		}
 
+		majTxt(className, txt) {
+			if(this.buttonsParams.others)
+			{
+				var test = this.buttonsParams.others.find(function(o){ return o.className.includes(className)});
+				if(test)
+					test.txt = txt;
+
+				$("."+className).html(txt);
+			}
+		}
+
 		bringToFront(e, zForced) {
 			if(this.closed)
 				return;
