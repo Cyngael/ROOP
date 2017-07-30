@@ -90,10 +90,7 @@ define(["jquery"],function ($) {
 		,
 		otherPotentialPopupsParams : {
 			documents : [
-			
-			],
-			simples : [
-				/*Documents => ask for save*/
+			/*Documents => ask for save*/
 				{
 					x		: 0,
 					y		: 0,
@@ -286,7 +283,142 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
+			,
+			/*Adobe applications: heavy and long to save*/
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Fireworks.png",
+					id		: "randomPopupConf10",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Fireworkspopup.png",
+								id		: "confirmPopup10",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 138,
+										y		: 15,
+										width	: 24,
+										height	: 24,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
 				,
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Flash.png",
+					id		: "randomPopupConf11",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Flashpopup.png",
+								id		: "confirmPopup11",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 91,
+										y		: 24,
+										width	: 21,
+										height	: 19,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
+				,
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Photoshop.png",
+					id		: "randomPopupConf12",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Photoshoppopup.png",
+								id		: "confirmPopup12",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 91,
+										y		: 24,
+										width	: 21,
+										height	: 19,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
+			
+			],
+			simples : [
 				/*web pages => close quickly, high number*/
 				{
 					x		: 7,
@@ -528,139 +660,6 @@ define(["jquery"],function ($) {
 								}
 							}		
 						}]
-					},
-				}
-			,
-			/*Adobe applications: heavy and long to save*/
-				{
-					x		: 0,
-					y		: 0,
-					width	: 100,
-					height	: 100,
-					img		: "Adobe/Fireworks.png",
-					id		: "randomPopupConf10",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 2,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							},
-							confirmPopup : {
-								x		: 35,
-								y		: 35,
-								width	: 20,
-								height	: 10,
-								img		: "Adobe/Fireworkspopup.png",
-								id		: "confirmPopup10",
-								linked  : true,
-								buttons : {
-									close : {
-										className	: "close",
-										x		: 138,
-										y		: 15,
-										width	: 24,
-										height	: 24,
-										img		: "",
-										txt 	: "",
-										callback: function() {
-										}
-									}
-								},
-							}
-						}
-					},
-				}
-				,
-				{
-					x		: 0,
-					y		: 0,
-					width	: 100,
-					height	: 100,
-					img		: "Adobe/Flash.png",
-					id		: "randomPopupConf11",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 2,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							},
-							confirmPopup : {
-								x		: 35,
-								y		: 35,
-								width	: 20,
-								height	: 10,
-								img		: "Adobe/Flashpopup.png",
-								id		: "confirmPopup11",
-								linked  : true,
-								buttons : {
-									close : {
-										className	: "close",
-										x		: 91,
-										y		: 24,
-										width	: 21,
-										height	: 19,
-										img		: "",
-										txt 	: "",
-										callback: function() {
-										}
-									}
-								},
-							}
-						}
-					},
-				}
-				,
-				{
-					x		: 0,
-					y		: 0,
-					width	: 100,
-					height	: 100,
-					img		: "Adobe/Photoshop.png",
-					id		: "randomPopupConf12",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 2,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							},
-							confirmPopup : {
-								x		: 35,
-								y		: 35,
-								width	: 20,
-								height	: 10,
-								img		: "Adobe/Photoshoppopup.png",
-								id		: "confirmPopup12",
-								linked  : true,
-								buttons : {
-									close : {
-										className	: "close",
-										x		: 91,
-										y		: 24,
-										width	: 21,
-										height	: 19,
-										img		: "",
-										txt 	: "",
-										callback: function() {
-										}
-									}
-								},
-							}
-						}
 					},
 				}
 			]
