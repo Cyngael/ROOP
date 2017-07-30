@@ -71,6 +71,112 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
+					x		: 0,
+					y		: 0,
+					width	: 80,
+					height	: 80,
+					img		: "documents/EmptyDoc.png",
+					id		: "randomPopupConf1",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					},
+					confirmPopup : {
+						x		: 35,
+						y		: 35,
+						width	: 20,
+						height	: 10,
+						img		: "documents/EmptyDocPopup1.png",
+						id		: "confirmPopup1",
+						buttons : {
+							close : {
+								className	: "close",
+								x		: 90,
+								y		: 20,
+								width	: 15,
+								height	: 17,
+								img		: "",
+								txt 	: "",
+								callback: function() {
+								}
+							}
+						},
+						confirmPopup : {
+							x		: 35,
+							y		: 35,
+							width	: 20,
+							height	: 10,
+							img		: "documents/EmptyDocPopup2.png",
+							id		: "confirmPopup1",
+							buttons : {
+								close : {
+									className	: "close",
+									x		: 90,
+									y		: 20,
+									width	: 15,
+									height	: 17,
+									img		: "",
+									txt 	: "",
+									callback: function() {
+									}
+								}
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "documents/EmptyDocPopup3.png",
+								id		: "confirmPopup1",
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 90,
+										y		: 20,
+										width	: 15,
+										height	: 17,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+								confirmPopup : {
+									x		: 35,
+									y		: 35,
+									width	: 20,
+									height	: 10,
+									img		: "documents/EmptyDocPopup4.png",
+									id		: "confirmPopup1",
+									buttons : {
+										close : {
+											className	: "close",
+											x		: 90,
+											y		: 20,
+											width	: 15,
+											height	: 17,
+											img		: "",
+											txt 	: "",
+											callback: function() {
+											}
+										}
+									},
+								}
+							}
+					}
+					}
+				}
+				,
+				{
 					x		: 15,
 					y		: 10,
 					width	: 80,
@@ -119,8 +225,8 @@ define(["jquery"],function ($) {
 					y		: 12,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow2.png",
-					id		: "randomPopup1",
+					img		: "classic_windows/normalwindow1.png",
+					id		: "randomPopup2",
 					buttons : {
 						close : {
 							className	: "close",
@@ -141,8 +247,8 @@ define(["jquery"],function ($) {
 					y		: 12,
 					width	: 80,
 					height	: 80,
-					img		: "classic_windows/normalwindow1.png",
-					id		: "randomPopup2",
+					img		: "classic_windows/normalwindow2.png",
+					id		: "randomPopup1",
 					buttons : {
 						close : {
 							className	: "close",
@@ -171,6 +277,28 @@ define(["jquery"],function ($) {
 							x		: 0,
 							y		: 97,
 							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
+				,
+				{
+					x		: 5,
+					y		: 8,
+					width	: 80,
+					height	: 80,
+					img		: "classic_windows/safariwindow1.png",
+					id		: "randomPopup3",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 2,
+							y		: 1,
+							width	: 1,
 							height	: 2,
 							img		: "",
 							txt 	: "",
@@ -365,8 +493,9 @@ define(["jquery"],function ($) {
 				},
 				imgStates : [
 					"game/doom_base.png",
-					"game/doom_load.png",
 					"game/doom_option.png",
+					"game/doom_load.png",
+					"game/doom_save.png",
 					"game/doom_read.png",
 					"game/doom_quit.png",
 				]
