@@ -27,7 +27,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 
 			this.domElement.onclick = function(){
-				that.bringToFront.bind(that);
+				that.bringToFront.bind(that)();
 				that.isFocused = true;
 			}
 

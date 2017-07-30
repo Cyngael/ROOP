@@ -114,6 +114,7 @@ define(["jquery"],function ($) {
 							that.close.bind(that)();
 							paramsIn.callback();
 						});
+						that.disabled = true;
 					}
 
 					setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);

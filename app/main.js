@@ -17,8 +17,11 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "GameEngi
 		allPopupsContainer.mails[i] = new MailPopup(popupsParams.otherPotentialPopupsParams.mails[i]);
 	}
 
-	allPopupsContainer.games.push(new DoomPopup(popupsParams.otherPotentialPopupsParams.doom));
-	allPopupsContainer.games.push(new SteamPopup(popupsParams.otherPotentialPopupsParams.steam));
+	let doomPopup = new DoomPopup(popupsParams.otherPotentialPopupsParams.doom);
+	popupsParams.otherPotentialPopupsParams.steam.doomPopup = doomPopup;
+	let steamPopup = new SteamPopup(popupsParams.otherPotentialPopupsParams.steam);
+	allPopupsContainer.games.push(doomPopup);
+	allPopupsContainer.games.push(steamPopup);
 	
 
 

@@ -10,8 +10,9 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 		close()
 		{
-			if(false)
+			if(!this.doomPopup.closed)
 			{
+				console.log("1")
 				var errorPopup = new BasePopup(this.errorPopupParams);
 				errorPopup.open();
 
@@ -19,6 +20,8 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			}
 			else
 			{
+				console.log("2")
+
 				super.close();
 			}
 		}
