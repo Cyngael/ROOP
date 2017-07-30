@@ -107,8 +107,8 @@ define(["jquery"],function ($) {
 										txt 	: "",
 										callback: function() {},
 										confirmPopup : {
-											x		: 35,
-											y		: 35,
+											x		: 15,
+											y		: 20,
 											width	: 20,
 											height	: 10,
 											img		: "documents/EmptyDocPopup2.png",
@@ -125,8 +125,8 @@ define(["jquery"],function ($) {
 													txt 	: "",
 													callback: function() {},
 													confirmPopup : {
-													x		: 35,
-													y		: 35,
+													x		: 72,
+													y		: 60,
 													width	: 20,
 													height	: 10,
 													img		: "documents/EmptyDocPopup3.png",
@@ -143,8 +143,8 @@ define(["jquery"],function ($) {
 															txt 	: "",
 															callback: function() {},
 															confirmPopup : {
-																x		: 35,
-																y		: 35,
+																x		: 42,
+																y		: 38,
 																width	: 20,
 																height	: 10,
 																img		: "documents/EmptyDocPopup4.png",
