@@ -495,11 +495,11 @@ define(["jquery"],function ($) {
 
 			]
 			,
-			/*games combo: doom block steam and can't be exited except by his own menu*/
+			/*games combo: doom blocks steam and can't be exited except by his own menu*/
 			steam :  {
 				x		: 2,
 				y		: 2,
-				width	: 10,
+				width	: 90,
 				height	: 90,
 				img		: "game/steam.png",
 				id		: "randomPopup6",
