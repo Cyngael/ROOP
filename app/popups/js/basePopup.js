@@ -53,14 +53,19 @@ define(["jquery"],function ($) {
 
 
 			this.listDomElement = [];
-	 		this.addButton(this.buttonsParams.close.className, this.close.bind(this));
+	 		if(this.buttonsParams)
+ 			{
+ 				this.addButton(this.buttonsParams.close.className, this.close.bind(this));
 
-			if(this.buttonsParams.others)
-			{
-				for (var i = 0; i < this.buttonsParams.others.length; i++) {
-					this.addButton(this.buttonsParams.others[i].className);
+				if(this.buttonsParams.others)
+				{
+					for (var i = 0; i < this.buttonsParams.others.length; i++) {
+						this.addButton(this.buttonsParams.others[i].className);
+					}
 				}
 			}
+			else
+				this.buttonsParams = {};
 
 			var that = this;
 			this.setButtonCallback("duplicate", function(){

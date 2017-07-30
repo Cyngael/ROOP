@@ -55,7 +55,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 			var that = this;
 			that.isGFWaiting = true;
-			setTimeout(function(){
+			this.timer = setTimeout(function(){
 				that.callPopup.open();
 				that.callPopup.bringToFront(null, "999999999999999999999");
 
@@ -79,7 +79,10 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 		close() {
 			if(!this.isGFWaiting)
+			{
+				this.timer = null;
 				super.close();
+			}
 		}
 
 
