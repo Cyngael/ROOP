@@ -77,7 +77,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "documents/EmptyDoc.png",
-					id		: "randomPopupConf1",
+					id		: "randomPopupConf2",
 					buttons : {
 						close : {
 							className	: "close",
@@ -182,7 +182,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "documents/ProjectWhole.png",
-					id		: "randomPopupConf1",
+					id		: "randomPopupConf3",
 					buttons : {
 						close : {
 							className	: "close",
@@ -227,7 +227,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow1.png",
-					id		: "randomPopup2",
+					id		: "randomPopup1",
 					buttons : {
 						close : {
 							className	: "close",
@@ -249,7 +249,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow2.png",
-					id		: "randomPopup1",
+					id		: "randomPopup2",
 					buttons : {
 						close : {
 							className	: "close",
@@ -293,7 +293,7 @@ define(["jquery"],function ($) {
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/safariwindow1.png",
-					id		: "randomPopup3",
+					id		: "randomPopup4",
 					buttons : {
 						close : {
 							className	: "close",
@@ -316,7 +316,7 @@ define(["jquery"],function ($) {
 					width	: 50,
 					height	: 50,
 					img		: "pop-ups/fakebook.png",
-					id		: "randomPopup4",
+					id		: "randomPopup5",
 					buttons : {
 						close : {
 							className	: "close",
@@ -326,8 +326,7 @@ define(["jquery"],function ($) {
 							height	: 3,
 							img		: "",
 							txt 	: "",
-							callback: function() {
-							}
+							callback: function() {}
 						}
 						,
 						others : [{
@@ -349,7 +348,7 @@ define(["jquery"],function ($) {
 					width	: 45,
 					height	: 45,
 					img		: "pop-ups/AOLTitanic.png",
-					id		: "randomPopupConf1",
+					id		: "randomPopupConf4",
 					buttons : {
 						close : {
 							className	: "close",
@@ -405,7 +404,7 @@ define(["jquery"],function ($) {
 					x		: 2,
 					y		: 1,
 					width	: 80,
-					height	: 80,
+					height	: 85,
 					img		: "mail/urgent_mail.png",
 					id		: "mail1",
 					buttons : {
@@ -452,7 +451,7 @@ define(["jquery"],function ($) {
 					x		: 20,
 					y		: 15,
 					width	: 80,
-					height	: 80,
+					height	: 55,
 					img		: "mail/urgent_mail2.png",
 					id		: "mail1",
 					buttons : {
@@ -496,42 +495,14 @@ define(["jquery"],function ($) {
 
 			]
 			,
-			doom : {
-				x		: 0,
-				y		: 0,
-				width	: 80,
-				height	: 80,
-				img		: "game/doom_base.png",
-				id		: "doom",
-				buttons : {
-					close : {
-						className	: "close",
-						x		: 0,
-						y		: 97,
-						width	: 3,
-						height	: 2,
-						img		: "",
-						txt 	: "",
-						callback: function() {}						
-					},
-				},
-				imgStates : [
-					"game/doom_base.png",
-					"game/doom_option.png",
-					"game/doom_load.png",
-					"game/doom_save.png",
-					"game/doom_read.png",
-					"game/doom_quit.png",
-				]
-			}
-			,
+			/*games combo: doom block steam and can't be exited except by his own menu*/
 			steam :  {
 				x		: 2,
 				y		: 2,
-				width	: 90,
+				width	: 10,
 				height	: 90,
 				img		: "game/steam.png",
-				id		: "randomPopup4",
+				id		: "randomPopup6",
 				buttons : {
 					close : {
 						className	: "close",
@@ -567,6 +538,36 @@ define(["jquery"],function ($) {
 				}
 			}
 			,
+			doom : {
+				x		: 10,
+				y		: 10,
+				width	: 60,
+				height	: 60,
+				img		: "game/doom_base.png",
+				id		: "doom",
+				buttons : {
+					close : {
+						className	: "close",
+						x		: 0,
+						y		: 97,
+						width	: 3,
+						height	: 2,
+						img		: "",
+						txt 	: "",
+						callback: function() {}						
+					},
+				},
+				imgStates : [
+					"game/doom_base.png",
+					"game/doom_option.png",
+					"game/doom_load.png",
+					"game/doom_save.png",
+					"game/doom_read.png",
+					"game/doom_quit.png",
+				]
+			}
+			,
+			/*skype. Girlfriends are not cool when you're in a jam, are they? ;) */
 			skype : {
 				x		: 8,
 				y		: 60,
