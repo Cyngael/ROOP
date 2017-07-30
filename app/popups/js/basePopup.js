@@ -219,7 +219,7 @@ define(["jquery"],function ($) {
 			}
 		}
 
-		bringToFront(e) {
+		bringToFront(e, zForced) {
 			if(this.closed)
 				return;
 
@@ -227,12 +227,17 @@ define(["jquery"],function ($) {
 				e.preventDefault();
 
 			var highterZ = 0;
-			var popups = $(".popup");
-			$(".popup").each(function(index, elem){				
-				let z = parseInt(elem.style.zIndex);
-				if(z > highterZ) 
-					highterZ = z;
-			});
+			if(zForced)
+				highterZ = zForced;
+			else
+			{
+				var popups = $(".popup");
+				$(".popup").each(function(index, elem){				
+					let z = parseInt(elem.style.zIndex);
+					if(z < 9999999 && z > highterZ) 
+						highterZ = z;
+				});
+			}
 
 			this.domElement.style.zIndex = highterZ + 10;
 			for (var i = 0; i < this.listDomElement.length; i++) {

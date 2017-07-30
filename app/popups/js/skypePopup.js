@@ -32,6 +32,9 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			that.isGFWaiting = true;
 			setTimeout(function(){
 				that.callPopup.open();
+				that.callPopup.bringToFront(null, "999999999999999999999");
+
+				that.callPopup.domElement.onclick = function(){};
 
 				that.callPopup.setButtonCallback("openChat", function(){
 					that.show();
@@ -41,7 +44,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 					that.callPopup.hide();
 					setTimeout(function(){
 						that.callPopup.show();
-						that.callPopup.bringToFront();
+						that.callPopup.bringToFront(null, "999999999999999999999");
 					}, that.callPopupParams.timer )
 					
 				})
