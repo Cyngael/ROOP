@@ -341,10 +341,10 @@ define(["jquery"],function ($) {
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 2,
+							x		: 104,
+							y		: 39,
+							width	: 25,
+							height	: 12,
 							img		: "",
 							txt 	: "",
 							callback: function() {
