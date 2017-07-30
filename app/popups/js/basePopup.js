@@ -3,6 +3,8 @@ define(["jquery"],function ($) {
 	class BasePopup {
 
 		constructor(params) {
+			this.initialParams = params;
+
 			this.x 	= params.x;
 			this.y 	= params.y;
 			this.width = params.width;
@@ -11,6 +13,8 @@ define(["jquery"],function ($) {
 			this.id 	= params.id;
 			this.buttonsParams = params.buttons;
 			this.confirmPopupParams = params.confirmPopup;
+
+			this.duplicates = [];
 
 			this.closed = true;
 			this.disabled = true;
@@ -56,6 +60,13 @@ define(["jquery"],function ($) {
 					this.addButton(this.buttonsParams.others[i].className);
 				}
 			}
+
+			this.setButtonCallback("duplicate", function(){
+				let newDuplicate = new BasePopup(that.initialParams);
+				this.duplicates.push(newDuplicate);
+				newDuplicate.randomizePosition();
+				newDuplicate.open();
+			});
 
 
 
@@ -151,10 +162,10 @@ define(["jquery"],function ($) {
 		randomizePosition(xMin,xMax, yMin, yMax) {
 			if(typeof xMin == "undefined")
 			{
-				xMin = 50;
-				xMax = 1000;
-				yMin = 50;
-				yMax = 500;
+				xMin = 0;
+				xMax = 50;
+				yMin = 0;
+				yMax = 50;
 			} 
 
 			this.x  = Math.random() * (xMax - xMin) + xMin;
@@ -171,10 +182,10 @@ define(["jquery"],function ($) {
 		randomizeSize(xMin,xMax, yMin, yMax) {
 			if(typeof xMin == "undefined")
 			{
-				xMin = 50;
+				xMin = 0;
 				xMax = 100;
-				yMin = 25;
-				yMax = 50;
+				yMin = 0;
+				yMax = 100;
 			} 
 
 			this.width  = Math.random() * (xMax - xMin) + xMin;
