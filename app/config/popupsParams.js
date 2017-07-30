@@ -90,9 +90,7 @@ define(["jquery"],function ($) {
 		,
 		otherPotentialPopupsParams : {
 			folders : [
-			
 			/*desktop windows => just another category, with nothing important to close actually. pure spam*/
-				,
 				{
 					x		: 5,
 					y		: 8,

@@ -33,15 +33,16 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			var that = this;
 			this.taskBar = new TaskBar([
 				{
-					txt : "Simples",
+					txt : "Internet",
 					callback : function(){
+						that.allPopupPoolsContainer.mails.openAll();						
 						that.allPopupPoolsContainer.simples.openAll();						
 					}
 				},
 				{
-					txt : "Mails",
+					txt : "Skype",
 					callback : function(){
-						that.allPopupPoolsContainer.mails.openAll();						
+						that.allPopupPoolsContainer.skype.openAll();						
 					}
 				},
 				{
@@ -57,9 +58,9 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 					}
 				},
 				{
-					txt : "Skype",
+					txt : "Adobe",
 					callback : function(){
-						that.allPopupPoolsContainer.skype.openAll();						
+						that.allPopupPoolsContainer.adobe.openAll();						
 					}
 				},
 				{
@@ -77,9 +78,11 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 		startTimer() {
 			this.timeRemaining = 300;//secondes
+			this.timeTotalUsed = 0;
 			var that = this;
 			this.timer = setInterval(function(){
 				that.timeRemaining -= that.secBySec;
+				that.timeTotalUsed ++;
 				that.majTimerDisplay();
 				if(that.timeRemaining <= 0)
 				{
@@ -102,48 +105,64 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 			};
 
 			//Check conditions victoire
-			let score = 0;
+			let score = 3000;
 			//SKype
 			if(this.allPopupsContainer.skype[0].closed){
-				texts.gfResult = "Wow, you made it like a boss. Your girldfriend understood you had a probleme and you will call her later on phone. +1000pts";
-				score += 1000;
+				let add = 1500;
+				texts.gfResult = "Wow, you made it like a boss. Your girlfriend understood you had a probleme and you will call her later on phone. +" + add + "pts";
+				score += add;
 			}
 			else{
-				texts.gfResult = "You made your girlfriend angry because she didn't understand your quick departure. You should have said some kind words. +0pts";
-				score += 0;
+				let add = 0;
+				texts.gfResult = "You made your girlfriend angry because she didn't understand your quick departure. You should have said some kind words. +" + add + "pts";
+				score += add;
 			}
 
 			//Mails
-			let tempTextTab = [
-				"Congrats! Even in this bad situation, you've well sent all your urgent mails. Boss is happy ! +1000pts",
-				"Big mistake. You sent the mails to the wrong persons. Now it's a mess. at least you've not lost them. +500pts",
-				"Oh no! You had some important mails to send but your didn't ! Now the boss is very angry at you and you're in trouble ! +0pts",
-			]
 			let tempScoreTab = [1000,500,0];
+			let tempTextTab = [
+				"Congrats! Even in this bad situation, you've well sent all your urgent mails. Boss is happy ! +"+tempScoreTab[0]+"pts * mail",
+				"Big mistake. You sent the mails to the wrong persons. Now it's a mess. at least you've not lost them. +"+tempScoreTab[1]+"pts * mail",
+				"Oh no! You had some important mails to send but your didn't ! Now the boss is very angry at you and you're in trouble ! +"+tempScoreTab[2]+"pts",
+			]
 			let failLevel = 0;
 			for (var i = 0; i < this.allPopupsContainer.mails.length; i++) {
 				if(!this.allPopupsContainer.mails[i].sended)
 				{
+					score += tempScoreTab[2];
 					failLevel = 2;
 				}
 				else if (!this.allPopupsContainer.mails[i].goodAnswer )
 				{
+					score += tempScoreTab[1];
 					if(failLevel < 1)
 						failLevel = 1;
+				}
+				else
+				{
+					score += tempScoreTab[0];
 				}
 			}
 
 			texts.mailResult = tempTextTab[failLevel];
-			score += tempScoreTab[failLevel];
 
 			var nbDocClosed = 0;
+			var addByDoc = 200;
 			for (var i = 0; i < this.allPopupsContainer.documents.length; i++) {
 				if(this.allPopupsContainer.documents[i].closed) {
-					score += 200;
+					score += addByDoc;
 					nbDocClosed ++;
 				}
 			}
 
+			var nbAdobeClosed = 0;
+			var addByAdobe = 200;
+			for (var i = 0; i < this.allPopupsContainer.adobe.length; i++) {
+				if(this.allPopupsContainer.adobe[i].closed) {
+					score += addByAdobe;
+					nbAdobeClosed ++;
+				}
+			}
 
 
 			this.timer = null;
@@ -154,7 +173,7 @@ define(["jquery", "TaskBar", "Utils"],function ($, TaskBar, Utils) {
 
 			this.outroPopup.majTxt("gfResult", texts.gfResult);
 			this.outroPopup.majTxt("mailResult", texts.mailResult);
-			this.outroPopup.majTxt("docResult", nbDocClosed + " * 200pts");
+			this.outroPopup.majTxt("docResult", (nbDocClosed + nbAdobeClosed) + " * " + addByDoc + "pts");
 			this.outroPopup.majTxt("scoreResult", score);
 
 			this.outroPopup.open();
