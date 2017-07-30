@@ -89,6 +89,76 @@ define(["jquery"],function ($) {
 		}
 		,
 		otherPotentialPopupsParams : {
+			folders : [
+			
+			/*desktop windows => just another category, with nothing important to close actually. pure spam*/
+				,
+				{
+					x		: 5,
+					y		: 8,
+					width	: 50,
+					height	: 50,
+					img		: "desktop_windows/desktopwindow1.png",
+					id		: "randomPopup7",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
+				,
+				{
+					x		: 25,
+					y		: 8,
+					width	: 50,
+					height	: 50,
+					img		: "desktop_windows/desktopwindow2.png",
+					id		: "randomPopup8",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
+				,
+				{
+					x		: 5,
+					y		: 28,
+					width	: 50,
+					height	: 50,
+					img		: "desktop_windows/desktopwindow3.png",
+					id		: "randomPopup9",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							}
+						}
+					}
+				}
+			],
 			documents : [
 			/*Documents => ask for save*/
 				{
@@ -283,7 +353,8 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
-			,
+			],
+			adobe : [
 			/*Adobe applications: heavy and long to save*/
 				{
 					x		: 0,
@@ -500,73 +571,6 @@ define(["jquery"],function ($) {
 							y		: 1,
 							width	: 1,
 							height	: 2,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							}
-						}
-					}
-				}
-				/*desktop windows => just another category, with nothing important to close actually. pure spam*/
-				,
-				{
-					x		: 5,
-					y		: 8,
-					width	: 50,
-					height	: 50,
-					img		: "desktop_windows/desktopwindow1.png",
-					id		: "randomPopup7",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							}
-						}
-					}
-				}
-				,
-				{
-					x		: 25,
-					y		: 8,
-					width	: 50,
-					height	: 50,
-					img		: "desktop_windows/desktopwindow2.png",
-					id		: "randomPopup8",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
-							img		: "",
-							txt 	: "",
-							callback: function() {
-							}
-						}
-					}
-				}
-				,
-				{
-					x		: 5,
-					y		: 28,
-					width	: 50,
-					height	: 50,
-					img		: "desktop_windows/desktopwindow3.png",
-					id		: "randomPopup9",
-					buttons : {
-						close : {
-							className	: "close",
-							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
