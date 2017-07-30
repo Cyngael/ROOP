@@ -46,7 +46,7 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 				}
 			]);
 
-			//this.masterPopupPool.openAll();
+			this.masterPopupPool.openAll();
 		}
 
 	}

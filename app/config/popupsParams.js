@@ -300,8 +300,8 @@ define(["jquery"],function ($) {
 			]
 			,
 			doom : {
-				x		: 25,
-				y		: 10,
+				x		: 0,
+				y		: 0,
 				width	: 80,
 				height	: 80,
 				img		: "game/doom_base.png",
