@@ -39,8 +39,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 80,
-					height	: 80,
+					width	: 100,
+					height	: 100,
 					img		: "documents/TomorrowPres.png",
 					id		: "randomPopupConf1",
 					buttons : {
@@ -67,7 +67,7 @@ define(["jquery"],function ($) {
 										className	: "close",
 										x		: 90,
 										y		: 20,
-										width	: 15,
+										width	: 18,
 										height	: 17,
 										img		: "",
 										txt 	: "",
@@ -83,8 +83,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 80,
-					height	: 80,
+					width	: 100,
+					height	: 100,
 					img		: "documents/EmptyDoc.png",
 					id		: "randomPopupConf2",
 					buttons : {
@@ -110,7 +110,7 @@ define(["jquery"],function ($) {
 										className	: "close",
 										x		: 90,
 										y		: 20,
-										width	: 15,
+										width	: 18,
 										height	: 17,
 										img		: "",
 										txt 	: "",
@@ -128,7 +128,7 @@ define(["jquery"],function ($) {
 													className	: "close",
 													x		: 90,
 													y		: 20,
-													width	: 15,
+													width	: 18,
 													height	: 17,
 													img		: "",
 													txt 	: "",
@@ -146,7 +146,7 @@ define(["jquery"],function ($) {
 															className	: "close",
 															x		: 90,
 															y		: 20,
-															width	: 15,
+															width	: 18,
 															height	: 17,
 															img		: "",
 															txt 	: "",
@@ -164,7 +164,7 @@ define(["jquery"],function ($) {
 																		className	: "close",
 																		x		: 90,
 																		y		: 20,
-																		width	: 15,
+																		width	: 18,
 																		height	: 17,
 																		img		: "",
 																		txt 	: "",
@@ -186,10 +186,10 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 15,
-					y		: 10,
-					width	: 80,
-					height	: 80,
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
 					img		: "documents/ProjectWhole.png",
 					id		: "randomPopupConf3",
 					buttons : {
@@ -216,7 +216,7 @@ define(["jquery"],function ($) {
 										className	: "close",
 										x		: 90,
 										y		: 20,
-										width	: 15,
+										width	: 18,
 										height	: 17,
 										img		: "",
 										txt 	: "",
@@ -253,8 +253,8 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 7,
-					y		: 12,
+					x		: 1,
+					y		: 1,
 					width	: 80,
 					height	: 80,
 					img		: "classic_windows/normalwindow2.png",
@@ -322,17 +322,17 @@ define(["jquery"],function ($) {
 				{
 					x		: 5,
 					y		: 8,
-					width	: 80,
-					height	: 80,
+					width	: 50,
+					height	: 50,
 					img		: "desktop_windows/desktopwindow1.png",
 					id		: "randomPopup7",
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 2,
-							y		: 1,
-							width	: 1,
-							height	: 2,
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -342,19 +342,19 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 5,
+					x		: 25,
 					y		: 8,
-					width	: 80,
-					height	: 80,
+					width	: 50,
+					height	: 50,
 					img		: "desktop_windows/desktopwindow2.png",
 					id		: "randomPopup8",
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 2,
-							y		: 1,
-							width	: 1,
-							height	: 2,
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -365,18 +365,18 @@ define(["jquery"],function ($) {
 				,
 				{
 					x		: 5,
-					y		: 8,
-					width	: 80,
-					height	: 80,
+					y		: 28,
+					width	: 50,
+					height	: 50,
 					img		: "desktop_windows/desktopwindow3.png",
 					id		: "randomPopup9",
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 2,
-							y		: 1,
-							width	: 1,
-							height	: 2,
+							x		: 0,
+							y		: 95,
+							width	: 4,
+							height	: 3,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -384,11 +384,11 @@ define(["jquery"],function ($) {
 						}
 					}
 				}
-				/*pop-ups => other kind of web pages, smaller*/
+				/*pop-ups => other kind of web pages, smaller, with traps (fake close buttons)*/
 				,
 				{
-					x		: 20,
-					y		: 25,
+					x		: 5,
+					y		: 40,
 					width	: 50,
 					height	: 50,
 					img		: "pop-ups/fakebook.png",
@@ -419,8 +419,8 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 30,
-					y		: 20,
+					x		: 40,
+					y		: 5,
 					width	: 45,
 					height	: 45,
 					img		: "pop-ups/AOLTitanic.png",
@@ -472,6 +472,139 @@ define(["jquery"],function ($) {
 						}]
 					},
 				}
+			,
+			/*Adobe applications: heavy and long to save*/
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Fireworks.png",
+					id		: "randomPopupConf10",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Fireworkspopup.png",
+								id		: "confirmPopup10",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 138,
+										y		: 15,
+										width	: 24,
+										height	: 24,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
+				,
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Flash.png",
+					id		: "randomPopupConf11",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Flashpopup.png",
+								id		: "confirmPopup11",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 91,
+										y		: 24,
+										width	: 21,
+										height	: 19,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
+				,
+				{
+					x		: 0,
+					y		: 0,
+					width	: 100,
+					height	: 100,
+					img		: "Adobe/Photoshop.png",
+					id		: "randomPopupConf12",
+					buttons : {
+						close : {
+							className	: "close",
+							x		: 0,
+							y		: 97,
+							width	: 3,
+							height	: 2,
+							img		: "",
+							txt 	: "",
+							callback: function() {
+							},
+							confirmPopup : {
+								x		: 35,
+								y		: 35,
+								width	: 20,
+								height	: 10,
+								img		: "Adobe/Photoshoppopup.png",
+								id		: "confirmPopup12",
+								linked  : true,
+								buttons : {
+									close : {
+										className	: "close",
+										x		: 91,
+										y		: 24,
+										width	: 21,
+										height	: 19,
+										img		: "",
+										txt 	: "",
+										callback: function() {
+										}
+									}
+								},
+							}
+						}
+					},
+				}
 			]
 			,
 			mails : [
@@ -487,9 +620,9 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 3,
+							y		: 98,
+							width	: 2,
+							height	: 4,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -498,10 +631,10 @@ define(["jquery"],function ($) {
 						,
 						others : [{
 							className	: "sendMail",
-							x		: 101,
-							y		: 1,
-							width	: 4,
-							height	: 3,
+							x		: 97,
+							y		: 0,
+							width	: 5,
+							height	: 4,
 							img		: "",
 							txt 	: "",
 							callback: function() {}		
@@ -511,7 +644,7 @@ define(["jquery"],function ($) {
 						x : 4,
 						y : 0,
 						width : 100,
-						height : 6,
+						height : 5,
 						elements : [
 							"Choose a recipient",
 							"c.verimportent@coldmail.com",
@@ -534,29 +667,29 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 0,
-							y		: 97,
-							width	: 3,
-							height	: 3,
+							y		: 98,
+							width	: 2,
+							height	: 5,
 							img		: "",
 							txt 	: "",
 							callback: function() {}						
 						},
 						others : [{
 							className	: "sendMail",
-							x		: 65,
-							y		: 1,
-							width	: 4,
-							height	: 3,
+							x		: 97,
+							y		: 0,
+							width	: 5,
+							height	: 5,
 							img		: "",
 							txt 	: "",
 							callback: function() {}		
 						}]
 					},
 					selectList : {
-						x : 4,
+						x : 6,
 						y : 0,
 						width : 100,
-						height : 6,
+						height : 8,
 						elements : [
 							"Choose a recipient",
 							"c.verimportent@coldmail.com",
@@ -583,8 +716,8 @@ define(["jquery"],function ($) {
 					close : {
 						className	: "close",
 						x		: 0,
-						y		: 95,
-						width	: 5,
+						y		: 98,
+						width	: 2,
 						height	: 3,
 						img		: "",
 						txt 	: "",
@@ -602,10 +735,10 @@ define(["jquery"],function ($) {
 					buttons : {
 						close : {
 							className	: "close",
-							x		: 90,
-							y		: 20,
-							width	: 15,
-							height	: 17,
+							x		: 198,
+							y		: 72,
+							width	: 25,
+							height	: 24,
 							img		: "",
 							txt 	: "",
 							callback: function() {}
@@ -655,9 +788,9 @@ define(["jquery"],function ($) {
 					close : {
 						className	: "close",
 						x		: 0,
-						y		: 95,
-						width	: 5,
-						height	: 3,
+						y		: 89,
+						width	: 10,
+						height	: 2,
 						img		: "",
 						txt 	: "",
 						callback: function() {}
