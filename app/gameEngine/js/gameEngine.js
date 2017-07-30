@@ -39,9 +39,15 @@ define(["jquery", "TaskBar"],function ($, TaskBar) {
 					}
 				},
 				{
-					txt : "Games",
+					txt : "Steam",
 					callback : function(){
-						that.allPopupPoolsContainer.games.openAll();						
+						that.allPopupPoolsContainer.steam.openAll();						
+					}
+				},
+				{
+					txt : "Doom",
+					callback : function(){
+						that.allPopupPoolsContainer.doom.openAll();						
 					}
 				},
 				{

@@ -8,7 +8,8 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 	var allPopupsContainer = {
 		simples : [],
 		mails : [],
-		games : [],
+		doom : [],
+		steam : [],
 		skype : []
 	};
 	for (var i = 0; i < popupsParams.otherPotentialPopupsParams.simples.length; i++) {
@@ -21,8 +22,8 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 	let doomPopup = new DoomPopup(popupsParams.otherPotentialPopupsParams.doom);
 	popupsParams.otherPotentialPopupsParams.steam.doomPopup = doomPopup;
 	let steamPopup = new SteamPopup(popupsParams.otherPotentialPopupsParams.steam);
-	allPopupsContainer.games.push(doomPopup);
-	allPopupsContainer.games.push(steamPopup);
+	allPopupsContainer.doom.push(doomPopup);
+	allPopupsContainer.steam.push(steamPopup);
 	
 
 	let skypePopup = new SkypePopup(popupsParams.otherPotentialPopupsParams.skype);
@@ -33,11 +34,12 @@ define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePop
 
 	allPopupPoolsContainer.simples = new PopupPool(allPopupsContainer.simples);
 	allPopupPoolsContainer.mails = new PopupPool(allPopupsContainer.mails);
-	allPopupPoolsContainer.games = new PopupPool(allPopupsContainer.games);
+	allPopupPoolsContainer.doom = new PopupPool(allPopupsContainer.doom);
+	allPopupPoolsContainer.steam = new PopupPool(allPopupsContainer.steam);
 	allPopupPoolsContainer.skype = new PopupPool(allPopupsContainer.skype);
 
 
-	var masterPopupPools = new PopupPool([allPopupPoolsContainer.simples, allPopupPoolsContainer.mails,  allPopupPoolsContainer.games, allPopupPoolsContainer.skype]);
+	var masterPopupPools = new PopupPool([allPopupPoolsContainer.simples, allPopupPoolsContainer.mails,  allPopupPoolsContainer.doom ,allPopupPoolsContainer.steam, allPopupPoolsContainer.skype]);
 
 
 
