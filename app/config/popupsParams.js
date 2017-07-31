@@ -837,7 +837,7 @@ define(["jquery"],function ($) {
 					},
 					selectList : {
 						x : 27,
-						y : 200,
+						y : 1,
 						width : 1199,
 						height : 32,
 						elements : [
