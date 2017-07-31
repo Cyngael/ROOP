@@ -232,7 +232,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams", "Utils"],function ($, TaskBa
 
 			this.outroPopup.majTxt("gfResult", texts.gfResult);
 			this.outroPopup.majTxt("mailResult", texts.mailResult);
-			this.outroPopup.majTxt("docResult", (nbDocClosed + nbAdobeClosed) + " * " + addByDoc + "pts");
+			this.outroPopup.majTxt("docResult", (nbDocClosed) + " * " + addByDoc + "pts and " +nbAdobeClosed + " * " + addByAdobe +"pts");
 			this.outroPopup.majTxt("scoreResult", score);
 
 			this.outroPopup.open();
