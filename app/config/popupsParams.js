@@ -418,7 +418,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-								img		: "Adobe/Fireworkspopup.png",
+								img		: "Adobe/FireworksPopUp.png",
 								id		: "confirmPopup10",
 								linked  : true,
 								buttons : {
@@ -495,7 +495,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-								img		: "Adobe/Flashpopup.png",
+								img		: "Adobe/FlashPopUp.png",
 								id		: "confirmPopup11",
 								linked  : true,
 								buttons : {
@@ -572,7 +572,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-								img		: "Adobe/PhotoshopPopup.png",
+								img		: "Adobe/PhotoshopPopUp.png",
 								id		: "confirmPopup12",
 								linked  : true,
 								buttons : {
@@ -987,7 +987,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-					img		: "game/steamPopup.png",
+					img		: "game/steamPopUp.png",
 					id		: "confirmPopup5",
 					linked  : true,
 					buttons : {
