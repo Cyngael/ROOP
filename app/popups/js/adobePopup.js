@@ -45,6 +45,12 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			super.close();
 		}
 
+		bringToFront() {
+			super.bringToFront();
+			if(this.savePopup)
+				this.savePopup.bringToFront();
+		}
+
 	}
 
 
