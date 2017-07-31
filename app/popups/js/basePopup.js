@@ -47,7 +47,7 @@ define(["jquery", "Utils"],function ($, Utils) {
             this.domElement.onclick                 = function(){
                 if(that.disabled)
                 {
-					/*Utils.SoundUtils.playSound("chlong.wav");	*/
+					Utils.SoundUtils.playSound("chlong.wav");	
                 }
                 else
                 {
@@ -116,7 +116,7 @@ define(["jquery", "Utils"],function ($, Utils) {
 			domElement.style.width				= params.width + "px";
 			domElement.style.height 			= params.height + "px";
 			domElement.style.backgroundImage 	= "url(" + params.img + ")";
-			/*domElement.style.border 			= "1px solid blue";*/
+			domElement.style.border 			= "1px solid blue";
 			domElement.style.cursor				= "pointer";
 			domElement.innerHTML 				= params.txt;
 
