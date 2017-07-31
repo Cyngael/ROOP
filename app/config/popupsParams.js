@@ -272,6 +272,28 @@ define(["jquery"],function ($) {
 										callback: function() {
 										}
 									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
@@ -368,15 +390,103 @@ define(["jquery"],function ($) {
 																			txt 	: "",
 																			callback: function() {},
 																		}
+																		,
+																		others : [{
+																			className	: "bottomButtons errorSound",
+																			x		: 91,
+																			y		: 158,
+																			width	: 150,
+																			height	: 21,
+																			img		: "",
+																			txt 	: "",
+																			callback: function() {}		
+																		}
+																		,
+																		{
+																			className	: "topButton errorSound",
+																			x		: 10,
+																			y		: 324,
+																			width	: 45,
+																			height	: 18,
+																			img		: "",
+																			txt 	: "",
+																			callback: function() {}		
+																		}]
 																	},
 																	}
 																}
-															}
+																,
+																others : [{
+																	className	: "bottomButtons errorSound",
+																	x		: 91,
+																	y		: 158,
+																	width	: 150,
+																	height	: 21,
+																	img		: "",
+																	txt 	: "",
+																	callback: function() {}		
+																}
+																,
+																{
+																	className	: "topButton errorSound",
+																	x		: 10,
+																	y		: 324,
+																	width	: 45,
+																	height	: 18,
+																	img		: "",
+																	txt 	: "",
+																	callback: function() {}		
+																}]
+														}
 													},
-												},
+												}
+												,
+												others : [{
+													className	: "bottomButtons errorSound",
+													x		: 91,
+													y		: 158,
+													width	: 150,
+													height	: 21,
+													img		: "",
+													txt 	: "",
+													callback: function() {}		
+												}
+												,
+												{
+													className	: "topButton errorSound",
+													x		: 10,
+													y		: 324,
+													width	: 45,
+													height	: 18,
+													img		: "",
+													txt 	: "",
+													callback: function() {}		
+												}]
 											},
 										}
-									}	
+									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
@@ -419,6 +529,28 @@ define(["jquery"],function ($) {
 										txt 	: "",
 										callback: function() {}
 									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
@@ -464,6 +596,28 @@ define(["jquery"],function ($) {
 										txt 	: "",
 										callback: function() {},
 									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
@@ -541,6 +695,28 @@ define(["jquery"],function ($) {
 										txt 	: "",
 										callback: function() {},
 									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
@@ -618,6 +794,28 @@ define(["jquery"],function ($) {
 										txt 	: "",
 										callback: function() {},
 									}
+									,
+									others : [{
+										className	: "bottomButtons errorSound",
+										x		: 91,
+										y		: 158,
+										width	: 150,
+										height	: 21,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}
+									,
+									{
+										className	: "topButton errorSound",
+										x		: 10,
+										y		: 324,
+										width	: 45,
+										height	: 18,
+										img		: "",
+										txt 	: "",
+										callback: function() {}		
+									}]
 								},
 							}
 						}
