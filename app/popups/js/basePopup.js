@@ -229,6 +229,16 @@ define(["jquery", "Utils"],function ($, Utils) {
 			
 		}
 
+		randomizeOrder() {
+
+			if(!this.closed)
+			{
+				var newZ = Math.round((Math.random() * 10000));
+				this.domElement.style.zIndex = newZ;
+			}
+			
+		}
+
 		show() {
 			this.domElement.style.display = "block";
 			this.hidden = false;

@@ -3,6 +3,10 @@ body {
 	margin : 0px;
 }
 
+div {
+	user-select : none;
+}
+
 #innerWindow {
 	background-image: url(app/img/UI/background.jpg);
 	overflow: hidden;

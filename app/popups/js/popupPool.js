@@ -4,6 +4,10 @@ define(["jquery"],function ($) {
 
 		constructor(listPopup) {
 			this.listPopup = listPopup;
+
+			if(this.listPopup.length > 1)
+				this.shuffleList();
+
 		}
 
 		
@@ -23,15 +27,40 @@ define(["jquery"],function ($) {
 			}
 		}
 
+		shuffleList() {
+		    let counter = this.listPopup.length;
+
+		    // While there are elements in the array
+		    while (counter > 0) {
+		        // Pick a random index
+		        let index = Math.floor(Math.random() * counter);
+
+		        // Decrease counter by 1
+		        counter--;
+
+		        // And swap the last element with it
+		        let temp = this.listPopup[counter];
+		        this.listPopup[counter] = this.listPopup[index];
+		        this.listPopup[index] = temp;
+		    }
+
+		    return this.listPopup;
+		}
+
 		randomizePositions(xMin,xMax, yMin, yMax) {
 			for (var i = 0; i < this.listPopup.length; i++) {
-				this.listPopup[i].randomizePosition();
+				this.listPopup[i].randomizePosition(xMin,xMax, yMin, yMax);
 			}
 		}
 
 		randomizeSizes(xMin,xMax, yMin, yMax) {
 			for (var i = 0; i < this.listPopup.length; i++) {
-				this.listPopup[i].randomizeSize();
+				this.listPopup[i].randomizeSize(xMin,xMax, yMin, yMax);
+			}
+		}
+		randomizeOrder() {
+			for (var i = 0; i < this.listPopup.length; i++) {
+				this.listPopup[i].randomizeOrder();
 			}
 		}
 
@@ -50,7 +79,8 @@ define(["jquery"],function ($) {
 
 		}
 
-		bringToFront() {
+		bringToFront() {			
+
 			for (var i = 0; i < this.listPopup.length; i++) {
 				this.listPopup[i].bringToFront();
 			}
