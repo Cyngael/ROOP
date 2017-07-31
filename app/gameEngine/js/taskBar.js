@@ -77,7 +77,7 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.domBatterie.style.margin = "5px";
 			this.domBatterie.style.cursor = "pointer";
 			this.domBatterie.style.left	  = "90%";
-			this.domBatterie.style.border = "1px solid red";
+			//this.domBatterie.style.border = "1px solid red";
 
 			this.domBatterie.onclick = function(){
 				that.powerPlanPopup.open();
