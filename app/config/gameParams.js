@@ -1,7 +1,7 @@
 define(["jquery"],function ($) {
 	
 	var gameParams = {
-		startTime : 120,//Second
+		startTime : 1200,//Second
 		powerPlan : {
 			opacity : 0.85,
 			transitionTime : 1000,//miliSecond

@@ -43,7 +43,11 @@ define(["jquery"],function ($) {
 			this.domElement.style.width				= this.width + "px";
 			this.domElement.style.height 			= this.height + "px";
 			//this.domElement.style.border 			= "8px solid #d7e4f2";
-			this.domElement.onclick 				= this.bringToFront.bind(this);
+			var that = this;
+            this.domElement.onclick                 = function(){
+                if(!that.disabled)
+                    that.bringToFront.bind(that)();
+            }
 
 			this.backgroundImage = document.createElement('img');
 			this.backgroundImage.src = "app/img/" + this.img;
