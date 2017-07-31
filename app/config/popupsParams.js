@@ -253,8 +253,8 @@ define(["jquery"],function ($) {
 							callback: function() {
 							},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "documents/TomorrowPresPopUp.png",
@@ -318,8 +318,8 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "documents/EmptyDocPopup1.png",
@@ -373,7 +373,7 @@ define(["jquery"],function ($) {
 																callback: function() {},
 																confirmPopup : {
 																	x		: 150,
-																	y		: 320,
+																	y		: 420,
 																	width	: 389,
 																	height	: 142,
 																	img		: "documents/EmptyDocPopup4.png",
@@ -511,8 +511,8 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "documents/ProjectWholePopUp.png",
@@ -578,8 +578,8 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "Adobe/FireworksPopUp.png",
@@ -599,21 +599,10 @@ define(["jquery"],function ($) {
 									,
 									others : [{
 										className	: "bottomButtons errorSound",
-										x		: 91,
-										y		: 158,
-										width	: 150,
-										height	: 21,
-										img		: "",
-										txt 	: "",
-										callback: function() {}		
-									}
-									,
-									{
-										className	: "topButton errorSound",
-										x		: 10,
-										y		: 324,
-										width	: 45,
-										height	: 18,
+										x		: 97,
+										y		: 189,
+										width	: 173,
+										height	: 17,
 										img		: "",
 										txt 	: "",
 										callback: function() {}		
@@ -623,8 +612,8 @@ define(["jquery"],function ($) {
 						}
 					},
 					savePopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 						img		: "Adobe/savePopup01.png",
@@ -677,8 +666,8 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "Adobe/FlashPopUp.png",
@@ -698,21 +687,10 @@ define(["jquery"],function ($) {
 									,
 									others : [{
 										className	: "bottomButtons errorSound",
-										x		: 91,
-										y		: 158,
-										width	: 150,
-										height	: 21,
-										img		: "",
-										txt 	: "",
-										callback: function() {}		
-									}
-									,
-									{
-										className	: "topButton errorSound",
-										x		: 10,
-										y		: 324,
-										width	: 45,
-										height	: 18,
+										x		: 97,
+										y		: 189,
+										width	: 173,
+										height	: 17,
 										img		: "",
 										txt 	: "",
 										callback: function() {}		
@@ -722,8 +700,8 @@ define(["jquery"],function ($) {
 						}
 					},
 					savePopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 						img		: "Adobe/savePopup01.png",
@@ -776,8 +754,8 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {},
 							confirmPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 								img		: "Adobe/PhotoshopPopUp.png",
@@ -797,21 +775,10 @@ define(["jquery"],function ($) {
 									,
 									others : [{
 										className	: "bottomButtons errorSound",
-										x		: 91,
-										y		: 158,
-										width	: 150,
-										height	: 21,
-										img		: "",
-										txt 	: "",
-										callback: function() {}		
-									}
-									,
-									{
-										className	: "topButton errorSound",
-										x		: 10,
-										y		: 324,
-										width	: 45,
-										height	: 18,
+										x		: 97,
+										y		: 189,
+										width	: 173,
+										height	: 17,
 										img		: "",
 										txt 	: "",
 										callback: function() {}		
@@ -821,8 +788,8 @@ define(["jquery"],function ($) {
 						}
 					},
 					savePopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 						img		: "Adobe/savePopup01.png",
@@ -1213,8 +1180,8 @@ define(["jquery"],function ($) {
 					}
 				},
 				errorPopup : {
-								x		: 550,
-								y		: 320,
+								x		: 350,
+								y		: 420,
 								width	: 389,
 								height	: 142,
 					img		: "game/steamPopUp.png",
