@@ -25,8 +25,9 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.domElement 						= document.createElement('div');
 			this.domElement.id 						= "taskBar";
 			this.domElement.style.width 			= "1500px";
-			this.domElement.style.height 			= "40px";
+			this.domElement.style.height 			= "32px";
 			this.domElement.style.backgroundImage 	= "url(app/img/UI/taskbar.png)";
+			this.domElement.style.backgroundSize 	= "1500px 32px";
 			this.domElement.style.position 			= "absolute";
 			this.domElement.style.bottom			= "0";
 			this.domElement.style.left				= "0";
