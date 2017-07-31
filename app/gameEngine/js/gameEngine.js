@@ -220,7 +220,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams", "Utils"],function ($, TaskBa
 				}
 			}
 
-			score += (this.timeSaved * gameParams.points.pointsBySecond)
+			score += (this.timeSaved * -gameParams.points.pointsBySecond)
 
 
 			clearInterval(this.timer);

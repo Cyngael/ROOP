@@ -62,8 +62,9 @@ define(["jquery", "BasePopup", "Utils"],function ($, BasePopup, Utils) {
 				that.callPopup.domElement.onclick = function(){};
 
 				that.callPopup.setButtonCallback("openChat", function(){
-					that.show();
 					that.callPopup.close();
+					that.show();
+					that.bringToFront();
 					Utils.SoundUtils.stopSound("skype_call_inc.mp3");
 				})
 				that.callPopup.setButtonCallback("close", function(){
