@@ -33,7 +33,7 @@ define(["jquery", "BasePopup", "Utils"],function ($, BasePopup, Utils) {
 
 					if(isEnought)
 					{
-						this.isGFWaiting = false;
+						that.isGFWaiting = false;
 						that.close();
 					}
 					else
