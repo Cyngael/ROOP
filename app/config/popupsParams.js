@@ -1219,7 +1219,29 @@ define(["jquery"],function ($) {
 						img		: "",
 						txt 	: "",
 						callback: function() {}						
-					},
+					}
+					,
+					others : [{
+						className	: "bottomButtons errorSound",
+						x		: 0,
+						y		: 0,
+						width	: 420,
+						height	: 260,
+						img		: "",
+						txt 	: "",
+						callback: function() {}		
+					}
+					,
+					{
+						className	: "topButtons errorSound",
+						x		: 0,
+						y		: 0,
+						width	: 900,
+						height	: 20,
+						img		: "",
+						txt 	: "",
+						callback: function() {}		
+					}]
 				},
 				imgStates : [
 					"game/doom_base.png",
