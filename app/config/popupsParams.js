@@ -344,7 +344,7 @@ define(["jquery"],function ($) {
 												},
 											},
 										}
-									}
+									}	
 								},
 							}
 						}
@@ -572,7 +572,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-								img		: "Adobe/Photoshoppopup.png",
+								img		: "Adobe/PhotoshopPopup.png",
 								id		: "confirmPopup12",
 								linked  : true,
 								buttons : {
