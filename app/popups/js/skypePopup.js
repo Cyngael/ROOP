@@ -26,10 +26,10 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 				let x = e.which || e.keyCode;
 				if (x == 13)//Enter
 				{
-					let isEnought = true;
+					let isEnought = false;
 					for (var i = 0; i < that.inputParams.keywords.length; i++) {
-						if(!this.value.toUpperCase().includes(that.inputParams.keywords[i].toUpperCase()))
-							isEnought = false;
+						if(this.value.toUpperCase().includes(that.inputParams.keywords[i].toUpperCase()))
+							isEnought = true;
 					}
 
 					if(isEnought)
