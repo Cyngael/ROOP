@@ -177,9 +177,9 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
+							y		: 714,
+							width	: 30,
+							height	: 12,
 							img		: "",
 							txt 	: "",
 							callback: function() {
@@ -188,10 +188,10 @@ define(["jquery"],function ($) {
 						,
 						others : [{
 							className	: "bottomButtons errorSound",
-							x		: 97,
-							y		: 189,
-							width	: 173,
-							height	: 17,
+							x		: 0,
+							y		: 678,
+							width	: 35,
+							height	: 12,
 							img		: "",
 							txt 	: "",
 							callback: function() {}		
@@ -210,14 +210,25 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
+							y		: 714,
+							width	: 30,
+							height	: 12,
 							img		: "",
 							txt 	: "",
 							callback: function() {
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 678,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -232,14 +243,25 @@ define(["jquery"],function ($) {
 						close : {
 							className	: "close",
 							x		: 0,
-							y		: 95,
-							width	: 4,
-							height	: 3,
+							y		: 714,
+							width	: 30,
+							height	: 12,
 							img		: "",
 							txt 	: "",
 							callback: function() {
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 678,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 			],
@@ -308,6 +330,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 				}
 				,
@@ -501,6 +534,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 				}
 				,
@@ -565,6 +609,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 			],
@@ -621,6 +676,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 					savePopup : {
 								x		: 350,
@@ -709,6 +775,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 					savePopup : {
 								x		: 350,
@@ -797,6 +874,17 @@ define(["jquery"],function ($) {
 								},
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1415,
+							width	: 45,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					},
 					savePopup : {
 								x		: 350,
@@ -855,6 +943,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -876,6 +975,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -897,6 +1007,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -918,6 +1039,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -939,12 +1071,23 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
 				{
-					x		: 250,
-					y		: 50,
+					x		: 50,
+					y		: 250,
 					width	: 1200,
 					height	: 360,
 					img		: "classic_windows/normalwindow6.png",
@@ -960,6 +1103,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
@@ -981,6 +1135,17 @@ define(["jquery"],function ($) {
 							txt 	: "",
 							callback: function() {}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				/*pop-ups => other kind of web pages, smaller, with traps (fake close buttons)*/
@@ -1096,6 +1261,17 @@ define(["jquery"],function ($) {
 						}
 						,
 						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}
+						,
+						{
 							className	: "sendMail",
 							x		: 634,
 							y		: 6,
@@ -1139,8 +1315,20 @@ define(["jquery"],function ($) {
 							img		: "",
 							txt 	: "",
 							callback: function() {}						
-						},
+						}
+						,
 						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 0,
+							y		: 1132,
+							width	: 35,
+							height	: 12,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}
+						,
+						{
 							className	: "sendMail",
 							x		: 411,
 							y		: 6,
@@ -1283,6 +1471,17 @@ define(["jquery"],function ($) {
 						txt 	: "",
 						callback: function() {}
 					}
+					,
+					others : [{
+						className	: "bottomButtons errorSound",
+						x		: 0,
+						y		: 292,
+						width	: 40,
+						height	: 14,
+						img		: "",
+						txt 	: "",
+						callback: function() {}		
+					}]
 				},
 				input : {
 					x		: 607,
