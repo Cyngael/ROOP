@@ -1,5 +1,6 @@
 body {
 	overflow: hidden;
+	margin : 0px;
 }
 
 #innerWindow {
@@ -7,6 +8,7 @@ body {
 	overflow: hidden;
 	width: 1500px;
 	height: 844px;
+	position: absolute;
 }
 
 
