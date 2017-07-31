@@ -48,7 +48,7 @@ define(["jquery"],function ($) {
 					className	: "gfResult result",
 					x		: 449,
 					y		: 577,
-					width	: 460,
+					width	: 604,
 					height	: 3,
 					img		: "",
 					txt 	: "gfResult",
@@ -89,8 +89,8 @@ define(["jquery"],function ($) {
 		}
 		,
 		powerPlanPopupParams : {
-			x		: 1080,
-			y		: 360,
+			x		: 628,
+			y		: 1205,
 			width	: 300,
 			height	: 103,
 			img		: "UI/batteryChange.png",
@@ -109,10 +109,10 @@ define(["jquery"],function ($) {
 				},
 				others : [{
 					className	: "normalPowerPlan",
-					x		: 54,
-					y		: 10,
-					width	: 65,
-					height	: 10,
+					x		: 95,
+					y		: 30,
+					width	: 200,
+					height	: 20,
 					img		: "",
 					txt 	: "",
 					callback: function() {}		
@@ -120,10 +120,10 @@ define(["jquery"],function ($) {
 				,
 				{
 					className	: "riskPowerPlan",
-					x		: 68,
-					y		: 10,
-					width	: 65,
-					height	: 10,
+					x		: 120,
+					y		: 30,
+					width	: 200,
+					height	: 20,
 					img		: "",
 					txt 	: "",
 					callback: function() {}		

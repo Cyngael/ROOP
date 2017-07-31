@@ -6,6 +6,9 @@ body {
 div {
 	user-select : none;
 }
+div:focus {
+	outline : 0;
+}
 
 #innerWindow {
 	background-image: url(app/img/UI/background.jpg);

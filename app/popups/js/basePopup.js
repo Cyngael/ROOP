@@ -125,6 +125,9 @@ define(["jquery", "Utils"],function ($, Utils) {
 			var that = this;
 			domElement.onclick = function(e)
 			{
+				if(this.className.includes("errorSound"))
+					Utils.SoundUtils.playSound("chlong.wav");	
+
 				if(that.disabled)
 				{
 					return;
@@ -166,8 +169,7 @@ define(["jquery", "Utils"],function ($, Utils) {
 						setTimeout(callback());
 				}
 
-				if(className.includes("errorSound"))
-					Utils.SoundUtils.playSound("chlong.wav");				
+			
 
 				e.stopPropagation();
 
@@ -298,7 +300,7 @@ define(["jquery", "Utils"],function ($, Utils) {
 			if(e)
 				e.preventDefault();
 
-
+			console.log(this.listDomElement)
 
 
 			var highterZ = 0;
