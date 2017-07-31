@@ -1,5 +1,8 @@
 define(["jquery", "BasePopup", "MailPopup", "DoomPopup", "SteamPopup", "SkypePopup", "AdobePopup",  "GameEngine", "PopupPool", "popupsParams"],function ($, BasePopup, MailPopup, DoomPopup, SteamPopup, SkypePopup, AdobePopup,  GameEngine, PopupPool, popupsParams) {
 
+	$(document).on("dragstart", function() {
+	     return false;
+	});
 	
 	var GE = new GameEngine();
 
