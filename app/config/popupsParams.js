@@ -131,6 +131,38 @@ define(["jquery"],function ($) {
 			}
 		}
 		,
+		shutdownPopupParams : {
+			x		: 500,
+			y		: 250,
+			width	: 300,
+			height	: 103,
+			img		: "UI/batteryChange.png",
+			imgRisk	: "UI/batteryChanged.png",
+			id		: "shutdown",
+			buttons : {
+				close : {
+					className : "close",
+					x		: 0,
+					y		: 0,
+					width	: 50,
+					height	: 50,
+					img		: "",
+					txt 	: "",
+					callback: function() {}
+				},
+				others : [{
+					className	: "shutdownButton",
+					x		: 54,
+					y		: 10,
+					width	: 65,
+					height	: 10,
+					img		: "",
+					txt 	: "",
+					callback: function() {}		
+				}]
+			}
+		}
+		,
 		otherPotentialPopupsParams : {
 			folders : [
 			/*desktop windows => just another category, with nothing important to close actually. pure spam*/
@@ -462,8 +494,8 @@ define(["jquery"],function ($) {
 								className	: "close",
 										x		: 92,
 										y		: 80,
-										width	: 70,
-										height	: 20,
+										width	: 0,
+										height	: 0,
 								img		: "",
 								txt 	: "",
 								callback: function() {}
@@ -539,8 +571,8 @@ define(["jquery"],function ($) {
 								className	: "close",
 										x		: 92,
 										y		: 80,
-										width	: 70,
-										height	: 20,
+										width	: 0,
+										height	: 0,
 								img		: "",
 								txt 	: "",
 								callback: function() {}
@@ -616,8 +648,8 @@ define(["jquery"],function ($) {
 								className	: "close",
 										x		: 92,
 										y		: 80,
-										width	: 70,
-										height	: 20,
+										width	: 0,
+										height	: 0,
 								img		: "",
 								txt 	: "",
 								callback: function() {}

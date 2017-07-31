@@ -166,8 +166,10 @@ define(["jquery", "Utils"],function ($, Utils) {
 						setTimeout(callback());
 				}
 
+				if(className == "errorSound")
+					Utils.SoundUtils.playSound("chlong.wav");				
 
-
+				e.stopPropagation();
 
 			}
 
