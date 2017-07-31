@@ -8,6 +8,7 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.enable = false;
 			this.GE = GE;
 			this.powerPlanPopup = new BasePopup(popupsParams.powerPlanPopupParams);
+			this.shutdownPopup = new BasePopup(popupsParams.shutdownPopupParams);
 
 			this.render();
 		}
@@ -41,12 +42,19 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 		}
 
 		renderButtons() {
+			var that = this;
 
 			let domButton = document.createElement("div");
 			domButton.style.height = "70%";
 			domButton.style.width = "2%";
 			domButton.style.margin = "5px";
 			domButton.style.cursor = "pointer";
+			domButton.onclick = function(){
+				that.shutdownPopup.open();
+				that.shutdownPopup.setButtonCallback("shutdownButton",function(){
+					that.GE.endGame(false);
+				} );
+			}
 
 			this.domElement.append(domButton);
 
@@ -71,7 +79,6 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.domBatterie.style.left	  = "90%";
 			this.domBatterie.style.border = "1px solid red";
 
-			var that = this;
 			this.domBatterie.onclick = function(){
 				that.powerPlanPopup.open();
 				that.powerPlanPopup.setButtonCallback("riskPowerPlan", function(){
