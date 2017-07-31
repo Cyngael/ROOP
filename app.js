@@ -1,6 +1,7 @@
 requirejs.config({
     baseUrl: 'libs',
     paths: {
+		AdobePopup	: '../app/popups/js/adobePopup',
         app 		: '../app',
         jquery 		: 'jquery-3.2.1.min',
         BasePopup 	: '../app/popups/js/basePopup',

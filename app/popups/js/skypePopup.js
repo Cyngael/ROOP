@@ -17,10 +17,10 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			this.domInput = document.createElement("input");
 			
 			this.domInput.style.position 			= "absolute";
-			this.domInput.style.top 				= this.inputParams.x + "%";
-			this.domInput.style.left 				= this.inputParams.y + "%";
-			this.domInput.style.width				= this.inputParams.width + "%";
-			this.domInput.style.height 				= this.inputParams.height + "%";
+			this.domInput.style.top 				= this.inputParams.x + "px";
+			this.domInput.style.left 				= this.inputParams.y + "px";
+			this.domInput.style.width				= this.inputParams.width + "px";
+			this.domInput.style.height 				= this.inputParams.height + "px";
 			this.domInput.placeholder = "Type your message here !";
 			this.domInput.onkeyup = function(e){
 				let x = e.which || e.keyCode;

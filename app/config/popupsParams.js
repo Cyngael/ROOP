@@ -2,10 +2,10 @@ define(["jquery"],function ($) {
 	
 	var popupsParams = {
 		introPopupParams : {
-			x		: 25,
-			y		: 25,
-			width	: 30,
-			height	: 30,
+			x		: 112,
+			y		: 375,
+			width	: 450,
+			height	: 135,
 			img		: "IntroPopUp.png",
 			id		: "introPopup",
 			buttons : {
@@ -27,8 +27,8 @@ define(["jquery"],function ($) {
 		outroPopupParams : {
 			x		: 0,
 			y		: 0,
-			width	: 100,
-			height	: 100,
+			width	: 1500,
+			height	: 450,
 			img		: "OutroScreen.png",
 			id		: "OutroScreen",
 			buttons : {
@@ -89,10 +89,10 @@ define(["jquery"],function ($) {
 		}
 		,
 		powerPlanPopupParams : {
-			x		: 72,
-			y		: 80,
-			width	: 20,
-			height	: 23,
+			x		: 1080,
+			y		: 360,
+			width	: 300,
+			height	: 103,
 			img		: "UI/batteryChange.png",
 			imgRisk	: "UI/batteryChanged.png",
 			id		: "powerPlan",
@@ -135,10 +135,10 @@ define(["jquery"],function ($) {
 			folders : [
 			/*desktop windows => just another category, with nothing important to close actually. pure spam*/
 				{
-					x		: 5,
-					y		: 8,
-					width	: 50,
-					height	: 50,
+					x		: 75,
+					y		: 36,
+					width	: 750,
+					height	: 225,
 					img		: "desktop_windows/desktopwindow1.png",
 					id		: "randomPopup7",
 					buttons : {
@@ -157,10 +157,10 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 25,
-					y		: 8,
-					width	: 50,
-					height	: 50,
+					x		: 400,
+					y		: 40,
+					width	: 750,
+					height	: 225,
 					img		: "desktop_windows/desktopwindow2.png",
 					id		: "randomPopup8",
 					buttons : {
@@ -179,10 +179,10 @@ define(["jquery"],function ($) {
 				}
 				,
 				{
-					x		: 5,
-					y		: 28,
-					width	: 50,
-					height	: 50,
+					x		: 250,
+					y		: 500,
+					width	: 750,
+					height	: 225,
 					img		: "desktop_windows/desktopwindow3.png",
 					id		: "randomPopup9",
 					buttons : {
@@ -205,8 +205,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "documents/TomorrowPres.png",
 					id		: "randomPopupConf1",
 					buttons : {
@@ -249,8 +249,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "documents/EmptyDoc.png",
 					id		: "randomPopupConf2",
 					buttons : {
@@ -354,8 +354,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "documents/ProjectWhole.png",
 					id		: "randomPopupConf3",
 					buttons : {
@@ -398,8 +398,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "Adobe/Fireworks.png",
 					id		: "randomPopupConf10",
 					timeWin : 10,
@@ -475,8 +475,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "Adobe/Flash.png",
 					id		: "randomPopupConf11",
 					timeWin : 10,
@@ -552,8 +552,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 0,
 					y		: 0,
-					width	: 100,
-					height	: 100,
+					width	: 1500,
+					height	: 450,
 					img		: "Adobe/Photoshop.png",
 					id		: "randomPopupConf12",
 					timeWin : 10,
@@ -632,8 +632,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 7,
 					y		: 12,
-					width	: 80,
-					height	: 80,
+					width	: 1200,
+					height	: 360,
 					img		: "classic_windows/normalwindow1.png",
 					id		: "randomPopup1",
 					buttons : {
@@ -653,8 +653,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 1,
 					y		: 1,
-					width	: 80,
-					height	: 80,
+					width	: 1200,
+					height	: 360,
 					img		: "classic_windows/normalwindow2.png",
 					id		: "randomPopup2",
 					buttons : {
@@ -674,8 +674,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 5,
 					y		: 8,
-					width	: 80,
-					height	: 80,
+					width	: 1200,
+					height	: 360,
 					img		: "classic_windows/normalwindow3.png",
 					id		: "randomPopup3",
 					buttons : {
@@ -695,8 +695,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 5,
 					y		: 8,
-					width	: 80,
-					height	: 80,
+					width	: 1200,
+					height	: 360,
 					img		: "classic_windows/safariwindow1.png",
 					id		: "randomPopup4",
 					buttons : {
@@ -717,8 +717,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 5,
 					y		: 40,
-					width	: 50,
-					height	: 50,
+					width	: 750,
+					height	: 225,
 					img		: "pop-ups/fakebook.png",
 					id		: "randomPopup5",
 					buttons : {
@@ -749,8 +749,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 40,
 					y		: 5,
-					width	: 45,
-					height	: 45,
+					width	: 675,
+					height	: 202,
 					img		: "pop-ups/AOLTitanic.png",
 					id		: "randomPopupConf4",
 					buttons : {
@@ -807,8 +807,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 2,
 					y		: 1,
-					width	: 80,
-					height	: 85,
+					width	: 1200,
+					height	: 360,
 					img		: "mail/urgent_mail.png",
 					id		: "mail1",
 					buttons : {
@@ -854,8 +854,8 @@ define(["jquery"],function ($) {
 				{
 					x		: 20,
 					y		: 15,
-					width	: 80,
-					height	: 55,
+					width	: 1200,
+					height	: 248,
 					img		: "mail/urgent_mail2.png",
 					id		: "mail1",
 					buttons : {
@@ -901,10 +901,10 @@ define(["jquery"],function ($) {
 			,
 			/*games combo: doom blocks steam and can't be exited except by his own menu*/
 			steam :  {
-				x		: 2,
-				y		: 2,
-				width	: 90,
-				height	: 90,
+				x		: 0,
+				y		: 0,
+				width	: 1500,
+				height	: 450,
 				img		: "game/steam.png",
 				id		: "randomPopup6",
 				buttons : {
@@ -945,8 +945,8 @@ define(["jquery"],function ($) {
 			doom : {
 				x		: 10,
 				y		: 10,
-				width	: 60,
-				height	: 42,
+				width	: 900,
+				height	: 190,
 				img		: "game/doom_base.png",
 				id		: "doom",
 				buttons : {
@@ -975,8 +975,8 @@ define(["jquery"],function ($) {
 			skype : {
 				x		: 8,
 				y		: 60,
-				width	: 25,
-				height	: 80,
+				width	: 375,
+				height	: 360,
 				img		: "Skype/gf.png",
 				id		: "skypePopup",
 				buttons : {

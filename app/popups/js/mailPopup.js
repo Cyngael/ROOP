@@ -23,10 +23,10 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			}
 
 			this.domSelect.style.position 			= "absolute";
-			this.domSelect.style.top 				= this.selectList.x + "%";
-			this.domSelect.style.left 				= this.selectList.y + "%";
-			this.domSelect.style.width				= this.selectList.width + "%";
-			this.domSelect.style.height 			= this.selectList.height + "%";
+			this.domSelect.style.top 				= this.selectList.x + "px";
+			this.domSelect.style.left 				= this.selectList.y + "px";
+			this.domSelect.style.width				= this.selectList.width + "px";
+			this.domSelect.style.height 			= this.selectList.height + "px";
 
 			this.domElement.append(this.domSelect);
 
