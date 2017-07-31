@@ -48,7 +48,7 @@ define(["jquery"],function ($) {
 					className	: "gfResult result",
 					x		: 449,
 					y		: 577,
-					width	: 460,
+					width	: 604,
 					height	: 3,
 					img		: "",
 					txt 	: "gfResult",
