@@ -185,6 +185,17 @@ define(["jquery"],function ($) {
 							callback: function() {
 							}
 						}
+						,
+						others : [{
+							className	: "bottomButtons errorSound",
+							x		: 97,
+							y		: 189,
+							width	: 173,
+							height	: 17,
+							img		: "",
+							txt 	: "",
+							callback: function() {}		
+						}]
 					}
 				}
 				,
