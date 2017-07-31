@@ -1,3 +1,5 @@
 body {
-	background-image: url(img/UI/background.jpg)
+	background-image: url(img/UI/background.jpg);
+	background-size: 1500px 844px;
+	overflow: hidden;
 }
