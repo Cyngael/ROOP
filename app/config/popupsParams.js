@@ -69,7 +69,7 @@ define(["jquery"],function ($) {
 					className	: "docResult result",
 					x		: 536,
 					y		: 849,
-					width	: 160,
+					width	: 300,
 					height	: 3,
 					img		: "",
 					txt 	: "docResult",
