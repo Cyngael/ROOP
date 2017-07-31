@@ -56,10 +56,31 @@ define(["jquery", "TaskBar", "Utils", "gameParams", "Utils"],function ($, TaskBa
 					}
 				},
 				{
+					img : "app/img/UI/documentsIcon.png",
+					txt : "Folders",
+					callback : function(){
+						that.allPopupPoolsContainer.documents.bringToFront();						
+					}
+				},
+				{
 					img : "app/img/UI/skypeIcon.png",
 					txt : "Skype",
 					callback : function(){
 						that.allPopupPoolsContainer.skype.bringToFront();						
+					}
+				},
+				{
+					img : "app/img/UI/adobeIcon.png",
+					txt : "Adobe",
+					callback : function(){
+						that.allPopupPoolsContainer.adobe.bringToFront();						
+					}
+				},
+				{
+					img : "app/img/UI/foldersIcon.png",
+					txt : "OpenOffice",
+					callback : function(){
+						that.allPopupPoolsContainer.folders.bringToFront();						
 					}
 				},
 				{
@@ -76,23 +97,12 @@ define(["jquery", "TaskBar", "Utils", "gameParams", "Utils"],function ($, TaskBa
 						that.allPopupPoolsContainer.doom.bringToFront();						
 					}
 				},
-				{
-					img : "app/img/UI/adobeIcon.png",
-					txt : "Adobe",
-					callback : function(){
-						that.allPopupPoolsContainer.adobe.bringToFront();						
-					}
-				},
-				{
-					img : "app/img/UI/foldersIcon.png",
-					txt : "OpenOffice",
-					callback : function(){
-						that.allPopupPoolsContainer.documents.bringToFront();						
-					}
-				}
 			], this);
 
 			this.masterPopupPool.openAll();
+
+			var that = this;
+			setTimeout(function(){ that.masterPopupPool.randomizeOrder() }, null);
 			this.startTimer();
 
 		}
