@@ -987,7 +987,7 @@ define(["jquery"],function ($) {
 								y		: 320,
 								width	: 389,
 								height	: 142,
-					img		: "game/steamPopUp.png",
+					img		: "game/steamPopup.png",
 					id		: "confirmPopup5",
 					linked  : true,
 					buttons : {
@@ -1059,7 +1059,7 @@ define(["jquery"],function ($) {
 					y		: 6,
 					width	: 298,
 					height	: 31,
-					keywords: ["bye", "sorry", "must go", "out of battery", "out of power"] 
+					keywords: ["bye", "sorry", "must go", "out of battery", "out of power", "y aller", "désolé", "dsl", "sry", "bisous", "kiss"] 
 				},
 				callPopup : {
 					timer   : 5000,
