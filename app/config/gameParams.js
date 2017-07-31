@@ -13,9 +13,9 @@ define(["jquery"],function ($) {
 			pointsForGFHappy : 1500,
 			pointsForMails : [1000,500,0],
 			pointsByDoc : 200,
-			pointsByAdobe : 200,
+			pointsByAdobe : 500,
 		},
 	}
-
+	
 	return gameParams ;
 });
