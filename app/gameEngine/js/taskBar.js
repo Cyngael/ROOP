@@ -54,6 +54,9 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 				that.shutdownPopup.setButtonCallback("shutdownButton",function(){
 					that.GE.endGame(false);
 				} );
+				that.shutdownPopup.setButtonCallback("restartButton",function(){
+					document.location.reload();
+				} );
 			}
 
 			this.domElement.append(domButton);

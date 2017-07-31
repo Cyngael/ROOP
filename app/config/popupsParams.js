@@ -132,30 +132,40 @@ define(["jquery"],function ($) {
 		}
 		,
 		shutdownPopupParams : {
-			x		: 500,
-			y		: 250,
+			x		: 300,
+			y		: 600,
 			width	: 300,
 			height	: 103,
-			img		: "UI/batteryChange.png",
-			imgRisk	: "UI/batteryChanged.png",
+			img		: "UI/turnOffPopUp.png",
 			id		: "shutdown",
 			buttons : {
 				close : {
 					className : "close",
-					x		: 0,
-					y		: 0,
-					width	: 50,
-					height	: 50,
+					x		: 168,
+					y		: 230,
+					width	: 60,
+					height	: 20,
 					img		: "",
 					txt 	: "",
 					callback: function() {}
 				},
 				others : [{
 					className	: "shutdownButton",
-					x		: 54,
-					y		: 10,
-					width	: 65,
-					height	: 10,
+					x		: 75,
+					y		: 125,
+					width	: 50,
+					height	: 50,
+					img		: "",
+					txt 	: "",
+					callback: function() {}		
+				}
+				,
+				{
+					className	: "restartButton",
+					x		: 75,
+					y		: 206,
+					width	: 50,
+					height	: 50,
 					img		: "",
 					txt 	: "",
 					callback: function() {}		
