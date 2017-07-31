@@ -45,7 +45,11 @@ define(["jquery", "Utils"],function ($, Utils) {
 			//this.domElement.style.border 			= "8px solid #d7e4f2";
 			var that = this;
             this.domElement.onclick                 = function(){
-                if(!that.disabled)
+                if(that.disabled)
+                {
+					Utils.SoundUtils.playSound("chlong.wav");				
+                }
+                else
                 {
                     that.bringToFront.bind(that)();
                 }
@@ -123,7 +127,6 @@ define(["jquery", "Utils"],function ($, Utils) {
 			{
 				if(that.disabled)
 				{
-					Utils.SoundUtils.playSound("chlong.wav")				
 					return;
 				}
 
@@ -139,19 +142,19 @@ define(["jquery", "Utils"],function ($, Utils) {
 
 				if(paramsIn.confirmPopup)
 				{
-					var confirmPopup = new BasePopup(paramsIn.confirmPopup);
-					confirmPopup.open();
+					that.confirmPopup = new BasePopup(paramsIn.confirmPopup);
+					that.confirmPopup.open();
 
 					if(paramsIn.confirmPopup.linked !== false)
 					{
-						confirmPopup.setButtonCallback("close", function(){
+						that.confirmPopup.setButtonCallback("close", function(){
 							that.close.bind(that)();
 							paramsIn.callback();
 						});
 						that.disabled = true;
 					}
 
-					setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,confirmPopup);
+					setTimeout(function(confirmPopup){ confirmPopup.bringToFront() },null ,that.confirmPopup);
 
 				}
 				else
@@ -283,6 +286,9 @@ define(["jquery", "Utils"],function ($, Utils) {
 			if(e)
 				e.preventDefault();
 
+
+
+
 			var highterZ = 0;
 			if(zForced)
 				highterZ = zForced;
@@ -300,7 +306,10 @@ define(["jquery", "Utils"],function ($, Utils) {
 			for (var i = 0; i < this.listDomElement.length; i++) {
 				this.listDomElement[i].zIndex = highterZ + 11;
 			}
-			//Order by Z index, Zindex -1 ?
+
+
+			if(this.confirmPopup)
+				this.confirmPopup.bringToFront();
 		}
 
 	}

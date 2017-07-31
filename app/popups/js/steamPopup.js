@@ -12,16 +12,24 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 		{
 			if(!this.doomPopup.closed)
 			{
-				var errorPopup = new BasePopup(this.errorPopupParams);
-				errorPopup.open();
+				this.disabled = true;
+				this.errorPopup = new BasePopup(this.errorPopupParams);
+				this.errorPopup.open();
+				var that = this;
+				this.errorPopup.setButtonCallback("close", function(){ that.disabled = false;})
 
-				setTimeout(function(errorPopup){ errorPopup.bringToFront() },null ,errorPopup);
+				setTimeout(function(errorPopup){ errorPopup.bringToFront() },null ,this.errorPopup);
 			}
 			else
 			{
-
 				super.close();
 			}
+		}
+
+		bringToFront() {
+			super.bringToFront();
+			if(this.errorPopup)
+				this.errorPopup.bringToFront();
 		}
 
 	}
