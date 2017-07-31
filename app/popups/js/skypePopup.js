@@ -1,4 +1,4 @@
-define(["jquery", "BasePopup"],function ($, BasePopup) {
+define(["jquery", "BasePopup", "Utils"],function ($, BasePopup, Utils) {
 	
 	class SkypePopup extends BasePopup {
 
@@ -15,7 +15,6 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 
 
 			this.domInput = document.createElement("input");
-			
 			this.domInput.style.position 			= "absolute";
 			this.domInput.style.top 				= this.inputParams.x + "px";
 			this.domInput.style.left 				= this.inputParams.y + "px";
@@ -57,6 +56,7 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 			that.isGFWaiting = true;
 			this.timer = setTimeout(function(){
 				that.callPopup.open();
+				Utils.SoundUtils.loopSound("skype_call_inc.mp3");
 				that.callPopup.bringToFront(null, "999999999999999999999");
 
 				that.callPopup.domElement.onclick = function(){};
@@ -64,12 +64,17 @@ define(["jquery", "BasePopup"],function ($, BasePopup) {
 				that.callPopup.setButtonCallback("openChat", function(){
 					that.show();
 					that.callPopup.close();
+					Utils.SoundUtils.stopSound("skype_call_inc.mp3");
 				})
 				that.callPopup.setButtonCallback("close", function(){
 					that.callPopup.hide();
+					Utils.SoundUtils.stopSound("skype_call_inc.mp3");
+
 					setTimeout(function(){
 						that.callPopup.show();
 						that.callPopup.bringToFront(null, "999999999999999999999");
+						Utils.SoundUtils.loopSound("skype_call_inc.mp3");
+
 					}, that.callPopupParams.timer )
 					
 				})

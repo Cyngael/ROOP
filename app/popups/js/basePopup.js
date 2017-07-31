@@ -132,7 +132,7 @@ define(["jquery", "Utils"],function ($, Utils) {
 
 				var className = this.className;
 				var paramsIn;
-				if(className == "close"){
+				if(className.includes("close")){
 					paramsIn = that.buttonsParams.close;
 					e.preventDefault();
 				}
@@ -166,7 +166,7 @@ define(["jquery", "Utils"],function ($, Utils) {
 						setTimeout(callback());
 				}
 
-				if(className == "errorSound")
+				if(className.includes("errorSound"))
 					Utils.SoundUtils.playSound("chlong.wav");				
 
 				e.stopPropagation();
