@@ -1,6 +1,6 @@
 define(["jquery"],function ($) {
 	
-	class Utils {
+	class StringUtils {
 
 		constructor() {}
 
@@ -11,6 +11,22 @@ define(["jquery"],function ($) {
 
 	}
 
-	return Utils;
+	class SoundUtils {
+
+		constructor() {}
+
+		static playSound(audioFilePath)
+		{
+			var audio = new Audio("app/sound/" + audioFilePath );
+			audio.play();
+		}
+
+	}
+
+
+	return {
+		StringUtils : StringUtils,
+		SoundUtils	: SoundUtils
+	};
     
 });

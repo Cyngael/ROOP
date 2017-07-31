@@ -1,4 +1,4 @@
-body {
+#innerWindow {
 	background-image: url(app/img/UI/background.jpg);
 	overflow: hidden;
 }

@@ -48,7 +48,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 					txt : "Internet",
 					callback : function(){
 						that.allPopupPoolsContainer.mails.bringToFront();						
-						that.allPopupPoolsContainer.simples.bringToFront();						
+						that.allPopupPoolsContainer.simples.bringToFront();		
 					}
 				},
 				{
@@ -115,7 +115,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 		}
 
 		majTimerDisplay() {
-			this.taskBar.updateTimer(Utils.formatSecToMin(Math.round(this.timeRemaining)));
+			this.taskBar.updateTimer(Utils.StringUtils.formatSecToMin(Math.round(this.timeRemaining)));
 		}
 
 		setPowerPlanRisk(on) {
