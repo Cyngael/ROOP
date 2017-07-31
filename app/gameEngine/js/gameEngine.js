@@ -1,4 +1,4 @@
-define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils, gameParams) {
+define(["jquery", "TaskBar", "Utils", "gameParams", "Utils"],function ($, TaskBar, Utils, gameParams, Utils) {
 	
 	class GameEngine {
 
@@ -13,6 +13,8 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 
 				this.introPopup.open();
 			}
+
+			Utils.SoundUtils.playSound("StartSound.wav");
 		}
 
 		init(params) {
@@ -22,7 +24,8 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 			this.allPopupPoolsContainer = params.allPopupPoolsContainer;
 			this.allPopupsContainer = params.allPopupsContainer;
 			this.secBySec = 1;
-			this.timeRemaining = gameParams.startTime;//secondes			
+			this.timeRemaining = gameParams.startTime;//secondes	
+			this.timeSaved = 0;		
 
 			this.wall = document.createElement("div");
 			this.wall.style.backgroundColor = "black";
@@ -32,6 +35,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 			this.wall.style.opacity = "0";
 			this.wall.style.zIndex	= "99999999999999999999999999999999999999999999";
 			this.wall.style.pointerEvents= "none";
+
 
 			$("#popupContainer").append(this.wall);
 
@@ -112,6 +116,7 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 
 		adobeClosed (timeWin) {
 			this.timeRemaining += timeWin;
+			this.timeSaved += timeWin;		
 		}
 
 		majTimerDisplay() {
@@ -205,12 +210,15 @@ define(["jquery", "TaskBar", "Utils", "gameParams"],function ($, TaskBar, Utils,
 				}
 			}
 
+			score += (this.timeSaved * gameParams.points.pointsBySecond)
+
 
 			clearInterval(this.timer);
 			this.masterPopupPool.closeAll();
 			this.taskBar.close();
 			this.hardCleanPopup();
 
+			Utils.SoundUtils.playSound("Logoff.wav");
 
 			this.outroPopup.majTxt("gfResult", texts.gfResult);
 			this.outroPopup.majTxt("mailResult", texts.mailResult);
