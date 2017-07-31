@@ -1,4 +1,4 @@
-define(["jquery"],function ($) {
+define(["jquery", "Utils"],function ($, Utils) {
 	
 	class BasePopup {
 
@@ -46,7 +46,9 @@ define(["jquery"],function ($) {
 			var that = this;
             this.domElement.onclick                 = function(){
                 if(!that.disabled)
+                {
                     that.bringToFront.bind(that)();
+                }
             }
 
 			this.backgroundImage = document.createElement('img');
@@ -120,7 +122,10 @@ define(["jquery"],function ($) {
 			domElement.onclick = function(e)
 			{
 				if(that.disabled)
+				{
+					Utils.SoundUtils.playSound("chlong.wav")				
 					return;
+				}
 
 				var className = this.className;
 				var paramsIn;
@@ -170,8 +175,8 @@ define(["jquery"],function ($) {
 
 
 
-		close() {
-			if(this.domElement.style.display != "none")
+		close() {                
+			if(!this.hidden)
 			{
 				this.disabled = true;
 				this.$Element.remove();

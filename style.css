@@ -1,7 +1,13 @@
 body {
-	background-image: url(app/img/UI/background.jpg);
 	overflow: hidden;
 }
+#innerWindow {
+	background-image: url(app/img/UI/background.jpg);
+	overflow: hidden;
+	width: 1500px;
+	height: 844px;
+}
+
 
 .result {
 	font-size: medium;

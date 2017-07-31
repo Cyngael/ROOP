@@ -35,7 +35,7 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.domElement.style.flexDirection		= "row";
 			this.domElement.style.zIndex			= "999999";
 
-			$("body").append(this.domElement);
+			$("#innerWindow").append(this.domElement);
 
 			this.renderButtons();
 		}
