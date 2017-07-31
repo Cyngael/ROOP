@@ -29,7 +29,7 @@ define(["jquery", "BasePopup", "popupsParams"],function ($, BasePopup, popupsPar
 			this.domElement.style.backgroundImage 	= "url(app/img/UI/taskbar.png)";
 			this.domElement.style.backgroundSize 	= "1500px 32px";
 			this.domElement.style.position 			= "absolute";
-			this.domElement.style.bottom			= "0";
+			this.domElement.style.top				= "812px";
 			this.domElement.style.left				= "0";
 			this.domElement.style.display			= "flex";
 			this.domElement.style.flexDirection		= "row";
